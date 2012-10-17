@@ -105,8 +105,12 @@ class Default_Model extends ZP_Model {
 				$sub30_2 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('196_a','196_b')");
 		$data["30"] = ($sub30_1[0]["suma"] + $sub30_2[0]["suma"]) / 10;
 		
-		____($data);
+		//echo $estado . " =============== <br />" . var_dump($data) . "<br /><br />";
 		return $data;
+	}
+	
+	public function create($query) {
+		$data = $this->Db->query($query);
 	}
 	
 }

@@ -18,7 +18,6 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-		
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->createP($estado);
 			$data[$estado] = $values;
@@ -41,9 +40,14 @@ class Default_Controller extends ZP_Controller {
 				}
 			}
 			
-			$query = "insert into indicadores (Indicador, " . trim($caEstados, ",") . ") values ('" . $key . "'," . trim($cadena, ",") . "); ";
-			echo $query . "<br />";
+			$query = "insert into indicadores (Indicador, ID_Parent, Value, Description, " . trim($caEstados, ",") . ") values ('" . $key . "',0,0,0," . trim($cadena, ",") . "); ";
+			echo $query . "<br /><br />";
+			
 			$this->Default_Model->create($query);
+			
+			if($key == 3) {
+				die("ok");
+			}
 		}
 	
 		$vars["view"] = $this->view("home", TRUE);

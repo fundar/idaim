@@ -323,6 +323,30 @@ class ZP_Db extends ZP_Load {
 		return (isset($data[0]["Total"]) and $data[0]["Total"]) ? (int) $data[0]["Total"] : 0;
 	}
 
+	private function data2($query) {
+		if($query === "") {
+			return FALSE;	
+		}
+		
+		$this->Rs = $this->Database->query($query);
+		
+		if($this->rows() === 0) {
+			return FALSE;			
+		} else {
+			while($row = $this->fetch($this->rows())) {
+				$rows[] = $row;	
+			}
+		}	
+
+		$this->free();
+			
+		if($this->encode) {
+			return isset($rows) ? $this->encoding($rows) : FALSE;
+		} else { 
+			return isset($rows) ? $rows : FALSE;
+		}		
+	}
+	
 	private function data($query) {
 		if($query === "") {
 			return FALSE;	
@@ -1102,6 +1126,10 @@ class ZP_Db extends ZP_Load {
      */	
 	public function query($query) {
 		return $this->data($query);
+	}
+	
+	public function query2($query) {
+		return $this->data2($query);
 	}
 	
 	/**

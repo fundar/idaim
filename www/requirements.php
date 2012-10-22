@@ -22,9 +22,9 @@ if(file_exists(_dir ."/config/config.php")) {
 }
 
 if($ZP["production"]) { 
-	error_reporting(FALSE);
+	error_reporting(TRUE);
 
-	ini_set("display_errors", FALSE); 
+	ini_set("display_errors", TRUE); 
 } else {
 	if(!headers_sent()) {
 		header("Cache-Control: no-cache, must-revalidate");

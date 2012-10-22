@@ -110,7 +110,10 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function create($query) {
-		$data = $this->Db->query($query);
+		$data = $this->Db->query2($query);
 	}
 	
+	public function suma() {
+		return $this->Db->query("select count(*) from indicadores");
+	}	
 }

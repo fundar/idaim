@@ -18,6 +18,9 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
+		error_reporting(E_ALL);
+		ini_set("display_errors", 1);
+		
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->createP($estado);
 			$data[$estado] = $values;
@@ -31,7 +34,9 @@ class Default_Controller extends ZP_Controller {
 			$caEstados .= $estadoo . ",";
 		}
 		
+		$caEstados = trim($caEstados, ",");
 		for($key=1; $key<=30; $key++) {
+			echo $key;
 			foreach($this->estados as $estadoo) {
 				if(isset($data[$estadoo][$key][0]["promedio"])) {
 					$cadena .= "'" . $data[$estadoo][$key][0]["promedio"] . "',";
@@ -40,14 +45,14 @@ class Default_Controller extends ZP_Controller {
 				}
 			}
 			
-			$query = "insert into indicadores (Indicador, ID_Parent, Value, Description, " . trim($caEstados, ",") . ") values ('" . $key . "',0,0,0," . trim($cadena, ",") . "); ";
-			echo $query . "<br /><br />";
+			$query = "insert into indicadores (Indicador, ID_Parent, Value, Description, " . $caEstados . ") values ('" . $key . "','0','0','0'," . trim($cadena, ",") . "); ";
 			
 			$this->Default_Model->create($query);
 			
-			if($key == 3) {
-				die("ok");
-			}
+			$query  = "";
+			$cadena = "";
+			
+
 		}
 	
 		$vars["view"] = $this->view("home", TRUE);

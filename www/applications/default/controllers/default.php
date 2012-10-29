@@ -36,7 +36,7 @@ class Default_Controller extends ZP_Controller {
 		
 		$caEstados = trim($caEstados, ",");
 		for($key=1; $key<=30; $key++) {
-			echo $key;
+			
 			foreach($this->estados as $estadoo) {
 				if(isset($data[$estadoo][$key][0]["promedio"])) {
 					$cadena .= "'" . $data[$estadoo][$key][0]["promedio"] . "',";
@@ -47,12 +47,12 @@ class Default_Controller extends ZP_Controller {
 			
 			$query = "insert into indicadores (Indicador, ID_Parent, Value, Description, " . $caEstados . ") values ('" . $key . "','0','0','0'," . trim($cadena, ",") . "); ";
 			
+			// echo $query;
+			
 			$this->Default_Model->create($query);
 			
 			$query  = "";
 			$cadena = "";
-			
-
 		}
 	
 		$vars["view"] = $this->view("home", TRUE);

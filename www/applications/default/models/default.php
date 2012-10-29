@@ -110,7 +110,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function create($query) {
-		$data = $this->Db->query2($query);
+		$data = $this->Db->query($query);
 	}
 	
 	public function suma() {

@@ -10,8 +10,8 @@ if(!defined("_access")) {
  * Website
  */
 $ZP["webURL"] 	    = "http://local.idaim.org";
-$ZP["webName"] 	    = "IDAIM";
-$ZP["webTheme"]     = "default";
+$ZP["webName"] 	    = "IDAIM - Índice del Derecho de Acceso a la Información en México";
+$ZP["webTheme"]     = "idaim";
 $ZP["webSituation"] = "Active";
 $ZP["webMessage"]   = "";
 $ZP["benchMark"]    = FALSE;

@@ -3,7 +3,7 @@ $(document).ready( function() {
 	$(".button-seek").click( function() {
 		
 		$.ajax({
-			url: "/get/" + $("#estados").val()
+			url: "get/" + $("#estados").val()
 		}).done(function(response) {
 			console.log(response);
 			chart(response);

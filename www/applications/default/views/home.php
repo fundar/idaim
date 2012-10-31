@@ -32,7 +32,7 @@
 				<span>Buscar</span>
 			</a>
 			
-			<select name="estados">
+			<select id="estados" name="estados">
 				<option value="Aguascalientes">Aguascalientes</option>
 				<option value="BC">Baja California</option>
 				<option value="BCS">Baja California Sur</option>
@@ -67,21 +67,6 @@
 				<option value="Zacatecas">Zacatecas</option>
 				<option value="Federal">Federal</option>
 			</select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		</div>
 			
 		<div class="clear"></div>

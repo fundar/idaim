@@ -24,4 +24,10 @@ class Default_Controller extends ZP_Controller {
 			
 		$this->render("content", $vars);
 	}
+	
+	public function get() {
+		$data["indice"]     = $this->Default_Model->getIndices(segment(1));
+		$data["variablesp"] = $this->Default_Model->getVariablesP(segment(1));
+		$data["variablesi"] = $this->Default_Model->getVariablesI(segment(1));
+	}
 }

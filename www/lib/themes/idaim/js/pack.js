@@ -21,7 +21,7 @@ var vis = d3.select("#chart").insert("svg:svg", "h2")
 
   
   node = root = json;
-console.log(node);
+
   var nodes = pack.nodes(root);
   
   vis.selectAll("circle")

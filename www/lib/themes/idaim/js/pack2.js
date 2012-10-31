@@ -64,7 +64,7 @@ function zoom2(d, i) {
   t.selectAll("text")
       .attr("x", function(d) { return x2(d.x); })
       .attr("y", function(d) { return y2(d.y); })
-      .style("opacity", function(d) { console.log(d.r); return k * d.r > 60 ? 1 : 0; });
+      .style("opacity", function(d) { return k * d.r > 60 ? 1 : 0; });
 	
   node2 = d;
   d3.event.stopPropagation();

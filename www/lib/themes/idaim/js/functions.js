@@ -52,34 +52,37 @@ $(document).ready( function() {
 	});
 });
 
-
-function chart(obj) {
-	$("#chart").html("");
-	
-	var json = JSON.parse(obj);
-
 var w = 550,
     h = 450,
     r = 450,
     x = d3.scale.linear().range([0, r]),
     y = d3.scale.linear().range([0, r]),
     node,
-    root;
+    root,
+    json,
+    vis,
+    pack,
+    nodes;
+    
+function chart(obj) {
+	$("#chart").html("");
+	
+	json = JSON.parse(obj);
+	console.log(json);
 
-var pack = d3.layout.pack()
+
+	pack = d3.layout.pack()
     .size([r, r])
     .value(function(d) { return d.size; })
 
-var vis = d3.select("#chart").insert("svg:svg", "h2")
+	vis = d3.select("#chart").insert("svg:svg", "h2")
     .attr("width", w)
     .attr("height", h)
   .append("svg:g")
     .attr("transform", "translate(" + (w - r) / 2 + "," + (h - r) / 2 + ")");
 
-  
-  node = root = json;
-console.log(node);
-  var nodes = pack.nodes(root);
+  node  = root = json;
+  nodes = pack.nodes(root);
   
   vis.selectAll("circle")
       .data(nodes)

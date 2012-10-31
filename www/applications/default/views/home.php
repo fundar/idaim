@@ -97,7 +97,7 @@
 	
 	<div id="burbujas">
 		<div id="chart"></div>
-		<script src="<?php print $this->themePath; ?>/js/pack.js"></script>
+		
 		
 		<div id="chart2"></div>
 		<script src="<?php print $this->themePath; ?>/js/pack2.js"></script>

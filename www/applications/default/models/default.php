@@ -16,21 +16,6 @@ class Default_Model extends ZP_Model {
 		$this->table = "variablesi";
 	}
 	
-	public function indice($estado = "Colima") {
-		$query = " as decimal(10,6)) as promedio from variablesp where Indicador in (";
-		
-		$data  = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "1,2,3);");
-		
-		return $data;
-	}
-	
-	public function getIndice($estado, $type = "p") {
-		$query = "select Indicador, " . $estado . " from indice where Type='" . $type . "';";
-		$data  = $this->Db->query($query);
-		
-		return $data;
-	}
-	
 	public function getIndices($estado) {
 		$query 		= "select Indicador, " . $estado . " from indice  where Type='p';";
 		$progresivo = $this->Db->query($query);
@@ -44,11 +29,52 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
-	public function getVariablesP() {
-		$query = "select Indicador, Type, Aguascalientes, BC, Guanajuato, Colima, DF from variablesp where Type='b';";
+	public function getVariablesP($estado) {
+		$query 	    = "select Indicador, " . $estado . " from variablesp where Type='p';";
+		$progresivo = $this->Db->query($query);
+		
+		$query = "select Indicador, " . $estado . " from variablesp where Type='b';";
+		$base  = $this->Db->query($query);
+		
+		foreach($progresivo as $value) $pro[$value["Indicador"]] = $value[$estado];
+		foreach($base as $value)       $bas[$value["Indicador"]] = $value[$estado];
+		
+		$data["progresivo"] = $pro;
+		$data["base"]       = $bas;
+		
+		return $data;
 	}
 	
-	public function getVariablesI() {
-		$query = "select Indicador, Type, Aguascalientes, Guanajuato, Colima, DF from variablesi where Type='b';";
+	public function getVariablesI($estado) {
+		$query = "select Indicador, " . $estado . " from variablesi where Type='p';";
+		$progresivo = $this->Db->query($query);
+		
+		$query = "select Indicador, " . $estado . " from variablesi where Type='b';";
+		$base = $this->Db->query($query);
+		
+		
+		foreach($progresivo as $value) $pro[$value["Indicador"]] = $value[$estado];
+		foreach($base as $value)       $bas[$value["Indicador"]] = $value[$estado];
+		
+		$data["progresivo"] = $pro;
+		$data["base"]       = $bas;
+		
+		return $data;
+	}
+	
+	public function getIndicadores($estado) {
+		$query = "select Indicador, " . $estado . " from indicadores where Type='p';";
+		$progresivo = $this->Db->query($query);
+		
+		$query = "select Indicador, " . $estado . " from indicadores where Type='b';";
+		$base  = $this->Db->query($query);
+		
+		foreach($progresivo as $value) $pro[$value["Indicador"]] = $value[$estado];
+		foreach($base as $value)       $bas[$value["Indicador"]] = $value[$estado];
+		
+		$data["progresivo"] = $pro;
+		$data["base"]       = $bas;
+		
+		return $data;
 	}
 }

@@ -45,10 +45,10 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getVariablesP() {
-		select Indicador, Type, Aguascalientes, BC, Guanajuato, Colima, DF from variablesp where Type='b';
+		$query = "select Indicador, Type, Aguascalientes, BC, Guanajuato, Colima, DF from variablesp where Type='b';";
 	}
 	
 	public function getVariablesI() {
-		select Indicador, Type, Aguascalientes, Guanajuato, Colima, DF from variablesi where Type='b';
+		$query = "select Indicador, Type, Aguascalientes, Guanajuato, Colima, DF from variablesi where Type='b';";
 	}
 }

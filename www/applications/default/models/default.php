@@ -23,8 +23,8 @@ class Default_Model extends ZP_Model {
 		$query = "select Indicador, " . $estado . " from indice  where Type='b';";
 		$base  = $this->Db->query($query);
 		
-		$data["progresivo"] = $progresivo[0][$estado];
-		$data["base"]       = $base[0][$estado];
+		$data["progresivo"] = substr($progresivo[0][$estado] * 10, 0, 3);
+		$data["base"]       = substr($base[0][$estado] * 10, 0, 3); 
 		
 		return $data;
 	}

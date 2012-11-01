@@ -17,6 +17,15 @@ class Default_Controller extends ZP_Controller {
 		$this->var_internas    = array("A", "B", "C", "D", "E", "F", "G", "H", "I");
 		$this->var_principales = array("1", "2", "3");
 		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal");
+		$this->id_estados = array("AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL","DF","DGO","MEX","GTO","GRO","HGO","JAL","MICH","MOR","NAY","NL","OAX","PUE","QUE","QROO","SLP","SIN","SON","TAB","TAMPS","TLAX","VER","YUC","ZAC", "Estado");
+		
+		/*
+			var estados_abr = [ "AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL",
+			  "DF","DGO","MEX","GTO","GRO","HGO","JAL","MICH",
+			  "MOR","NAY","NL","OAX","PUE","QUE","QROO","SLP",
+			  "SIN","SON","TAB","TAMPS","TLAX","VER","YUC","ZAC" ]; 
+		 
+		*/
 	}
 	
 	public function index() {
@@ -31,9 +40,15 @@ class Default_Controller extends ZP_Controller {
 		$data["variablesi"]  = $this->Default_Model->getVariablesI(segment(1));
 		$data["indicadores"] = $this->Default_Model->getIndicadores(segment(1));
 		
-		//$data["progresivo"] = $this->json($data);
+		$key = array_search(segment(1), $this->estados);
+		$key = $this->id_estados[$key];
 		
-		echo $this->json($data);
+		$response["progresivo"] = $this->json($data);
+		$response["base"]	    = $this->json($data, "base");
+		$response["indice"]     = $data["indice"];
+		$response["key"]        = $key;
+		
+		echo json_encode($response);
 	}
 	
 	public function json($data, $type = "progresivo") {

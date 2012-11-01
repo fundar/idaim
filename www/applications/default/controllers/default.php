@@ -35,20 +35,24 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function get() {
-		$data["indice"]      = $this->Default_Model->getIndices(segment(1));
-		$data["variablesp"]  = $this->Default_Model->getVariablesP(segment(1));
-		$data["variablesi"]  = $this->Default_Model->getVariablesI(segment(1));
-		$data["indicadores"] = $this->Default_Model->getIndicadores(segment(1));
-		
-		$key = array_search(segment(1), $this->estados);
-		$key = $this->id_estados[$key];
-		
-		$response["progresivo"] = $this->json($data);
-		$response["base"]	    = $this->json($data, "base");
-		$response["indice"]     = $data["indice"];
-		$response["key"]        = $key;
-		
-		echo json_encode($response);
+		if(segment(1) and in_array(segment(1), $this->estados)) {
+			$data["indice"]      = $this->Default_Model->getIndices(segment(1));
+			$data["variablesp"]  = $this->Default_Model->getVariablesP(segment(1));
+			$data["variablesi"]  = $this->Default_Model->getVariablesI(segment(1));
+			$data["indicadores"] = $this->Default_Model->getIndicadores(segment(1));
+			
+			$key = array_search(segment(1), $this->estados);
+			$key = $this->id_estados[$key];
+			
+			$response["progresivo"] = $this->json($data);
+			$response["base"]	    = $this->json($data, "base");
+			$response["indice"]     = $data["indice"];
+			$response["key"]        = $key;
+			
+			echo json_encode($response);
+		} else {
+			echo "Bad Request";
+		}
 	}
 	
 	public function json($data, $type = "progresivo") {

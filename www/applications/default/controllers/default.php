@@ -60,93 +60,93 @@ class Default_Controller extends ZP_Controller {
 		$json .= '"name": "",';
 		$json .= ' "children": [';
 		$json .= '  {';
-		$json .= '   "name": "Disposiciones Normativas - ' . $data["variablesp"][$type][1] . '",';
+		$json .= '   "name": "Disposiciones Normativas - ' . $this->convert($data["variablesp"][$type][1]) . '",';
 		$json .= '   "children": [';
 		$json .= '	{';
-		$json .= '	 "name": "Positivación del DAI - ' . $data["variablesi"][$type]["A"] . '",';
+		$json .= '	 "name": "Positivación del DAI - ' . $this->convert($data["variablesi"][$type]["A"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "1.- ' . $data["indicadores"][$type][1] . '", "size": 10000},';
-		$json .= '	  {"name": "2.- ' . $data["indicadores"][$type][2] . '", "size": 9000},';
-		$json .= '	  {"name": "3.- ' . $data["indicadores"][$type][3] . '", "size": 8000},';
-		$json .= '	  {"name": "4.- ' . $data["indicadores"][$type][4] . '", "size": 7000},';
-		$json .= '	  {"name": "5.- ' . $data["indicadores"][$type][5] . '", "size": 6000}';
+		$json .= '	  {"name": "1.- ' . $this->convert($data["indicadores"][$type][1]) . '", "size": ' . $this->convert2($data["indicadores"][$type][1]) . '},';
+		$json .= '	  {"name": "2.- ' . $this->convert($data["indicadores"][$type][2]) . '", "size": ' . $this->convert2($data["indicadores"][$type][2]) . '},';
+		$json .= '	  {"name": "3.- ' . $this->convert($data["indicadores"][$type][3]) . '", "size": ' . $this->convert2($data["indicadores"][$type][3]) . '},';
+		$json .= '	  {"name": "4.- ' . $this->convert($data["indicadores"][$type][4]) . '", "size": ' . $this->convert2($data["indicadores"][$type][4]) . '},';
+		$json .= '	  {"name": "5.- ' . $this->convert($data["indicadores"][$type][5]) . '", "size": ' . $this->convert2($data["indicadores"][$type][5]) . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Información restringida - ' . $data["variablesi"][$type]["B"] . '",';
+		$json .= '	 "name": "Información restringida - ' . $this->convert($data["variablesi"][$type]["B"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "6.- ' . $data["indicadores"][$type][6] . '", "size": 10000},';
-		$json .= '	  {"name": "7.- ' . $data["indicadores"][$type][7] . '", "size": 9000},';
-		$json .= '	  {"name": "8.- ' . $data["indicadores"][$type][8] . '", "size": 8000}';
+		$json .= '	  {"name": "6.- ' . $this->convert($data["indicadores"][$type][6]) . '", "size": ' . $this->convert2($data["indicadores"][$type][6]) . '},';
+		$json .= '	  {"name": "7.- ' . $this->convert($data["indicadores"][$type][7]) . '", "size": ' . $this->convert2($data["indicadores"][$type][7]) . '},';
+		$json .= '	  {"name": "8.- ' . $this->convert($data["indicadores"][$type][8]) . '", "size": ' . $this->convert2($data["indicadores"][$type][8])  . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Sanciones al incumplimiento de la ley - ' . $data["variablesi"][$type]["C"] . '",';
+		$json .= '	 "name": "Sanciones al incumplimiento de la ley - ' . $this->convert($data["variablesi"][$type]["C"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "9.- ' . $data["indicadores"][$type][9] . '", "size": 10000},';
-		$json .= '	  {"name": "10.- ' . $data["indicadores"][$type][10] . '", "size": 10000}';
+		$json .= '	  {"name": "9.- ' . $this->convert($data["indicadores"][$type][9]) . '", "size": ' . $this->convert2($data["indicadores"][$type][9]) . '},';
+		$json .= '	  {"name": "10.- ' . $this->convert($data["indicadores"][$type][10]) . '", "size": ' . $this->convert2($data["indicadores"][$type][10]) . '}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
 		$json .= '  },';
 		  
 		$json .= '  {';
-		$json .= '   "name": "Diseño institucional - ' . $data["variablesp"][$type][2] . '",';
+		$json .= '   "name": "Diseño institucional - ' . $this->convert($data["variablesp"][$type][2]) . '",';
 		$json .= '   "children": [';
 		$json .= '	{';
-		$json .= '	 "name": "Instituciones internas de acceso a la información - ' . $data["variablesi"][$type]["D"] . '",';
+		$json .= '	 "name": "Instituciones internas de acceso a la información - ' . $this->convert($data["variablesi"][$type]["D"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "11.- ' . $data["indicadores"][$type][11] . '", "size": 10000},';
-		$json .= '	  {"name": "12.- ' . $data["indicadores"][$type][12] . '", "size": 9000},';
-		$json .= '	  {"name": "13.- ' . $data["indicadores"][$type][13] . '", "size": 8000},';
-		$json .= '	  {"name": "14.- ' . $data["indicadores"][$type][14] . '", "size": 7000}';
+		$json .= '	  {"name": "11.- ' . $this->convert($data["indicadores"][$type][11]) . '", "size": ' . $this->convert2($data["indicadores"][$type][11]) . '},';
+		$json .= '	  {"name": "12.- ' . $this->convert($data["indicadores"][$type][12]) . '", "size": ' . $this->convert2($data["indicadores"][$type][12]) . '},';
+		$json .= '	  {"name": "13.- ' . $this->convert($data["indicadores"][$type][13]) . '", "size": ' . $this->convert2($data["indicadores"][$type][13]) . '},';
+		$json .= '	  {"name": "14.- ' . $this->convert($data["indicadores"][$type][14]) . '", "size": ' . $this->convert2($data["indicadores"][$type][14]) . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Promoción del DAI - ' . $data["variablesi"][$type]["E"] . '",';
+		$json .= '	 "name": "Promoción del DAI - ' . $this->convert($data["variablesi"][$type]["E"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "15.- ' . $data["indicadores"][$type][15] . '", "size": 10000},';
-		$json .= '	  {"name": "16.- ' . $data["indicadores"][$type][16] . '", "size": 9000},';
-		$json .= '	  {"name": "17.- ' . $data["indicadores"][$type][17] . '", "size": 8000}';
+		$json .= '	  {"name": "15.- ' . $this->convert($data["indicadores"][$type][15]) . '", "size": ' . $this->convert2($data["indicadores"][$type][15]) . '},';
+		$json .= '	  {"name": "16.- ' . $this->convert($data["indicadores"][$type][16]) . '", "size": ' . $this->convert2($data["indicadores"][$type][16]) . '},';
+		$json .= '	  {"name": "17.- ' . $this->convert($data["indicadores"][$type][17]) . '", "size": ' . $this->convert2($data["indicadores"][$type][17]) . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Órganos garantes - ' . $data["variablesi"][$type]["F"] . '",';
+		$json .= '	 "name": "Órganos garantes - ' . $this->convert($data["variablesi"][$type]["F"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "18.- ' . $data["indicadores"][$type][18] . '", "size": 10000},';
-		$json .= '	  {"name": "19.- ' . $data["indicadores"][$type][19] . '", "size": 9000},';
-		$json .= '	  {"name": "20.- ' . $data["indicadores"][$type][20] . '", "size": 8000}';
+		$json .= '	  {"name": "18.- ' . $this->convert($data["indicadores"][$type][18]) . '", "size": ' . $this->convert2($data["indicadores"][$type][18]) . '},';
+		$json .= '	  {"name": "19.- ' . $this->convert($data["indicadores"][$type][19]) . '", "size": ' . $this->convert2($data["indicadores"][$type][19]) . '},';
+		$json .= '	  {"name": "20.- ' . $this->convert($data["indicadores"][$type][20]) . '", "size": ' . $this->convert2($data["indicadores"][$type][20]) . '}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
 		$json .= '  },';
 		  
 		$json .= '  {';
-		$json .= '   "name": "Procedimientos - ' . $data["variablesp"][$type][2] . '",';
+		$json .= '   "name": "Procedimientos - ' . $this->convert($data["variablesp"][$type][3]) . '",';
 		$json .= '   "children": [';
 		$json .= '	{';
-		$json .= '	 "name": "Procedimientos de acceso a la información - ' . $data["variablesi"][$type]["G"] . '",';
+		$json .= '	 "name": "Procedimientos de acceso a la información - ' . $this->convert($data["variablesi"][$type]["G"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "21.- ' . $data["indicadores"][$type][21] . '", "size": 10000},';
-		$json .= '	  {"name": "22.- ' . $data["indicadores"][$type][22] . '", "size": 9000},';
-		$json .= '	  {"name": "23.- ' . $data["indicadores"][$type][23] . '", "size": 8000},';
-		$json .= '	  {"name": "24.- ' . $data["indicadores"][$type][24] . '", "size": 7000}';
+		$json .= '	  {"name": "21.- ' . $this->convert($data["indicadores"][$type][21]) . '", "size": ' . $this->convert2($data["indicadores"][$type][21]) . '},';
+		$json .= '	  {"name": "22.- ' . $this->convert($data["indicadores"][$type][22]) . '", "size": ' . $this->convert2($data["indicadores"][$type][22]) . '},';
+		$json .= '	  {"name": "23.- ' . $this->convert($data["indicadores"][$type][23]) . '", "size": ' . $this->convert2($data["indicadores"][$type][23]) . '},';
+		$json .= '	  {"name": "24.- ' . $this->convert($data["indicadores"][$type][24]) . '", "size": ' . $this->convert2($data["indicadores"][$type][24]) . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Procedimientos de revisión - ' . $data["variablesi"][$type]["H"] . '",';
+		$json .= '	 "name": "Procedimientos de revisión - ' . $this->convert($data["variablesi"][$type]["H"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "25.- ' . $data["indicadores"][$type][25] . '", "size": 10000},';
-		$json .= '	  {"name": "26.- ' . $data["indicadores"][$type][26] . '", "size": 9000},';
-		$json .= '	  {"name": "27.- ' . $data["indicadores"][$type][27] . '", "size": 8000}';
+		$json .= '	  {"name": "25.- ' . $this->convert($data["indicadores"][$type][25]) . '", "size": ' . $this->convert2($data["indicadores"][$type][25]) . '},';
+		$json .= '	  {"name": "26.- ' . $this->convert($data["indicadores"][$type][26]) . '", "size": ' . $this->convert2($data["indicadores"][$type][26]) . '},';
+		$json .= '	  {"name": "27.- ' . $this->convert($data["indicadores"][$type][27]) . '", "size": ' . $this->convert2($data["indicadores"][$type][27]) . '}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Difusión proactiva de información pública - ' . $data["variablesi"][$type]["I"] . '",';
+		$json .= '	 "name": "Difusión proactiva de información pública - ' . $this->convert($data["variablesi"][$type]["I"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "28.- ' . $data["indicadores"][$type][28] . '", "size": 10000},';
-		$json .= '	  {"name": "29.- ' . $data["indicadores"][$type][29] . '", "size": 9000},';
-		$json .= '	  {"name": "30.- ' . $data["indicadores"][$type][30] . '", "size": 8000}';
+		$json .= '	  {"name": "28.- ' . $this->convert($data["indicadores"][$type][28]) . '", "size": ' . $this->convert2($data["indicadores"][$type][28]) . '},';
+		$json .= '	  {"name": "29.- ' . $this->convert($data["indicadores"][$type][29]) . '", "size": ' . $this->convert2($data["indicadores"][$type][29]) . '},';
+		$json .= '	  {"name": "30.- ' . $this->convert($data["indicadores"][$type][30]) . '", "size": ' . $this->convert2($data["indicadores"][$type][30]) . '}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
@@ -155,6 +155,19 @@ class Default_Controller extends ZP_Controller {
 		$json .= '}';
 		
 		return $json;
+	}
+	
+	public function convert($data) {
+		return substr($data * 10, 0, 3);
+	}
+	
+	public function convert2($data) {
+		$number = substr($data * 10, 0, 3);
+		$number = $number *1000;
+		
+		if($number==0 or $number<7000) return 5000;
+		
+		return $number;
 	}
 }
 

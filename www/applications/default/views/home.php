@@ -388,8 +388,12 @@
 	<div class="clear"></div>
 	
 	<div id="burbujas">
-		<div id="nchart"></div>
-		<div id="nchart2"></div>
+		<div id="nchart">
+			 <script src="<?php print $this->themePath; ?>/js/pack.js"></script>
+		</div>
+		<div id="nchart2">
+			 <script src="<?php print $this->themePath; ?>/js/pack2.js"></script>
+		</div>
 	</div>
 </div>
 

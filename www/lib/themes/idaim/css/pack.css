@@ -9,7 +9,8 @@ circle.parent {
 
 #chart  circle { fill: #10b9da; }
 #chart  circle.parent { fill: #9bcee1; }
-#chart text.parent { fill: #1f77b4; }
+#chart text.parent { fill: #1f77b4; color:#fff !important;}
+#chart text.parent { fill: #fff; }
 
 #chart2 circle { fill: #429cce; }
 #chart2 circle.parent { fill: #6fbdee; color:#fff !important; }

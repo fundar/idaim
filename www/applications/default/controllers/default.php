@@ -81,7 +81,7 @@ class Default_Controller extends ZP_Controller {
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
-		$json .= '	 "name": "Sanciones al incumplimiento de la ley - ' . $this->convert($data["variablesi"][$type]["C"]) . '",';
+		$json .= '	 "name": "Sanciones - ' . $this->convert($data["variablesi"][$type]["C"]) . '",';
 		$json .= '	 "children": [';
 		$json .= '	  {"name": "9.- ' . $this->convert($data["indicadores"][$type][9]) . '", "size": ' . $this->convert2($data["indicadores"][$type][9]) . '},';
 		$json .= '	  {"name": "10.- ' . $this->convert($data["indicadores"][$type][10]) . '", "size": ' . $this->convert2($data["indicadores"][$type][10]) . '}';

@@ -54,10 +54,10 @@ $(document).ready( function() {
 			data = JSON.parse(response);
 			
 			if(data.key=="Estado") {
-				$(".Estado").css("fill","#fff");
+				$("#mapa .Estado").css("fill","#fff");
 			} else {
-				$(".Estado").css("fill","#00b1b0");
-				$("#" + data.key).css("fill","#fff");
+				$("#mapa .Estado").css("fill","#00b1b0");
+				$("#mapa #" + data.key).css("fill","#fff");
 			}
 		
 			$("#name-estado").html($("#estados option:selected").text());

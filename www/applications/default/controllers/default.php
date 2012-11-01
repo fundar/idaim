@@ -34,14 +34,22 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
-	public function get() {
-		if(segment(1) and in_array(segment(1), $this->estados)) {
-			$data["indice"]      = $this->Default_Model->getIndices(segment(1));
-			$data["variablesp"]  = $this->Default_Model->getVariablesP(segment(1));
-			$data["variablesi"]  = $this->Default_Model->getVariablesI(segment(1));
-			$data["indicadores"] = $this->Default_Model->getIndicadores(segment(1));
+	public function estado() {
+		if(segment(1) != "get") {
+			$this->index();
+		} else {
+			$this->get(segment(2));
+		}
+	}
+	
+	public function get($estado) {
+		if($estado and in_array($estado, $this->estados)) {
+			$data["indice"]      = $this->Default_Model->getIndices($estado);
+			$data["variablesp"]  = $this->Default_Model->getVariablesP($estado);
+			$data["variablesi"]  = $this->Default_Model->getVariablesI($estado);
+			$data["indicadores"] = $this->Default_Model->getIndicadores($estado);
 			
-			$key = array_search(segment(1), $this->estados);
+			$key = array_search($estado, $this->estados);
 			$key = $this->id_estados[$key];
 			
 			$response["progresivo"] = $this->json($data);

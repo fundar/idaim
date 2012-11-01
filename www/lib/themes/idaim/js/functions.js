@@ -1,9 +1,6 @@
 $(document).ready( function() {
 	$(".loading").hide();
-	$("#results-estatal").hide();
-	$("#indice-nacional .more").hide();
-	$("#indice-estatal .close").hide();
-	
+		
 	// Nacional
 	$("#indice-nacional .more").click( function() {
 		$("#results-estatal").slideUp("slow");
@@ -53,6 +50,9 @@ $(document).ready( function() {
 			
 			data = JSON.parse(response);
 			
+			var stateObj = { foo: $("#estados option:selected").text() };
+			history.pushState(stateObj, $("#estados option:selected").text(), "/estado/" + $("#estados").val());
+
 			if(data.key=="Estado") {
 				$("#mapa .Estado").css("fill","#fff");
 			} else {
@@ -74,7 +74,17 @@ $(document).ready( function() {
 	});
 	
 	$("#estados").change( function () { $(".button-seek").click(); });
-	$(".button-seek").click();
+	
+	if($("#showes").val() == "0") {
+		$("#results-estatal").hide();
+		$("#indice-nacional .more").hide();
+		$("#indice-estatal .close").hide();
+	} else {
+		$("#results-nacional").hide();
+		$(".button-seek").click();
+		$("#indice-nacional .close").hide();
+		$("#indice-estatal .more").hide();
+	}
 });
 
 var w = 550,

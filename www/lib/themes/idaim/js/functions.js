@@ -87,7 +87,7 @@ $(document).ready( function() {
 	}
 });
 
-var w = 550,
+var w = 450,
     h = 450,
     r = 450,
     x = d3.scale.linear().range([0, r]),
@@ -165,7 +165,7 @@ function zoom(d, i) {
 }
 
 
-var w2 = 550,
+var w2 = 450,
     h2 = 450,
     r2 = 450,
     x2 = d3.scale.linear().range([0, r2]),

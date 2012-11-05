@@ -31,8 +31,8 @@ circle.child {
   pointer-events: none;
 }
 
-#chart { float:left; margin:40px 0 0 70px; width:600px; height:600px; }
-#chart2 { float:left; margin:40px 0 0 25px; width:600px; height:600px; }
+#chart { float:left; margin:40px 0 0 20px; width:450px; height:600px; }
+#chart2 { float:left; margin:40px 0 0 25px; width:450px; height:600px; }
 
 #nchart circle { fill: #429cce; }
 #nchart circle.parent { fill: #6fbdee; color:#fff !important; }

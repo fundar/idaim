@@ -157,7 +157,7 @@ class Default_Controller extends ZP_Controller {
 		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][21]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][21]) . '", "desc" : "Modalidades para presentar solicitudes de AI"},';
 		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][22]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][22]) . '", "desc" : "Requisitos para solicitar información"},';
 		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][23]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][23]) . '", "desc" : "Regulación de  respuestas a solicitudes de AI"},';
-		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][24]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][24]) . '", "desc" : "Cuotas por la reproducción de información solicitada"}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][24]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][24]) . '", "desc" : "Cuotas por la reproducción de información"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';

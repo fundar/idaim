@@ -7,6 +7,13 @@ circle.parent {
   stroke: steelblue;
 }
 
+.c109 { fill: #4042e3 !important; }
+.c87 { fill: #01a8dc !important; }
+.c65 { fill: #e5a649 !important; }
+.c43 { fill: #e48148 !important; }
+.c21 { fill: #e36914 !important; }
+.c0 { fill: #ed1f1f !important; }
+
 #chart  circle { fill: #10b9da; }
 #chart  circle.parent { fill: #9bcee1; }
 #chart text.parent { fill: #1f77b4; color:#fff !important;}

@@ -133,6 +133,8 @@ function chart(obj) {
       .attr("y", function(d) { return d.y; })
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
+      .on("mouseover", function(d) { if(d.desc != undefined) { $(this).text(d.desc); } })
+      .on("mouseout", function(d) { if(d.desc != undefined) { $(this).text(d.name); } })
       .style("opacity", function(d) { return d.r > 60 ? 1 : 0; })
       .text(function(d) { return d.name; });
 
@@ -195,7 +197,7 @@ function chart2(obj) {
   vis2.selectAll("circle")
       .data(nodes2)
     .enter().append("svg:circle")
-      .attr("class", function(d2) { return d2.children ? "parent" : "child"; })
+      .attr("class", function(d2) { if(d2.clas != undefined) { return d2.children ? "parent " + d2.clas : "child " + d2.clas;   } else { return d2.children ? "parent" : "child"; } })
       .attr("cx", function(d2) { return d2.x; })
       .attr("cy", function(d2) { return d2.y; })
       .attr("r", function(d2) { return d2.r; })
@@ -209,6 +211,8 @@ function chart2(obj) {
       .attr("y", function(d2) { return d2.y; })
       .attr("dy", ".22em")
       .attr("text-anchor", "middle")
+      .on("mouseover", function(d2) { if(d2.desc != undefined) { $(this).text(d2.desc); } })
+      .on("mouseout", function(d2) { if(d2.desc != undefined) { $(this).text(d2.name); } })
       .style("opacity", function(d2) { return d2.r > 60 ? 1 : 0; })
       .text(function(d2) { return d2.name; });
 		

@@ -16,7 +16,7 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->var_internas    = array("A", "B", "C", "D", "E", "F", "G", "H", "I");
 		$this->var_principales = array("1", "2", "3");
-		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal");
+		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas", "Federal");
 		$this->id_estados = array("AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL","DF","DGO","MEX","GTO","GRO","HGO","JAL","MICH","MOR","NAY","NL","OAX","PUE","QUE","QROO","SLP","SIN","SON","TAB","TAMPS","TLAX","VER","YUC","ZAC", "Estado");
 		
 		/*
@@ -27,6 +27,25 @@ class Default_Controller extends ZP_Controller {
 		 
 		*/
 	}
+	
+	/*
+	public function index() {
+		foreach($this->estados as $estado) {
+			$data[$estado] = $this->Default_Model->getIndices($estado);
+		}
+		
+		arsort($data);
+		
+		$i=1;
+		foreach($data as $key => $value) {
+			echo $i . ".- " . $key . " " . $value . "<br/>";
+			$i++;
+		}
+		
+		____($key);
+		____($data);
+	}
+	*/
 	
 	public function index() {
 		$vars["view"] = $this->view("home", TRUE);
@@ -73,26 +92,26 @@ class Default_Controller extends ZP_Controller {
 		$json .= '	{';
 		$json .= '	 "name": "Positivación del DAI - ' . $this->convert($data["variablesi"][$type]["A"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "1.- ' . $this->convert($data["indicadores"][$type][1]) . '", "size": ' . $this->convert2($data["indicadores"][$type][1]) . '},';
-		$json .= '	  {"name": "2.- ' . $this->convert($data["indicadores"][$type][2]) . '", "size": ' . $this->convert2($data["indicadores"][$type][2]) . '},';
-		$json .= '	  {"name": "3.- ' . $this->convert($data["indicadores"][$type][3]) . '", "size": ' . $this->convert2($data["indicadores"][$type][3]) . '},';
-		$json .= '	  {"name": "4.- ' . $this->convert($data["indicadores"][$type][4]) . '", "size": ' . $this->convert2($data["indicadores"][$type][4]) . '},';
-		$json .= '	  {"name": "5.- ' . $this->convert($data["indicadores"][$type][5]) . '", "size": ' . $this->convert2($data["indicadores"][$type][5]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][1]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][1]) . '","desc" : "Conceptualización e interpretación del DAI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][2]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][2]) . '","desc" : "Objetivos de las legislaciones de AI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][3]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][3]) . '","desc" : "SO"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][4]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][4]) . '","desc" : "Obligaciones de los SO"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][5]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][5]) . '","desc" : "Sujetos del derecho"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Información restringida - ' . $this->convert($data["variablesi"][$type]["B"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "6.- ' . $this->convert($data["indicadores"][$type][6]) . '", "size": ' . $this->convert2($data["indicadores"][$type][6]) . '},';
-		$json .= '	  {"name": "7.- ' . $this->convert($data["indicadores"][$type][7]) . '", "size": ' . $this->convert2($data["indicadores"][$type][7]) . '},';
-		$json .= '	  {"name": "8.- ' . $this->convert($data["indicadores"][$type][8]) . '", "size": ' . $this->convert2($data["indicadores"][$type][8])  . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][6]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][6]) . '", "desc" : "Criterios legales para restringir información"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][7]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][7]) . '", "desc" : "Lista de excepciones"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][8]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][8]) . '", "desc" : "Prueba tripartita"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Sanciones - ' . $this->convert($data["variablesi"][$type]["C"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "9.- ' . $this->convert($data["indicadores"][$type][9]) . '", "size": ' . $this->convert2($data["indicadores"][$type][9]) . '},';
-		$json .= '	  {"name": "10.- ' . $this->convert($data["indicadores"][$type][10]) . '", "size": ' . $this->convert2($data["indicadores"][$type][10]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][9]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][9]) . '", "desc" : "Sanciones establecidas"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][10]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][10]) . '", "desc" : "Responsabilidades específicas"}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
@@ -104,26 +123,26 @@ class Default_Controller extends ZP_Controller {
 		$json .= '	{';
 		$json .= '	 "name": "Instituciones internas de acceso a la información - ' . $this->convert($data["variablesi"][$type]["D"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "11.- ' . $this->convert($data["indicadores"][$type][11]) . '", "size": ' . $this->convert2($data["indicadores"][$type][11]) . '},';
-		$json .= '	  {"name": "12.- ' . $this->convert($data["indicadores"][$type][12]) . '", "size": ' . $this->convert2($data["indicadores"][$type][12]) . '},';
-		$json .= '	  {"name": "13.- ' . $this->convert($data["indicadores"][$type][13]) . '", "size": ' . $this->convert2($data["indicadores"][$type][13]) . '},';
-		$json .= '	  {"name": "14.- ' . $this->convert($data["indicadores"][$type][14]) . '", "size": ' . $this->convert2($data["indicadores"][$type][14]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][11]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][11]) . '", "desc" : "Integración de las OI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][12]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][12]) . '", "desc" : "Atribuciones de las OI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][13]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][13]) . '", "desc" : "Itegración de los CI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][14]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][14]) . '", "desc" : "Facultades de los CI"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Promoción del DAI - ' . $this->convert($data["variablesi"][$type]["E"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "15.- ' . $this->convert($data["indicadores"][$type][15]) . '", "size": ' . $this->convert2($data["indicadores"][$type][15]) . '},';
-		$json .= '	  {"name": "16.- ' . $this->convert($data["indicadores"][$type][16]) . '", "size": ' . $this->convert2($data["indicadores"][$type][16]) . '},';
-		$json .= '	  {"name": "17.- ' . $this->convert($data["indicadores"][$type][17]) . '", "size": ' . $this->convert2($data["indicadores"][$type][17]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][15]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][15]) . '", "desc" : "Acciones de sensibilización"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][16]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][16]) . '", "desc" : "Capacitación"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][17]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][17]) . '", "desc" : "Rendición de cuentas"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Órganos garantes - ' . $this->convert($data["variablesi"][$type]["F"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "18.- ' . $this->convert($data["indicadores"][$type][18]) . '", "size": ' . $this->convert2($data["indicadores"][$type][18]) . '},';
-		$json .= '	  {"name": "19.- ' . $this->convert($data["indicadores"][$type][19]) . '", "size": ' . $this->convert2($data["indicadores"][$type][19]) . '},';
-		$json .= '	  {"name": "20.- ' . $this->convert($data["indicadores"][$type][20]) . '", "size": ' . $this->convert2($data["indicadores"][$type][20]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][18]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][18]) . '", "desc" : "Naturaleza jurídica"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][19]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][19]) . '", "desc" : "Facultad de los OG"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][20]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][20]) . '", "desc" : "Órganos de conducción de los OG"}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
@@ -135,26 +154,26 @@ class Default_Controller extends ZP_Controller {
 		$json .= '	{';
 		$json .= '	 "name": "Procedimientos de acceso a la información - ' . $this->convert($data["variablesi"][$type]["G"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "21.- ' . $this->convert($data["indicadores"][$type][21]) . '", "size": ' . $this->convert2($data["indicadores"][$type][21]) . '},';
-		$json .= '	  {"name": "22.- ' . $this->convert($data["indicadores"][$type][22]) . '", "size": ' . $this->convert2($data["indicadores"][$type][22]) . '},';
-		$json .= '	  {"name": "23.- ' . $this->convert($data["indicadores"][$type][23]) . '", "size": ' . $this->convert2($data["indicadores"][$type][23]) . '},';
-		$json .= '	  {"name": "24.- ' . $this->convert($data["indicadores"][$type][24]) . '", "size": ' . $this->convert2($data["indicadores"][$type][24]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][21]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][21]) . '", "desc" : "Modalidades para presentar solicitudes de AI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][22]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][22]) . '", "desc" : "Requisitos para solicitar información"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][23]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][23]) . '", "desc" : "Regulación de  respuestas a solicitudes de AI"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][24]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][24]) . '", "desc" : "Cuotas por la reproducción de información solicitada"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Procedimientos de revisión - ' . $this->convert($data["variablesi"][$type]["H"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "25.- ' . $this->convert($data["indicadores"][$type][25]) . '", "size": ' . $this->convert2($data["indicadores"][$type][25]) . '},';
-		$json .= '	  {"name": "26.- ' . $this->convert($data["indicadores"][$type][26]) . '", "size": ' . $this->convert2($data["indicadores"][$type][26]) . '},';
-		$json .= '	  {"name": "27.- ' . $this->convert($data["indicadores"][$type][27]) . '", "size": ' . $this->convert2($data["indicadores"][$type][27]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][25]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][25]) . '", "desc" : "Requisitos para promover recursos de revisión"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][26]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][26]) . '", "desc" : "Plazos para promover recursos de revisión"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][27]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][27]) . '", "desc" : "Garantías jurídicas del recurso de revisión"}';
 		$json .= '	 ]';
 		$json .= '	},';
 		$json .= '	{';
 		$json .= '	 "name": "Difusión proactiva de información pública - ' . $this->convert($data["variablesi"][$type]["I"]) . '",';
 		$json .= '	 "children": [';
-		$json .= '	  {"name": "28.- ' . $this->convert($data["indicadores"][$type][28]) . '", "size": ' . $this->convert2($data["indicadores"][$type][28]) . '},';
-		$json .= '	  {"name": "29.- ' . $this->convert($data["indicadores"][$type][29]) . '", "size": ' . $this->convert2($data["indicadores"][$type][29]) . '},';
-		$json .= '	  {"name": "30.- ' . $this->convert($data["indicadores"][$type][30]) . '", "size": ' . $this->convert2($data["indicadores"][$type][30]) . '}';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][28]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][28]) . '", "desc" : "OT"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][29]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][29]) . '", "desc" : "Modalidades de difusión"},';
+		$json .= '	  {"name": "' . $this->convert($data["indicadores"][$type][30]) . '", "size": 9000, "clas" : "' . $this->clas($data["indicadores"][$type][30]) . '", "desc" : "Reglas para la publicación de OT"}';
 		$json .= '	 ]';
 		$json .= '	}';
 		$json .= '   ]';
@@ -177,79 +196,92 @@ class Default_Controller extends ZP_Controller {
 		
 		return $number;
 	}
+	
+	public function clas($data) {
+		$number = substr($data * 10, 0, 3);
+		
+		if($number>=9 and $number<=10) return "c109";
+		if($number>=7 and $number<=8.9) return "c87";
+		if($number>=5 and $number<=6.9) return "c65";
+		if($number>=3 and $number<=4.9) return "c43";
+		if($number>=1 and $number<=2.9) return "c21";
+		if($number>=0 and $number<=0.9) return "c0";
+		
+		return $number;
+	}
 }
 
-/*
+/* Base
 {
  "name": "",
  "children": [
   {
-   "name": "Disposiciones Normativas - ' . $data["variablesp"]["progresivo"][1] . '",
+   "name": "Disposiciones Normativas - 6.5",
    "children": [
     {
-     "name": "Positivación del DAI - ' . $data["variablesi"]["progresivo"]["A"] . '",
+     "name": "Positivación del DAI - 7.0",
      "children": [
-      {"name": "1.- ' . $data["variablesi"]["progresivo"][1] . '", "size": 10000},
-      {"name": "2.- ' . $data["variablesi"]["progresivo"][2] . '", "size": 9000},
-      {"name": "3.- ' . $data["variablesi"]["progresivo"][3] . '", "size": 8000},
-      {"name": "4.- ' . $data["variablesi"]["progresivo"][4] . '", "size": 7000},
-      {"name": "5.- ' . $data["variablesi"]["progresivo"][5] . '", "size": 6000}
+      {"name": "1.- 6.3", "size": 10000},
+      {"name": "2.- 6.2", "size": 9000},
+      {"name": "3.- 7.5", "size": 8000},
+      {"name": "4.- 6.8", "size": 7000},
+      {"name": "5.- 8.2", "size": 6000}
      ]
     },
     {
-     "name": "Información restringida - ' . $data["variablesi"]["progresivo"]["B"] . '",
+     "name": "Información restringida - 7.8",
      "children": [
-      {"name": "6.- ' . $data["variablesi"]["progresivo"][6] . '", "size": 10000},
-      {"name": "7.- ' . $data["variablesi"]["progresivo"][7] . '", "size": 9000},
-      {"name": "8.- ' . $data["variablesi"]["progresivo"][8] . '", "size": 8000}
+      {"name": "6.- 7.1", "size": 10000},
+      {"name": "7.- 8.2", "size": 9000},
+      {"name": "8.- 8.2", "size": 8000}
      ]
     },
     {
-     "name": "Sanciones al incumplimiento de la ley - ' . $data["variablesi"]["progresivo"]["C"] . '",
+     "name": "Sanciones al incumplimiento de la ley - 4.7",
      "children": [
-      {"name": "9.- ' . $data["variablesi"]["progresivo"][9] . '", "size": 10000},
-      {"name": "10.- ' . $data["variablesi"]["progresivo"][10] . '", "size": 10000}
+      {"name": "9.- 6.3", "size": 10000},
+      {"name": "10.- 3.1", "size": 10000}
      ]
     }
    ]
   },
   
   {
-   "name": "Diseño institucional - ' . $data["variablesp"]["progresivo"][2] . '",
+   "name": "Diseño institucional - 7.0",
    "children": [
     {
-     "name": "Instituciones internas de acceso a la información - ' . $data["variablesi"]["progresivo"]["D"] . '",
+     "name": "Instituciones internas de acceso a la información - 5.9",
      "children": [
-      {"name": "11.- ' . $data["variablesi"]["progresivo"][11] . '", "size": 10000},
-      {"name": "12.- ' . $data["variablesi"]["progresivo"][12] . '", "size": 9000},
-      {"name": "13.- ' . $data["variablesi"]["progresivo"][13] . '", "size": 8000},
-      {"name": "14.- ' . $data["variablesi"]["progresivo"][14] . '", "size": 7000}
+      {"name": "11.- 9.6", "size": 10000},
+      {"name": "12.- 7.3", "size": 9000},
+      {"name": "13.- 4.5", "size": 8000},
+      {"name": "14.- 2.3", "size": 7000}
      ]
     },
     {
-     "name": "Promoción del DAI - ' . $data["variablesi"]["progresivo"]["E"] . '",
+     "name": "Promoción del DAI - 7.9",
      "children": [
-      {"name": "15.- ' . $data["variablesi"]["progresivo"][15] . '", "size": 10000},
-      {"name": "16.- ' . $data["variablesi"]["progresivo"][16] . '", "size": 9000},
-      {"name": "17.- ' . $data["variablesi"]["progresivo"][17] . '", "size": 8000}
+      {"name": "15.- 9.3", "size": 10000},
+      {"name": "16.- 7.9", "size": 9000},
+      {"name": "17.- 6.4", "size": 8000}
      ]
     },
     {
-     "name": "Órganos garantes - ' . $data["variablesi"]["progresivo"]["F"] . '",
+     "name": "Órganos garantes - 7.3",
      "children": [
-      {"name": "18.- ' . $data["variablesi"]["progresivo"][18] . '", "size": 10000},
-      {"name": "19.- ' . $data["variablesi"]["progresivo"][19] . '", "size": 9000},
-      {"name": "20.- ' . $data["variablesi"]["progresivo"][20] . '", "size": 8000}
+      {"name": "18.- 0", "size": 10000},
+      {"name": "19.- 6.9", "size": 9000},
+      {"name": "20.- 7.0", "size": 8000}
      ]
     }
    ]
   },
   
   {
-   "name": "Procedimientos - ' . $data["variablesp"]["progresivo"][2] . '",
+   "name": "Procedimientos - 7.2",
    "children": [
     {
-     "name": "Procedimientos de acceso a la información - ' . $data["variablesi"]["progresivo"]["G"] . '",
+     "name": "Procedimientos de acceso a la información - 7.0",
      "children": [
       {"name": "21.- ' . $data["variablesi"]["progresivo"][21] . '", "size": 10000},
       {"name": "22.- ' . $data["variablesi"]["progresivo"][22] . '", "size": 9000},

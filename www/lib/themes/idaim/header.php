@@ -5,6 +5,7 @@
 		<title><?php print $this->getTitle(); ?></title>
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/pack.css" rel="stylesheet">
+		<link href="<?php print $this->themePath; ?>/css/tabs.css" rel="stylesheet">
 		<script src="<?php print $this->themePath; ?>/js/d3.v2.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>

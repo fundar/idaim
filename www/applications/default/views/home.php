@@ -807,14 +807,23 @@
 	</div>
 	
 	<div class="clear"></div>
-	
-	<div id="burbujas">
-		<div id="pro-chart">
-			<div id="chart"></div>
+	<section class="tabs">
+		<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+        <label for="tab-1" class="tab-label-1">Base</label>
+
+		<input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+        <label for="tab-2" class="tab-label-2">Progresivo</label>
+        
+        <div class="clear"></div>
+        
+		<div id="burbujas">
+			<div id="pro-chart">
+				<div id="chart"></div>
+			</div>
+			
+			<div id="base-chart">
+				<div id="chart2"></div>
+			</div>
 		</div>
-		
-		<div id="base-chart">
-			<div id="chart2"></div>
-		</div>
-	</div>
+	</section>
 </div>

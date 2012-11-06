@@ -2,6 +2,18 @@ $(document).ready( function() {
 	$(".loading").hide();
 	$("#pro-chart").hide();	
 	
+	$("#tab-1").click( function() {
+		$("#base-chart").show();
+		$("#pro-chart").hide();	
+	});
+	
+	
+	$("#tab-2").click( function() {
+		$("#pro-chart").show();	
+		$("#base-chart").hide();
+	});
+	
+	
 	// Nacional
 	$("#indice-nacional .more").click( function() {
 		$("#results-estatal").slideUp("slow");
@@ -88,9 +100,9 @@ $(document).ready( function() {
 	}
 });
 
-var w = 450,
-    h = 450,
-    r = 450,
+var w = 650,
+    h = 500,
+    r = 500,
     x = d3.scale.linear().range([0, r]),
     y = d3.scale.linear().range([0, r]),
     node,
@@ -167,9 +179,9 @@ function zoom(d, i) {
 }
 
 
-var w2 = 600,
-    h2 = 600,
-    r2 = 550,
+var w2 = 650,
+    h2 = 500,
+    r2 = 500,
     x2 = d3.scale.linear().range([0, r2]),
     y2 = d3.scale.linear().range([0, r2]),
     node2,

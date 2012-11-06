@@ -37,10 +37,10 @@ circle.child {
 #nchart circle { fill: #429cce; }
 #nchart circle.parent { fill: #6fbdee; color:#fff !important; }
 #nchart text.parent { fill: #fff; }
-#nchart { float:left; margin:40px 0 0 70px; width:600px; height:600px; }
+#nchart { float:left; margin:40px 0 0 16px; width:450px; height:600px; }
 
 
 #nchart2 circle { fill: #429cce; }
 #nchart2 circle.parent { fill: #6fbdee; color:#fff !important; }
 #nchart2 text.parent { fill: #fff; }
-#nchart2 { float:left; margin:40px 0 0 25px; width:600px; height:600px; }
+#nchart2 { float:left; margin:40px 0 0 25px; width:450px; height:600px; }

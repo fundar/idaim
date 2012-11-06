@@ -51,7 +51,7 @@ $(document).ready( function() {
 			data = JSON.parse(response);
 			
 			var stateObj = { foo: $("#estados option:selected").text() };
-			history.pushState(stateObj, $("#estados option:selected").text(), "/idaim/estado/" + $("#estados").val());
+			history.pushState(stateObj, $("#estados option:selected").text(), "/estado/" + $("#estados").val());
 
 			if(data.key=="Estado") {
 				$("#mapa .Estado").css("fill","#fff");
@@ -131,8 +131,9 @@ function chart(obj) {
       .attr("class", function(d) { return d.children ? "parent" : "child"; })
       .attr("x", function(d) { return d.x; })
       .attr("y", function(d) { return d.y; })
-      .attr("dy", ".35em")
+      .attr("dy", ".25em")
       .attr("text-anchor", "middle")
+      .attr("font-size", 10)
       .on("mouseover", function(d) { if(d.desc != undefined) { $(this).text(d.desc); } })
       .on("mouseout", function(d) { if(d.desc != undefined) { $(this).text(d.name); } })
       .style("opacity", function(d) { return d.r > 60 ? 1 : 0; })
@@ -158,7 +159,7 @@ function zoom(d, i) {
   t.selectAll("text")
       .attr("x", function(d) { return x(d.x); })
       .attr("y", function(d) { return y(d.y); })
-      .style("opacity", function(d) { return k * d.r > 60 ? 1 : 0; });
+      .style("opacity", function(d) { return k * d.r > 20 ? 1 : 0; });
 
   node = d;
   d3.event.stopPropagation();
@@ -209,10 +210,19 @@ function chart2(obj) {
       .attr("class", function(d2) { return d2.children ? "parent" : "child"; })
       .attr("x", function(d2) { return d2.x; })
       .attr("y", function(d2) { return d2.y; })
-      .attr("dy", ".22em")
+      .attr("dy", ".10em")
       .attr("text-anchor", "middle")
-      .on("mouseover", function(d2) { if(d2.desc != undefined) { $(this).text(d2.desc); } })
-      .on("mouseout", function(d2) { if(d2.desc != undefined) { $(this).text(d2.name); } })
+      .attr("font-size", 12)
+      .on("mouseover", function(d2) { 
+			if(d2.desc != undefined) { 
+				$(this).text(d2.desc);
+			} 
+	   })
+      .on("mouseout", function(d2) { 
+			if(d2.desc != undefined) { 
+				$(this).text(d2.name);
+			} 
+	  })
       .style("opacity", function(d2) { return d2.r > 60 ? 1 : 0; })
       .text(function(d2) { return d2.name; });
 		
@@ -238,7 +248,25 @@ function zoom2(d, i) {
   t.selectAll("text")
       .attr("x", function(d) { return x2(d.x); })
       .attr("y", function(d) { return y2(d.y); })
-      .style("opacity", function(d) { return k * d.r > 60 ? 1 : 0; });
+      .style("opacity", function(d) { 
+			if(k * d.r > 60) {
+				return 1;
+			} else {
+				if(k * d.r > 32) {
+					if(d.desc == undefined) {
+						return 0;
+					} else {
+						if(d.size > 6000) {
+							return 0;
+						}
+						console.log(d);
+						return 1;
+					}
+				} else {
+					return 0;
+				}
+			}
+	  });
 	
   node2 = d;
   d3.event.stopPropagation();

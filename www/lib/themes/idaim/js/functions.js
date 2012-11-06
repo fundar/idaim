@@ -1,6 +1,7 @@
 $(document).ready( function() {
 	$(".loading").hide();
-		
+	$("#pro-chart").hide();	
+	
 	// Nacional
 	$("#indice-nacional .more").click( function() {
 		$("#results-estatal").slideUp("slow");
@@ -166,9 +167,9 @@ function zoom(d, i) {
 }
 
 
-var w2 = 450,
-    h2 = 450,
-    r2 = 450,
+var w2 = 600,
+    h2 = 600,
+    r2 = 550,
     x2 = d3.scale.linear().range([0, r2]),
     y2 = d3.scale.linear().range([0, r2]),
     node2,

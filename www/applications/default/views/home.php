@@ -809,7 +809,12 @@
 	<div class="clear"></div>
 	
 	<div id="burbujas">
-		<div id="chart"></div>
-		<div id="chart2"></div>
+		<div id="pro-chart">
+			<div id="chart"></div>
+		</div>
+		
+		<div id="base-chart">
+			<div id="chart2"></div>
+		</div>
 	</div>
 </div>

@@ -19,14 +19,15 @@
 .tabs input#tab-2{
 	left: 120px;
 }
-.tabs input#tab-3{
-	left: 240px;
+.tabs input#ntab-2{
+	left: 120px;
 }
 .tabs input#tab-4{
 	left: 360px;
 }
 
 .tabs label {
+	cursor:pointer;
 	background: #5ba4a4;
 	background: -moz-linear-gradient(top, #5ba4a4 0%, #4e8c8a 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ba4a4), color-stop(100%,#4e8c8a));

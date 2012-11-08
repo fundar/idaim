@@ -16,7 +16,8 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->var_internas    = array("A", "B", "C", "D", "E", "F", "G", "H", "I");
 		$this->var_principales = array("1", "2", "3");
-		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas", "Federal");
+		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas");
+		$this->claves  = array("01","02","03","04","07","08","05","06","09","10","15","11","12","13","14","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32");
 		$this->id_estados = array("AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL","DF","DGO","MEX","GTO","GRO","HGO","JAL","MICH","MOR","NAY","NL","OAX","PUE","QUE","QROO","SLP","SIN","SON","TAB","TAMPS","TLAX","VER","YUC","ZAC", "Estado");
 		
 		/*
@@ -37,10 +38,31 @@ class Default_Controller extends ZP_Controller {
 		arsort($data);
 		
 		$i=1;
+		$es="";
+		
 		foreach($data as $key => $value) {
-			echo $i . ".- " . $key . " " . $value . "<br/>";
-			$i++;
+			$es .=   $key . ",";
 		}
+		
+		echo trim($es, ",");
+		
+		$val ="";
+		foreach($data as $key => $value) {
+			$val .=   $value . ",";
+		}
+		
+		echo "<br/>";
+		echo trim($val, ",");
+		
+		
+		$clv ="";
+		foreach($data as $key => $value) {
+			 $posicion = array_search($key, $this->estados);
+			 $clv .= $this->claves[$posicion] . ",";
+		}
+		
+		echo "<br/>";
+		echo trim($clv, ",");
 		
 		____($key);
 		____($data);

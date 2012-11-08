@@ -1,16 +1,26 @@
 $(document).ready( function() {
 	$(".loading").hide();
 	$("#pro-chart").hide();	
+	$("#npro-chart").hide();
 	
 	$("#tab-1").click( function() {
 		$("#base-chart").show();
 		$("#pro-chart").hide();	
 	});
 	
-	
 	$("#tab-2").click( function() {
 		$("#pro-chart").show();	
 		$("#base-chart").hide();
+	});
+	
+	$("#ntab-1").click( function() {
+		$("#nbase-chart").show();
+		$("#npro-chart").hide();	
+	});
+	
+	$("#ntab-2").click( function() {
+		$("#npro-chart").show();	
+		$("#nbase-chart").hide();
 	});
 	
 	
@@ -64,7 +74,7 @@ $(document).ready( function() {
 			data = JSON.parse(response);
 			
 			var stateObj = { foo: $("#estados option:selected").text() };
-			history.pushState(stateObj, $("#estados option:selected").text(), "/idaim/estado/" + $("#estados").val());
+			history.pushState(stateObj, $("#estados option:selected").text(), "/estado/" + $("#estados").val());
 
 			if(data.key=="Estado") {
 				$("#mapa .Estado").css("fill","#fff");

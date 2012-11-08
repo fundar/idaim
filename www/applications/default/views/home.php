@@ -387,14 +387,28 @@
 	
 	<div class="clear"></div>
 	
-	<div id="burbujas">
-		<div id="nchart">
-			 <script src="<?php print $this->themePath; ?>/js/pack.js"></script>
+	<section class="tabs">
+		<input id="ntab-1" type="radio" name="nradio-set" class="tab-selector-1" checked="checked" />
+        <label for="ntab-1" class="tab-label-1">Base</label>
+
+		<input id="ntab-2" type="radio" name="nradio-set" class="tab-selector-2" />
+        <label for="ntab-2" class="tab-label-2">Progresivo</label>
+        
+        <div class="clear"></div>
+        
+		<div id="burbujas">
+			<div id="npro-chart">
+				<div id="nchart">
+					 <script src="<?php print $this->themePath; ?>/js/pack.js"></script>
+				</div>
+			</div>
+			<div id="nbase-chart">
+				<div id="nchart2">
+					 <script src="<?php print $this->themePath; ?>/js/pack2.js"></script>
+				</div>
+			</div>
 		</div>
-		<div id="nchart2">
-			 <script src="<?php print $this->themePath; ?>/js/pack2.js"></script>
-		</div>
-	</div>
+	</section>
 </div>
 
 <div class="clear"></div>

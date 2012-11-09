@@ -1,4 +1,4 @@
-body { font-family: arial, "PT Sans Caption", arial;  }
+body { font-family: arial, "PT Sans Caption", arial; margin:0; }
 #container { width:100%; height:auto; margin:0 auto; } 
 
 #header { width:100%; height:159px; background-color:#fff; border-bottom:2px solid #d0d0d0; }

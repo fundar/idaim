@@ -100,7 +100,8 @@ $(document).ready( function() {
 	
 	if($("#showes").val() == "0") {
 		$("#results-estatal").hide();
-		$("#indice-nacional .more").hide();
+		$("#results-nacional").hide();
+		$("#indice-nacional .close").hide();
 		$("#indice-estatal .close").hide();
 	} else {
 		$("#results-nacional").hide();

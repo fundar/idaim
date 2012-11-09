@@ -31,8 +31,6 @@
 	</div>
 </div>
 
-<div id="divisor"></div>
-
 <div id="results-nacional">
 	<div id="results-nacional-content">
 		<div id="top-resutls">

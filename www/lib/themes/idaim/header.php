@@ -6,11 +6,13 @@
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/pack.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/tabs.css" rel="stylesheet">
+		<link href="<?php print $this->themePath; ?>/css/dart.css" rel="stylesheet">
 		<script src="<?php print $this->themePath; ?>/js/d3.v2.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
-		
+		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<?php print $this->getCSS(); ?>
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -21,7 +23,7 @@
 	</head>
 
 	
-<body>
+<body onload="init();">
 	<div id="container">
 		<div id="header">
 			<div id="logo">

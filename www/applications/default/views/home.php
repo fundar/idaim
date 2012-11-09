@@ -7,6 +7,10 @@
 
 <div id="results-graph">
 	<h2>Ranking general de las entidades</h2>
+	<div id="container-r"></div>
+    <div id="rank-estados"></div>
+    <div id="bar-colors"></div>
+    <div id="interval-rank"></div>
 </div>
 
 <div id="indice-nacional">

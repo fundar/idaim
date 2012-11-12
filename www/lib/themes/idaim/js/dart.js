@@ -30,7 +30,6 @@ function init() {
 		$("#interval-rank").html("<span>4.00 a 5.99</span>")
 		$("#rank-estados").html("<ul><li>Quintana Roo</li><li>Guanajuato</li><li>Queretaro</li></ul>");
 	});
-
 	
 	/* Circle 2 */
 	var circle2 = new Kinetic.Shape({

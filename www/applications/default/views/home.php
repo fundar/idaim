@@ -2,7 +2,7 @@
 	<div id="message-content">
 		<h2>"En est&aacute; parte se desplegar&aacute; datos que destaquen del &iacute;ndice de transparencia"</h2>
 		<div class="clear"></div>
-		<a href="/ranking" title="Descarga el ranking final"   class="downloads ranking-download margin-download ">Descarga el ranking final</a>
+		<a href="/ranking" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
 		<a href="/indice" title="Descarga la matriz del IDAIM" class="downloads indice-download">Descarga la matriz del IDAIM</a>
 	</div>
 </div>

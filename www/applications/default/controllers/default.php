@@ -18,7 +18,7 @@ class Default_Controller extends ZP_Controller {
 		$this->var_principales = array("1", "2", "3");
 		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas");
 		$this->claves  = array("01","02","03","04","07","08","05","06","09","10","15","11","12","13","14","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32");
-		$this->id_estados = array("AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL","DF","DGO","MEX","GTO","GRO","HGO","JAL","MICH","MOR","NAY","NL","OAX","PUE","QUE","QROO","SLP","SIN","SON","TAB","TAMPS","TLAX","VER","YUC","ZAC", "Estado");
+		$this->id_estados = array("aguascalientes","bcn","bcs","campeche","chiapas","chihuahua","coahuila","colima","df","durango","edo_mexico","guanajuato","guerrero","hidalgo","jalisco","michoacan","morelos","nayarit","nuevo_leon","oaxaca","puebla","queretaro","quntana_roo","slp","sinaloa","sonora","tabasco","tamaulipas","tlaxcala","veracruz","yucatan","zacatecas", "Estado");
 		
 		/*
 			var estados_abr = [ "AGS","BC","BCS","CAM","CHIS","CHIH","COA","COL",

@@ -75,12 +75,12 @@ $(document).ready( function() {
 			
 			var stateObj = { foo: $("#estados option:selected").text() };
 			history.pushState(stateObj, $("#estados option:selected").text(), "/estado/" + $("#estados").val());
-
+			console.log(data.key);
+			
 			if(data.key=="Estado") {
-				$("#mapa .Estado").css("fill","#fff");
+				$("#mapa").html("");
 			} else {
-				$("#mapa .Estado").css("fill","#00b1b0");
-				$("#mapa #" + data.key).css("fill","#fff");
+				$("#mapa").html('<img src="'+themePath+'/css/images/estados/'+data.key+'.png" title="'+$("#estados option:selected").text()+'" />');
 			}
 		
 			$("#name-estado").html($("#estados option:selected").text());

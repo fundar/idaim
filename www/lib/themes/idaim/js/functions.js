@@ -75,11 +75,11 @@ $(document).ready( function() {
 			
 			var stateObj = { foo: $("#estados option:selected").text() };
 			history.pushState(stateObj, $("#estados option:selected").text(), webURL + "/estado/" + $("#estados").val());
-			console.log(data.key);
 			
 			if(data.key=="Estado") {
 				$("#mapa").html("");
 			} else {
+				$("#button-download").show();
 				$("#mapa").html('<img src="'+themePath+'/css/images/estados/'+data.key+'.png" title="'+$("#estados option:selected").text()+'" />');
 			}
 		
@@ -100,6 +100,8 @@ $(document).ready( function() {
 	
 	if($("#showes").val() == "0") {
 		$("#results-estatal").hide();
+		$("#results-estatal .tabs").hide();
+		$("#button-download").hide();
 		$("#results-nacional").hide();
 		$("#indice-nacional .close").hide();
 		$("#indice-estatal .close").hide();

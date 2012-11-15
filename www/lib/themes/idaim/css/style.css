@@ -37,7 +37,7 @@ h3 { float:left; color:#feffff; }
 
 #form-estados { float:right; width:498px; text-transform:uppercase; }
 #form-estados select { float:right; margin:6px 20px 0 0; width:229px; height:28px; background-color:#fff; border:0; padding:4px; color:#606060; text-transform:uppercase; }
-#resultados-estado { float:left; margin:10px 0 0 120px; width:840px; height:435px; 	-webkit-box-shadow: 0 5px 6px -6px #fff; -moz-box-shadow: 0 5px 6px -6px #fff; box-shadow: 0 5px 6px -6px #fff; }
+#resultados-estado { float:left; margin:10px 0 0 120px; width:840px; height:370px; -webkit-box-shadow: 0 5px 6px -6px #fff; -moz-box-shadow: 0 5px 6px -6px #fff; box-shadow: 0 5px 6px -6px #fff; }
 #form-estados select option { background-color:#fff; list-style: none outside none; text-transform:uppercase; }
 
 #desc-estado { float:left; width:340px; height:auto; margin-top:20px; }

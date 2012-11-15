@@ -34,7 +34,7 @@
 <div id="results-nacional">
 	<div id="results-nacional-content">
 		<div id="top-resutls">
-			<a class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
+			<a id="button-download-nacional" class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
 		</div>
 				
 			<div class="clear"></div>
@@ -95,7 +95,7 @@
 <div id="results-estatal">
 	<div id="results-estatal-content">
 		<div id="top-resutls">
-			<a class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
+			<a id="button-download"  class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
 			
 			<div id="form-estados">
 				<div class="loading"></div>

@@ -15,6 +15,7 @@
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<?php print $this->getCSS(); ?>
 		<script>
+			var webURL    = "<?php echo get("webURL");?>";
 			var themePath = "<?php echo $this->themePath; ?>";
 		</script>
 	</head>

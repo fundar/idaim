@@ -74,7 +74,7 @@ $(document).ready( function() {
 			data = JSON.parse(response);
 			
 			var stateObj = { foo: $("#estados option:selected").text() };
-			history.pushState(stateObj, $("#estados option:selected").text(), "/estado/" + $("#estados").val());
+			history.pushState(stateObj, $("#estados option:selected").text(), webURL + "/estado/" + $("#estados").val());
 			console.log(data.key);
 			
 			if(data.key=="Estado") {

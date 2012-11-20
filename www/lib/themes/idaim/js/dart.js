@@ -23,7 +23,7 @@ function init() {
 	circle.setCenterOffset(191,101);
 	
 	circle.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		$("#interval-rank").css("background-color", "#f11d40");
@@ -48,7 +48,7 @@ function init() {
 	circle2.setCenterOffset(158,160);
 	
 	circle2.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle2.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle2.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle2.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Colima</li>";
@@ -92,7 +92,7 @@ function init() {
 	circle3.setCenterOffset(120,233);
 	
 	circle3.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle3.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle3.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle3.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Puebla</li>";
@@ -121,7 +121,7 @@ function init() {
 	circle4.setCenterOffset(60,346);
 	
 	circle4.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle4.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle4.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle4.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Morelos</li>";
@@ -154,7 +154,7 @@ function init() {
 	circle5.setCenterOffset(-84,620);
 	
 	circle5.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle5.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle5.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle5.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Chihuahua</li>";
@@ -181,7 +181,7 @@ function init() {
 	circle6.setCenterOffset(-2090,4440);
 	
 	circle6.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle6.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
+	circle6.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#interval-rank").css("background-color", "transparent"); $("#rank-estados").css("background-color", "transparent"); });
 	circle6.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Distrito Federal</li>";

@@ -3,6 +3,16 @@
 	margin:20 0 0 380px;
 }
 
+#container-result {
+	float:right;
+	width:638px;
+	height:auto;
+}
+
+#cont-bar {
+	float:left;
+}
+
 #rank-estados {
 	float: right;
 	height: 355px;
@@ -14,7 +24,7 @@
 #rank-estados ul { list-style:none; }
 #rank-estados ul li { list-style:none; }
 
-#bar-colors { float:right; margin:18px 7px 0 0; width:168px; height:11px; z-index:100; position:relative; }
+#bar-colors { float:right; margin:18px 7px 0 0; width:168px; height:11px; 	position:relative; z-index:1001; }
 #bar-colors .color {
 	width:27px;
 	height:10px;

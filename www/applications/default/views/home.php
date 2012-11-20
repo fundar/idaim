@@ -1,6 +1,7 @@
 <div id="message">
 	<div id="message-content">
-		<h2>"En est&aacute; parte se desplegar&aacute; datos que destaquen del &iacute;ndice de transparencia"</h2>
+		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los Estados
+en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cticas en la materia."</h2>
 		<div class="clear"></div>
 		<a href="/ranking" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
 		<a href="/indice" title="Descarga la matriz del IDAIM" class="downloads indice-download">Descarga la matriz del IDAIM</a>

@@ -14,7 +14,16 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		<div id="container-r"></div>
 		<div id="interval-rank"></div>
 		<div id="rank-estados"></div>
-		<span class="text-bar">Alta transparencia</span><div id="bar-colors"></div><span class="text-bar">Baja transparencia</span>
+		<span class="text-bar">Alta transparencia</span>
+			<div id="bar-colors">
+				<span class="color color1"></span>
+				<span class="color color2"></span>
+				<span class="color color3"></span>
+				<span class="color color4"></span>
+				<span class="color color5"></span>
+				<span class="color color6"></span>
+			</div>
+		<span class="text-bar">Baja transparencia</span>
     </div>
 </div>
 

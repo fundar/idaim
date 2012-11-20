@@ -14,7 +14,20 @@
 #rank-estados ul { list-style:none; }
 #rank-estados ul li { list-style:none; }
 
-#bar-colors { float:right; margin:18px 7px 0 0; width:166px; height:11px; background:url(images/bar-colors.png);}
+#bar-colors { float:right; margin:18px 7px 0 0; width:168px; height:11px; z-index:100; position:relative; }
+#bar-colors .color {
+	width:27px;
+	height:10px;
+	float:left;
+}
+
+#bar-colors span:hover { cursor:pointer; }
+#bar-colors .color1 { border-left:1px solid #f23837; border-top:1px solid #f17575; background-color:#f21f1d; }
+#bar-colors .color2 { border-left:1px solid #f14489; border-top:1px solid #f173ab; background-color:#f11d77; }
+#bar-colors .color3 { border-left:1px solid #d24ee4; border-top:1px solid #d473f4; background-color:#c21df1; }
+#bar-colors .color4 { border-left:1px solid #9f53f3; border-top:1px solid #9873f4; background-color:#5e1df1; }
+#bar-colors .color5 { border-left:1px solid #6e4ef3; border-top:1px solid #7a73f4; background-color:#2c1df1; }
+#bar-colors .color6 { border-left:1px solid #2169f1; border-top:1px solid #71aff4; background-color:#1d81f1; }
 
 #interval-rank { 
 	float:right;

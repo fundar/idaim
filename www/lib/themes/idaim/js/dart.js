@@ -14,7 +14,7 @@ function init() {
 			context.arc(0,0,330,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#e36914";
+			context.fillStyle="#f11d40";
 			context.fill();
 		}
 	});
@@ -23,10 +23,10 @@ function init() {
 	circle.setCenterOffset(191,101);
 	
 	circle.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
-		$("#rank-estados").css("background-color", "#e36914");
+		$("#interval-rank").css("background-color", "#f11d40");
 		$("#interval-rank").html("<span>4.00 a 5.99</span>")
 		$("#rank-estados").html("<ul><li>Quintana Roo</li><li>Guanajuato</li><li>Queretaro</li></ul>");
 	});
@@ -39,7 +39,7 @@ function init() {
 			context.arc(0,0,230,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#e5a649";
+			context.fillStyle="#f11d77";
 			context.fill();
 		}
 	});
@@ -48,7 +48,7 @@ function init() {
 	circle2.setCenterOffset(158,160);
 	
 	circle2.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle2.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle2.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle2.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Colima</li>";
@@ -69,7 +69,7 @@ function init() {
 		html += "<li>Tamaulipas</li>";
 		html += "<li>Yucatan</li>";
 		$("#interval-rank").html("<span>6.00 a 6.99</span>");
-		$("#rank-estados").css("background-color", "#e5a649");
+		$("#interval-rank").css("background-color", "#f11d77");
 		$("#rank-estados").html("<ul>" + html + "</ul>");
 	});
 	
@@ -83,7 +83,7 @@ function init() {
 			context.arc(0,0,165,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#b5dfef";
+			context.fillStyle="#c21df1";
 			context.fill();
 		}
 	});
@@ -92,14 +92,14 @@ function init() {
 	circle3.setCenterOffset(120,233);
 	
 	circle3.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle3.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle3.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle3.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Puebla</li>";
 		html += "<li>Nuevo Leon</li>";
 		html += "<li>Campeche</li>";
 		$("#interval-rank").html("<span>7.00 a 7.49</span>");
-		$("#rank-estados").css("background-color", "#b5dfef");
+		$("#interval-rank").css("background-color", "#c21df1");
 		$("#rank-estados").html("<ul>" + html + "</ul>");
 	});
 	
@@ -112,7 +112,7 @@ function init() {
 			context.arc(0,0,99,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#78cce6";
+			context.fillStyle="#5e1df1";
 			context.fill();
 		}
 	});
@@ -121,7 +121,7 @@ function init() {
 	circle4.setCenterOffset(60,346);
 	
 	circle4.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle4.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle4.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle4.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Morelos</li>";
@@ -132,7 +132,7 @@ function init() {
 		html += "<li>San Luis Potosi</li>";
 		html += "<li>Nayarit</li>";
 		$("#interval-rank").html("<span>7.50 a 7.99</span>");
-		$("#rank-estados").css("background-color", "#78cce6");
+		$("#interval-rank").css("background-color", "#5e1df1");
 		$("#rank-estados").html("<ul>" + html + "</ul>");
 	});
 	
@@ -145,7 +145,7 @@ function init() {
 			context.arc(0,0,33,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#01a8dc";
+			context.fillStyle="#2c1df1";
 			context.fill();
 		}
 	});
@@ -154,12 +154,12 @@ function init() {
 	circle5.setCenterOffset(-84,620);
 	
 	circle5.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle5.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle5.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle5.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Chihuahua</li>";
 		$("#interval-rank").html("<span>8.00 a 8.59</span>");
-		$("#rank-estados").css("background-color", "#01a8dc");
+		$("#interval-rank").css("background-color", "#2c1df1");
 		$("#rank-estados").html("<ul>" + html + "</ul>");
 	});
 
@@ -172,7 +172,7 @@ function init() {
 			context.arc(0,0,17,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#234189";
+			context.fillStyle="#1d81f1";
 			context.fill();
 		}
 	});
@@ -181,12 +181,12 @@ function init() {
 	circle6.setCenterOffset(-2090,4440);
 	
 	circle6.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
-	circle6.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "#fdfeff"); });
+	circle6.on("mouseout", function(){ document.body.style.cursor = "default"; $("#rank-estados").html(""); $("#interval-rank").html(""); $("#rank-estados").css("background-color", "transparent"); });
 	circle6.on("mouseover", function(){
 		document.body.style.cursor = "pointer";
 		html = "<li>Distrito Federal</li>";
 		$("#interval-rank").html("<span>8.60 a 9.30</span>");
-		$("#rank-estados").css("background-color", "#234189");
+		$("#interval-rank").css("background-color", "#1d81f1");
 		$("#rank-estados").html("<ul>" + html + "</ul>");
 	});
 	

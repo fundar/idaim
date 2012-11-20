@@ -6,31 +6,25 @@
 #rank-estados {
 	float: right;
 	height: 355px;
-	margin:7px 0 0 0;
+	margin: 28px -222px 0;
 	width: 210px;
-	color:#fff;
-	background-color:#fdfeff;
-	-moz-border-radius: 17px;
-	-ms-border-radius: 17px;
-	-webkit-border-radius: 17px;
-	border-radius: 17px;
+	color:#626363;
 }
 
 #rank-estados ul { list-style:none; }
 #rank-estados ul li { list-style:none; }
 
-#bar-colors { float:right; margin:18px 100px 0 0; width:17px; height:288px; background:url(images/bar-colors.png);}
+#bar-colors { float:right; margin:18px 100px 0 0; width:166px; height:11px; background:url(images/bar-colors.png);}
 
 #interval-rank { 
 	float:right;
-	width:108px;
-	height:30px;
-	margin:317px -64px 0 0;
-	background-color:#ccc;
+	width:189px;
+	height:29px;
+	margin:10px 34px 0 0;
 	-moz-border-radius: 17px;
-	-ms-border-radius: 17px;
+    -ms-border-radius: 17px;
 	-webkit-border-radius: 17px;
 	border-radius: 17px;
 }
 
-#interval-rank span { float:left; margin:5px 0  0 10px; color:#fff; }
+#interval-rank span { float:left; margin:6px 0  0 55px; color:#fff; }

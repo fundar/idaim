@@ -14,7 +14,7 @@
 #rank-estados ul { list-style:none; }
 #rank-estados ul li { list-style:none; }
 
-#bar-colors { float:right; margin:18px 100px 0 0; width:166px; height:11px; background:url(images/bar-colors.png);}
+#bar-colors { float:right; margin:18px 7px 0 0; width:166px; height:11px; background:url(images/bar-colors.png);}
 
 #interval-rank { 
 	float:right;
@@ -28,3 +28,4 @@
 }
 
 #interval-rank span { float:left; margin:6px 0  0 55px; color:#fff; }
+.text-bar { color:#4d4d4d; font-size:12px; float:right; margin: 16px 10px 0 0; }

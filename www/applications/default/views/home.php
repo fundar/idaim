@@ -13,7 +13,7 @@
 		<div id="container-r"></div>
 		<div id="interval-rank"></div>
 		<div id="rank-estados"></div>
-		<div id="bar-colors"></div>
+		<span class="text-bar">Alta transparencia</span><div id="bar-colors"></div><span class="text-bar">Baja transparencia</span>
     </div>
 </div>
 

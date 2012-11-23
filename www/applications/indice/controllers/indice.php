@@ -19,7 +19,7 @@ class Indice_Controller extends ZP_Controller {
 		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal", "Nacional");
 	}
 	
-	public function index2() {
+	public function index() {
 		echo "Hello World";
 	}
 	
@@ -160,7 +160,7 @@ class Indice_Controller extends ZP_Controller {
 		echo "Done.";
 	}
 	
-	public function index() {
+	public function indice() {
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->indice($estado);
 			$data[$estado] = $values;

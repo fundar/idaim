@@ -133,14 +133,13 @@ function init() {
 	
 	
 	/* Add Circle on Layer*/
-	layer.add(circle);
-	layer.add(circle2);
-	layer.add(circle3);
-	layer.add(circle4);
-	layer.add(circle5);
-	layer.add(circle6);
 	
-	stage.add(layer);
+	setTimeout( function(){ layer.add(circle); stage.add(layer); } , 400)
+	setTimeout( function(){ layer.add(circle2); stage.add(layer); } , 800)
+	setTimeout( function(){ layer.add(circle3); stage.add(layer); } , 1200)
+	setTimeout( function(){ layer.add(circle4); stage.add(layer); } , 1600)
+	setTimeout( function(){ layer.add(circle5); stage.add(layer); } , 2000)
+	setTimeout( function(){ layer.add(circle6); stage.add(layer); } , 2400)
 }
 
 $(document).ready( function() {

@@ -16,10 +16,10 @@ class Indice_Controller extends ZP_Controller {
 		
 		$this->var_internas    = array("A", "B", "C", "D", "E", "F", "G", "H", "I");
 		$this->var_principales = array("1", "2", "3");
-		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal");
+		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal", "Nacional");
 	}
 	
-	public function index() {
+	public function index2() {
 		echo "Hello World";
 	}
 	
@@ -160,7 +160,7 @@ class Indice_Controller extends ZP_Controller {
 		echo "Done.";
 	}
 	
-	public function indice() {
+	public function index() {
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->indice($estado);
 			$data[$estado] = $values;
@@ -258,9 +258,6 @@ class Indice_Controller extends ZP_Controller {
 	}
 	
 	public function indicadores() {
-		error_reporting(E_ALL);
-		ini_set("display_errors", 1);
-		
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->createP($estado);
 			$data[$estado] = $values;
@@ -289,8 +286,7 @@ class Indice_Controller extends ZP_Controller {
 			}
 			
 			$query = "insert into indicadores (Indicador, ID_Parent, Value, Description, " . $caEstados . ") values ('" . $key . "','0','0','0'," . trim($cadena, ",") . "); ";
-			
-			
+			var_dump($query);
 			$this->Default_Model->create($query);
 			
 			$query  = "";

@@ -29,45 +29,7 @@ class Default_Controller extends ZP_Controller {
 		*/
 	}
 	
-	/*
-	public function index() {
-		foreach($this->estados as $estado) {
-			$data[$estado] = $this->Default_Model->getIndices($estado);
-		}
-		
-		arsort($data);
-		
-		$i=1;
-		$es="";
-		
-		foreach($data as $key => $value) {
-			$es .=   $key . ",";
-		}
-		
-		echo trim($es, ",");
-		
-		$val ="";
-		foreach($data as $key => $value) {
-			$val .=   $value . ",";
-		}
-		
-		echo "<br/>";
-		echo trim($val, ",");
-		
-		
-		$clv ="";
-		foreach($data as $key => $value) {
-			 $posicion = array_search($key, $this->estados);
-			 $clv .= $this->claves[$posicion] . ",";
-		}
-		
-		echo "<br/>";
-		echo trim($clv, ",");
-		
-		____($key);
-		____($data);
-	}
-	*/
+	
 	
 	public function index() {
 		$vars["view"] = $this->view("home", TRUE);

@@ -16,6 +16,19 @@ class Indice_Model extends ZP_Model {
 		$this->table = "dataset";
 	}
 	
+	public function getIndices($estado) {
+		$query 		= "select Indicador, " . $estado . " from indice  where Type='p';";
+		$progresivo = $this->Db->query($query);
+		
+		$query = "select Indicador, " . $estado . " from indice  where Type='b';";
+		$base  = $this->Db->query($query);
+		
+		$data["progresivo"] = $progresivo[0][$estado];
+		$data["base"]       = $base[0][$estado];
+		
+		return $data;
+	}
+	
 	public function indice($estado = "Colima") {
 		$query = " as decimal(10,6)) as promedio from variablesp where Indicador in (";
 		
@@ -142,7 +155,7 @@ class Indice_Model extends ZP_Model {
 		$data["27"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "157,158,159,160,161,162);");
 		
 		//subindicador
-		$sub28_1 = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "163,164,165,166,168,168,169);");
+		$sub28_1 = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "163,164,165,166,167,168,169);");
 		$sub28_1 = number_format($sub28_1[0]["promedio"], 4);
 		
 		//subindicador
@@ -169,106 +182,76 @@ class Indice_Model extends ZP_Model {
 	}
 	
 	public function createB($estado = "Colima") {
-		$query = " as decimal(10,6)) as promedio from dataset where Indicador in (";
+		$query = " as decimal(10,6)) as promedio from dataset where ID_Criterio in (";
 		
 		$data["1"] = $this->Db->query("select cast(sum(" . $estado . ")/5" . $query . "1,2,4,6,7);");
 		$data["2"] = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "8,9,10,11,12,13,14);");
-			//subindicador
-			
-			$sub3_1 = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "16,17,18);");
-			
-				$sub3_21 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (19,20,21,22,23,24,25,28,29,31)");
-				$sub3_22 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('26_a','26_b')");
-				
-			//subindicador
-			$sub3_2 =  number_format(($sub3_21[0]["suma"] + $sub3_22[0]["suma"]) / 11, 4);
-			
-			//subindicador
-			$sub3_3 = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "32);");
-			
-			$sub3_1 = number_format($sub3_1[0]["promedio"], 4);
-			$sub3_3 = number_format($sub3_3[0]["promedio"], 4);
+
+		//subindicador
+		$sub3_1 = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "16,17,18);");
+		$sub3_1 = number_format($sub3_1[0]["promedio"], 4);
+		
+		//subindicador
+		$sub3_2 = $this->Db->query("select cast(sum(" . $estado . ")/11" . $query . "19,20,21,22,23,24,25,26,28,29,31);");
+		$sub3_2 = number_format($sub3_2[0]["promedio"], 4);
+		
+		//subindicador
+		$sub3_3 = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "32);");
+		$sub3_3 = number_format($sub3_3[0]["promedio"], 4);
 			
 		$data["3"] = number_format(($sub3_1 + $sub3_2 + $sub3_3) / 3, 4);
-		
 		$data["4"] = $this->Db->query("select cast(sum(" . $estado . ")/5" . $query . "35,36,37,38,40);");
 		$data["5"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "41,42,43);");
-		$data["6"] = $this->Db->query("select cast(sum(" . $estado . ")/9" . $query . "44,45,46,47,48,49,50,51,54);");
-		$data["7"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "55,56,57,58,59,60);");
-
-			$sub8_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (62)");
-			$sub8_2 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('61_a','61_b')");
-			
-			$sub8_2 = number_format($sub8_2[0]["suma"], 4);
-			$sub8_1 = number_format($sub8_1[0]["suma"], 4);
-		$data["8"]  = number_format(($sub8_1 + $sub8_2) / 2, 4);
-		$data["9"]  = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "64,65,66);");
-		$data["10"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "69);");
-		$data["11"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "70);");
-		$data["12"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "72,73,74,75,76,77);");
-		$data["13"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "78,79);");
-		$data["14"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "80,81,82,83,84,86);");
-		$data["15"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "87);");
-		$data["16"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "90,91);");
-		$data["17"] = $this->Db->query("select cast(sum(" . $estado . ")/4" . $query . "92,93,94,95);");
-		$data["18"] = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "97,98,99,100,101,102,103);");
-			
-			$sub19_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (105,106,107,108,109,111)");
-			$sub19_2 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('104_a','104_b')");
-			$sub19_1 = number_format($sub19_1[0]["suma"], 4);
-			$sub19_2 = number_format($sub19_2[0]["suma"], 4);
-		$data["19"] = number_format(($sub19_1 + $sub19_2) / 7, 4);
+		$data["6"] = $this->Db->query("select cast(sum(" . $estado . ")/9" . $query . "44,45,46,47,48,49,50,51,55);");
+		$data["7"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "56,57,58,59,60,61);");
+		$data["8"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "62,63);");		
+		$data["9"]  = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "65,66,67);");
+		$data["10"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "70);");
+		$data["11"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "71);");
+		$data["12"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "73,74,75,76,77,78);");
+		$data["13"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "79,80);");
+		$data["14"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "81,82,83,84,85,87);");
+		$data["15"] = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "88);");
+		$data["16"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "91,92);");
+		$data["17"] = $this->Db->query("select cast(sum(" . $estado . ")/4" . $query . "93,94,95,96);");
+		$data["18"] = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "98,99,100,101,102,103,104);");
+		$data["19"] = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "105,106,107,108,109,110,112);");
 		
-				$sub20_4_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (112,115,117)");
-				$sub20_4_1 = number_format($sub20_4_1[0]["suma"], 4);
-			//subindicador
-			$sub20_4 = number_format($sub20_4_1 / 3, 4);
-			
-				$sub20_5_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (122)");
-				$sub20_5_1 = number_format($sub20_5_1[0]["suma"], 4);
-
-			//subindicador
-			$sub20_5 = number_format($sub20_5_1 / 1, 4);
+		//subindicador
+		$sub20_1 = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "113,119,121);");
+		$sub20_1 = number_format($sub20_1[0]["promedio"], 4);
 		
-		$data["20"] = number_format(($sub20_4 + $sub20_5) / 2, 4);
-		$data["21"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "124,125,127,128,129,130);");
-		$data["22"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "131,132,133,134,135,136);");
-		$data["23"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "138,139,141);");
-		$data["24"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "143,144,145);");
-		$data["25"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "146,147,148);");
-		$data["26"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "149,150,151);");
-		$data["27"] = $this->Db->query("select cast(sum(" . $estado . ")/5" . $query . "153,154,155,156,157);");
+		//subindicador
+		$sub20_2 = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "126);");
+		$sub20_2 = number_format($sub20_2[0]["promedio"], 4);
 			
-			//subindicador
-			$sub28_1 = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "159,160,161,163,164,165);");
-			$sub28_1 = number_format($sub28_1[0]["promedio"], 4);
-			//subindicador
-			$sub28_2 = $this->Db->query("select cast(sum(" . $estado . ")/8" . $query . "166,167,168,169,170,171,172,175);");
+		$data["20"] = number_format(($sub20_1 + $sub20_2) / 2, 4);
+		$data["21"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "128,129,131,132,133,134);");
+		$data["22"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "135,136,137,138,139,140);");
+		$data["23"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "142,143,145);");
+		$data["24"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "147,148,149);");
+		$data["25"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "150,151,152);");
+		$data["26"] = $this->Db->query("select cast(sum(" . $estado . ")/3" . $query . "153,154,155);");
+		$data["27"] = $this->Db->query("select cast(sum(" . $estado . ")/5" . $query . "157,158,159,160,161);");
+		
+		//subindicador
+		$sub28_1 = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "163,164,165,167,168,169);");
+		$sub28_1 = number_format($sub28_1[0]["promedio"], 4);
+		
+		//subindicador
+		$sub28_2 = $this->Db->query("select cast(sum(" . $estado . ")/8" . $query . "170,171,172,173,174,175,176,179);");
+		$sub28_2 = number_format($sub28_2[0]["promedio"], 4);
+		
+		$sub28_3 = $this->Db->query("select cast(sum(" . $estado . ")/7" . $query . "181,182,183,184,185,186,187);");
+		$sub28_3 = number_format($sub28_3[0]["promedio"], 4);
+		
+		//subindicador
+		$sub28_4 = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "189);");
+		$sub28_4 = number_format($sub28_4[0]["promedio"], 4);
 			
-			$sub28_2 = number_format($sub28_2[0]["promedio"], 4);
-			
-				$sub28_3_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (178,179,180,181,182,183)");
-				$sub28_3_2 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('177_a','177_b')");
-				$sub28_3_1 = number_format($sub28_3_1[0]["suma"], 4);
-				$sub28_3_2 = number_format($sub28_3_2[0]["suma"], 4);
-			//subindicador
-			$sub28_3 =  number_format(($sub28_3_1 + $sub28_3_2) / 7, 4);
-			
-			//subindicador
-			$sub28_4 = $this->Db->query("select cast(sum(" . $estado . ")/1" . $query . "185);");
-			$sub28_4 = number_format($sub28_4[0]["promedio"], 4);
-	
 		$data["28"] = number_format(($sub28_1 + $sub28_2 + $sub28_3 + $sub28_4) / 4, 4);
-		
-		$data["29"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "193,194);");
-		
-			
-				$sub30_1 = $this->Db->query("select  sum(" . $estado . ") as suma from dataset where Indicador in (195,197,198,202,203)");
-				$sub30_2 = $this->Db->query("select  cast(sum(" . $estado . ")/2 as decimal(10,6)) as suma from dataset where Indicador in ('196_a','196_b')");
-				$sub30_1 = number_format($sub30_1[0]["suma"], 4);
-				$sub30_2 = number_format($sub30_2[0]["suma"], 4);
-				
-		$data["30"] = number_format(($sub30_1 + $sub30_2) / 6, 4);
+		$data["29"] = $this->Db->query("select cast(sum(" . $estado . ")/2" . $query . "197,198);");
+		$data["30"] = $this->Db->query("select cast(sum(" . $estado . ")/6" . $query . "199,200,202,203,207,208);");
 		
 		//echo $estado . " =============== <br />" . var_dump($data) . "<br /><br />";
 		return $data;

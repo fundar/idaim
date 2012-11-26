@@ -16,11 +16,53 @@ class Indice_Controller extends ZP_Controller {
 		
 		$this->var_internas    = array("A", "B", "C", "D", "E", "F", "G", "H", "I");
 		$this->var_principales = array("1", "2", "3");
-		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas","Federal", "Nacional");
+		$this->claves  = array("01","02","03","04","07","08","05","06","09","10","15","11","12","13","14","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32");
+		$this->estados = array("Aguascalientes","BC","BCS","Campeche","Chiapas","Chihuahua","Coahuila","Colima","DF","Durango","Mexico","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacan","Morelos","Nayarit","NL","Oaxaca","Puebla","Queretaro","QR","SLP","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan","Zacatecas");
 	}
 	
 	public function index() {
 		echo "Hello World";
+	}
+	
+	
+	public function index2() {
+		foreach($this->estados as $estado) {
+			$data[$estado] = $this->Default_Model->getIndices($estado);
+		}
+		
+		//arsort($data);
+		
+		$i=1;
+		$es="";
+		
+		foreach($data as $key => $value) {
+			echo $key . "," . $value["base"];
+			echo "<br/>";
+		}
+		
+		____($key);
+		
+		echo trim($es, ",");
+		
+		$val ="";
+		
+		foreach($data as $key => $value) {
+			$val .=   $value["progresivo"] . ",";
+		}
+		
+		echo "<br/>";
+		echo trim($val, ",");
+		
+		
+		$clv ="";
+		
+		foreach($data as $key => $value) {
+			 $posicion = array_search($key, $this->estados);
+			 $clv .= $this->claves[$posicion] . ",";
+		}
+		
+		echo "<br/>";
+		echo trim($clv, ",");
 	}
 	
 	public function indiceB() {
@@ -121,7 +163,7 @@ class Indice_Controller extends ZP_Controller {
 		echo "Done.";
 	}
 	
-	public function indicadoresBase() {
+	public function indicadoresB() {
 		foreach($this->estados as $estado) {
 			$values = $this->Default_Model->createB($estado);
 			$data[$estado] = $values;

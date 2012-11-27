@@ -18,12 +18,12 @@ class Default_Model extends ZP_Model {
 	
 	public function getIndices($estado, $type = "p") {
 		$query = "select Indicador, Description, " . $estado . " from indice  where Type='" . $type . "';";
-		$data  = $this->Db->query($query);
+		$result  = $this->Db->query($query);
 		
-		$data["desc"]  = $data[0]["Description"];
-		$data["color"] = $this->color($this->convert($data[0][$estado]));
+		$data["desc"]  = $result[0]["Description"];
+		$data["color"] = $this->color($this->convert($result[0][$estado]));
 		$data["level"] = 1;
-		$data["value"] = $this->convert($data[0][$estado]);
+		$data["value"] = $this->convert($result[0][$estado]);
 		
 		return $data;
 	}

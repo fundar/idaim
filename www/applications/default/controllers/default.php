@@ -58,11 +58,13 @@ class Default_Controller extends ZP_Controller {
 			$key = array_search($estado, $this->estados);
 			$key = $this->id_estados[$key];
 			
-			//$data["progresivo"] = substr($progresivo[0][$estado] * 10, 0, 3);
-			//$data["base"]       = substr($base[0][$estado] * 10, 0, 3);
-			
 			$response["data"]   = $data;
-			$response["indice"] = array("progresivo" => $data["progresivo"]["indice"]["value"], "base" => $data["base"]["indice"]["value"]);
+			
+			$response["indice"] = array(
+				"progresivo" => $data["progresivo"]["indice"]["value"], 
+				"base" => $data["base"]["indice"]["value"]
+			);
+			
 			$response["key"]    = $key;
 			
 			echo json_encode($response);

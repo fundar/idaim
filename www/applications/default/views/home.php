@@ -81,29 +81,15 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		
 		
 		<div class="clear"></div>
-		
-		<section class="tabs">
-			<input id="ntab-1" type="radio" name="nradio-set" class="tab-selector-1" checked="checked" />
-			<label for="ntab-1" class="tab-label-1">Base</label>
 
-			<input id="ntab-2" type="radio" name="nradio-set" class="tab-selector-2" />
-			<label for="ntab-2" class="tab-label-2">Progresivo</label>
-			
-			<div class="clear"></div>
-			
-			<div id="burbujas">
-				<div id="npro-chart">
-					<div id="nchart">
-						 <script src="<?php print $this->themePath; ?>/js/pack.js"></script>
-					</div>
-				</div>
-				<div id="nbase-chart">
-					<div id="nchart2">
-						 <script src="<?php print $this->themePath; ?>/js/pack2.js"></script>
-					</div>
-				</div>
+		<div id="burbujas">
+			<div id="npro-chart">
+				<div id="nchart"></div>
 			</div>
-		</section>
+			<div id="nbase-chart">
+				<div id="nchart2"></div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -185,24 +171,15 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		</div>
 		
 		<div class="clear"></div>
-		<section class="tabs">
-			<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
-			<label for="tab-1" class="tab-label-1">Base</label>
 
-			<input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
-			<label for="tab-2" class="tab-label-2">Progresivo</label>
-			
-			<div class="clear"></div>
-			
-			<div id="burbujas">
-				<div id="pro-chart">
-					<div id="chart"></div>
-				</div>
-				
-				<div id="base-chart">
-					<div id="chart2"></div>
-				</div>
+		<div id="burbujas">
+			<div id="pro-chart">
+				<div id="chart"></div>
 			</div>
-		</section>
+			
+			<div id="base-chart">
+				<div id="chart2"></div>
+			</div>
+		</div>
 	</div>
 </div>

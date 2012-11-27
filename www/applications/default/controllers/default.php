@@ -47,19 +47,23 @@ class Default_Controller extends ZP_Controller {
 		if($estado and in_array($estado, $this->estados)) {
 			$data["progresivo"]["indice"]     = $this->Default_Model->getIndices($estado);
 			$data["progresivo"]["variablesp"] = $this->Default_Model->getVariablesP($estado);
+			$data["progresivo"]["variablesi"] = $this->Default_Model->getVariablesI($estado);
+			$data["progresivo"]["indicadores"] = $this->Default_Model->getIndicadores($estado);
 			
-			____($data["progresivo"]["variablesp"]);
-			$data["variablesp"]  = $this->Default_Model->getVariablesP($estado);
-			$data["variablesi"]  = $this->Default_Model->getVariablesI($estado);
-			$data["indicadores"] = $this->Default_Model->getIndicadores($estado);
+			$data["base"]["indice"]     = $this->Default_Model->getIndices($estado, "b");
+			$data["base"]["variablesp"] = $this->Default_Model->getVariablesP($estado, "b");
+			$data["base"]["variablesi"] = $this->Default_Model->getVariablesI($estado, "b");
+			$data["base"]["indicadores"] = $this->Default_Model->getIndicadores($estado, "b");
 			
 			$key = array_search($estado, $this->estados);
 			$key = $this->id_estados[$key];
 			
-			$response["progresivo"] = $this->json($data);
-			$response["base"]	    = $this->json($data, "base");
-			$response["indice"]     = $data["indice"];
-			$response["key"]        = $key;
+			//$data["progresivo"] = substr($progresivo[0][$estado] * 10, 0, 3);
+			//$data["base"]       = substr($base[0][$estado] * 10, 0, 3);
+			
+			$response["data"]   = $data;
+			$response["indice"] = array("progresivo" => $data["progresivo"]["indice"]["value"], "base" => $data["base"]["indice"]["value"]);
+			$response["key"]    = $key;
 			
 			echo json_encode($response);
 		} else {

@@ -29,8 +29,6 @@ class Default_Controller extends ZP_Controller {
 		*/
 	}
 	
-	
-	
 	public function index() {
 		$vars["view"] = $this->view("home", TRUE);
 			
@@ -47,7 +45,10 @@ class Default_Controller extends ZP_Controller {
 	
 	public function get($estado) {
 		if($estado and in_array($estado, $this->estados)) {
-			$data["indice"]      = $this->Default_Model->getIndices($estado);
+			$data["progresivo"]["indice"]     = $this->Default_Model->getIndices($estado);
+			$data["progresivo"]["variablesp"] = $this->Default_Model->getVariablesP($estado);
+			
+			____($data["progresivo"]["variablesp"]);
 			$data["variablesp"]  = $this->Default_Model->getVariablesP($estado);
 			$data["variablesi"]  = $this->Default_Model->getVariablesI($estado);
 			$data["indicadores"] = $this->Default_Model->getIndicadores($estado);
@@ -194,104 +195,3 @@ class Default_Controller extends ZP_Controller {
 		return $number;
 	}
 }
-
-/* Base
-{
- "name": "",
- "children": [
-  {
-   "name": "Disposiciones Normativas - 6.5",
-   "children": [
-    {
-     "name": "Positivación del DAI - 7.0",
-     "children": [
-      {"name": "1.- 6.3", "size": 10000},
-      {"name": "2.- 6.2", "size": 9000},
-      {"name": "3.- 7.5", "size": 8000},
-      {"name": "4.- 6.8", "size": 7000},
-      {"name": "5.- 8.2", "size": 6000}
-     ]
-    },
-    {
-     "name": "Información restringida - 7.8",
-     "children": [
-      {"name": "6.- 7.1", "size": 10000},
-      {"name": "7.- 8.2", "size": 9000},
-      {"name": "8.- 8.2", "size": 8000}
-     ]
-    },
-    {
-     "name": "Sanciones al incumplimiento de la ley - 4.7",
-     "children": [
-      {"name": "9.- 6.3", "size": 10000},
-      {"name": "10.- 3.1", "size": 10000}
-     ]
-    }
-   ]
-  },
-  
-  {
-   "name": "Diseño institucional - 7.0",
-   "children": [
-    {
-     "name": "Instituciones internas de acceso a la información - 5.9",
-     "children": [
-      {"name": "11.- 9.6", "size": 10000},
-      {"name": "12.- 7.3", "size": 9000},
-      {"name": "13.- 4.5", "size": 8000},
-      {"name": "14.- 2.3", "size": 7000}
-     ]
-    },
-    {
-     "name": "Promoción del DAI - 7.9",
-     "children": [
-      {"name": "15.- 9.3", "size": 10000},
-      {"name": "16.- 7.9", "size": 9000},
-      {"name": "17.- 6.4", "size": 8000}
-     ]
-    },
-    {
-     "name": "Órganos garantes - 7.3",
-     "children": [
-      {"name": "18.- 0", "size": 10000},
-      {"name": "19.- 6.9", "size": 9000},
-      {"name": "20.- 7.0", "size": 8000}
-     ]
-    }
-   ]
-  },
-  
-  {
-   "name": "Procedimientos - 7.2",
-   "children": [
-    {
-     "name": "Procedimientos de acceso a la información - 7.0",
-     "children": [
-      {"name": "21.- ' . $data["variablesi"]["progresivo"][21] . '", "size": 10000},
-      {"name": "22.- ' . $data["variablesi"]["progresivo"][22] . '", "size": 9000},
-      {"name": "23.- ' . $data["variablesi"]["progresivo"][23] . '", "size": 8000},
-      {"name": "24.- ' . $data["variablesi"]["progresivo"][24] . '", "size": 7000}
-     ]
-    },
-    {
-     "name": "Procedimientos de revisión - ' . $data["variablesi"]["progresivo"]["H"] . '",
-     "children": [
-      {"name": "25.- ' . $data["variablesi"]["progresivo"][25] . '", "size": 10000},
-      {"name": "26.- ' . $data["variablesi"]["progresivo"][26] . '", "size": 9000},
-      {"name": "27.- ' . $data["variablesi"]["progresivo"][27] . '", "size": 8000}
-     ]
-    },
-    {
-     "name": "Difusión proactiva de información pública - ' . $data["variablesi"]["progresivo"]["I"] . '",
-     "children": [
-      {"name": "28.- ' . $data["variablesi"]["progresivo"][28] . '", "size": 10000},
-      {"name": "29.- ' . $data["variablesi"]["progresivo"][29] . '", "size": 9000},
-      {"name": "30.- ' . $data["variablesi"]["progresivo"][30] . '", "size": 8000}
-     ]
-    }
-   ]
-  }
-  
- ]
-}
-*/

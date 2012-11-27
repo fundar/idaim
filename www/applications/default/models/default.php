@@ -16,31 +16,25 @@ class Default_Model extends ZP_Model {
 		$this->table = "variablesi";
 	}
 	
-	public function getIndices($estado) {
-		$query 		= "select Indicador, " . $estado . " from indice  where Type='p';";
-		$progresivo = $this->Db->query($query);
+	public function getIndices($estado, $type = "p") {
+		$query = "select Indicador, Description, " . $estado . " from indice  where Type='" . $type . "';";
+		$data  = $this->Db->query($query);
 		
-		$query = "select Indicador, " . $estado . " from indice  where Type='b';";
-		$base  = $this->Db->query($query);
-		
-		$data["progresivo"] = substr($progresivo[0][$estado] * 10, 0, 3);
-		$data["base"]       = substr($base[0][$estado] * 10, 0, 3); 
-		
+		$data["text"]  = $data[0]["Description"];
+		$data["desc"]  = $data[0]["Description"];
+		$data["color"] = $this->color($this->convert($data[0][$estado]));
+		$data["level"] = 1;
+		$data["value"] = $this->convert($data[0][$estado]);
+		____($data);
 		return $data;
 	}
 	
-	public function getVariablesP($estado) {
-		$query 	    = "select Indicador, " . $estado . " from variablesp where Type='p';";
-		$progresivo = $this->Db->query($query);
+	public function getVariablesP($estado, $type = "p") {
+		$query 	= "select Indicador, " . $estado . " from variablesp where Type='" . $type . "';";
+		$result = $this->Db->query($query);
 		
-		$query = "select Indicador, " . $estado . " from variablesp where Type='b';";
-		$base  = $this->Db->query($query);
-		
-		foreach($progresivo as $value) $pro[$value["Indicador"]] = $value[$estado];
-		foreach($base as $value)       $bas[$value["Indicador"]] = $value[$estado];
-		
-		$data["progresivo"] = $pro;
-		$data["base"]       = $bas;
+		foreach($result as $value) $data[$value["Indicador"]] = $value[$estado];
+		____($data);
 		
 		return $data;
 	}
@@ -76,5 +70,19 @@ class Default_Model extends ZP_Model {
 		$data["base"]       = $bas;
 		
 		return $data;
+	}
+	
+	public function convert($data) {
+		return substr($data * 10, 0, 3);
+	}
+	
+	public function color($value) {
+		if($value>=9 and $value<=10) return "#388652";
+		if($value>=7 and $value<=8.9) return "#79c452";
+		if($value>=5 and $value<=6.9) return "#ebd06e";
+		if($value>=3 and $value<=4.9) return "#df6c4f";
+		if($value>=0 and $value<=2.9) return "#de2b33";
+		
+		return "#ccc";
 	}
 }

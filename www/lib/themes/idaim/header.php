@@ -17,6 +17,7 @@
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dartb.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/dartp.js"></script>
 		
 		<?php print $this->getCSS(); ?>
 		<script>

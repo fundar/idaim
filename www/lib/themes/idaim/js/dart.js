@@ -10,8 +10,8 @@ $(document).ready( function() {
 		$("#rk-but-base").addClass("button-active");
 		$("#rk-but-pro").addClass("button-inactive");
 		
-		$("#base-chart").show();
-		$("#pro-chart").hide();	
+		$("#container-r").html("");
+		dartb();
 	});
 
 	$("#rk-but-pro").click( function() {
@@ -21,7 +21,7 @@ $(document).ready( function() {
 		$("#rk-but-pro").addClass("button-active");
 		$("#rk-but-base").addClass("button-inactive");
 		
-		$("#pro-chart").show();	
-		$("#base-chart").hide();
+		$("#container-r").html("");
+		dartp();
 	});
 });

@@ -1,4 +1,4 @@
-function dartb() {
+function dartp() {
 	var stage = new Kinetic.Stage("container-r", 440, 370);
 	var layer = new Kinetic.Layer();
 	var draggingShape = undefined;
@@ -24,7 +24,7 @@ function dartb() {
 	
 	circle.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
 	circle.on("mouseout", function(){ edefault(); });
-	circle.on("mouseover", function(){ rank1(); });
+	circle.on("mouseover", function(){ rank1p(); });
 	
 	/* Circle 2 */
 	var circle2 = new Kinetic.Shape({
@@ -44,7 +44,7 @@ function dartb() {
 	
 	circle2.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
 	circle2.on("mouseout", function(){ edefault(); });
-	circle2.on("mouseover", function(){ rank2(); });
+	circle2.on("mouseover", function(){ rank2p(); });
 	
 
 	/* Circle 3 */
@@ -66,7 +66,7 @@ function dartb() {
 	
 	circle3.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
 	circle3.on("mouseout", function(){ edefault(); });
-	circle3.on("mouseover", function(){ rank3(); });
+	circle3.on("mouseover", function(){ rank3p(); });
 	
 	
 	/* Circle 4 */
@@ -74,7 +74,7 @@ function dartb() {
 		drawFunc: function(){
 			var context = this.getContext();
 			context.beginPath();
-			context.arc(0,0,33,0, 0.610865238, false); 
+			context.arc(0,0,40,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
 			context.fillStyle="#388652";
@@ -87,7 +87,7 @@ function dartb() {
 	
 	circle4.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
 	circle4.on("mouseout", function(){ edefault(); });
-	circle4.on("mouseover", function(){ rank4(); });
+	circle4.on("mouseover", function(){ rank4p(); });
 	
 
 	/* Circle 5 */
@@ -108,7 +108,7 @@ function dartb() {
 	
 	circle5.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - circle._x; draggingRectOffsetY = mousePos.y - circle._y; });
 	circle5.on("mouseout", function(){ edefault(); });
-	circle5.on("mouseover", function(){ rank5(); });
+	circle5.on("mouseover", function(){ rank5p(); });
 
 
 	/* Circle 6 */
@@ -152,80 +152,77 @@ $(document).ready( function() {
 	$(".color6").hover(function() { rank6() }, function() { edefault() });
 });
 
-function edefault() {
-	document.body.style.cursor = "default"; 
-	$("#rank-estados").html(""); 
-	$("#interval-rank").html(""); 
-	$("#interval-rank").css("background-color", "transparent"); 
-	$("#rank-estados").css("background-color", "transparent");
-}
-
-function rank1() {
+function rank1p() {
 	document.body.style.cursor = "pointer";
-	html = "<li>Sinaloa</li>";
-	html += "<li>Baja California Sur</li>";
-	html += "<li>Queretaro</li>";
-	html += "<li>Veracruz</li>";
+	
+	html = "<li>Baja California Sur</li>";
 	html += "<li>Michoacan</li>";
-	html += "<li>Jalisco</li>";
-	html += "<li>Zacatecas</li>";
 	html += "<li>Tabasco</li>";
-	html += "<li>Guanajuato</li>";
 	html += "<li>Hidalgo</li>";
+	html += "<li>Guanajuato</li>";
+	html += "<li>Queretaro</li>";
 	html += "<li>Sonora</li>";
+	html += "<li>Sinaloa</li>";
 	html += "<li>Tamaulipas</li>";
-	html += "<li>Quintana Roo</li>";
 	html += "<li>Yucatan</li>";
+	html += "<li>Quintana Roo</li>";
+	
 	$("#interval-rank").css("background-color", "#de2b33");
-	$("#interval-rank").html("<span>0 a 6.89</span>")
+	$("#interval-rank").html("<span>0 a 5.59</span>")
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }
 
-function rank2() {
+function rank2p() {
 	document.body.style.cursor = "pointer";
-	html = "<li>Nayarit</li>";
-	html += "<li>San Luis Potosi</li>";
-	html += "<li>Puebla</li>";
-	html += "<li>Nuevo Leon</li>";
-	html += "<li>Coahuila</li>";
-	html += "<li>Campeche</li>";
+
+	html = "<li>San Luis Potosi</li>";
 	html += "<li>México</li>";
-	html += "<li>Chiapas</li>";
-	html += "<li>Colima</li>";
+	html += "<li>Campeche</li>";
+	html += "<li>Veracruz</li>";
+	html += "<li>Zacatecas</li>";
+	html += "<li>Jalisco</li>";
 	html += "<li>Aguascalientes</li>";
+	html += "<li>Colima</li>";
+	html += "<li>Chiapas</li>";
 	
-	
-	$("#interval-rank").html("<span>6.90 a 7.69</span>");
+	$("#interval-rank").html("<span>5.6 a 6.39</span>");
 	$("#interval-rank").css("background-color", "#df6c4f");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }
 
-function rank3() {
+function rank3p() {
 	document.body.style.cursor = "pointer";
-	
+
 	html = "<li>Baja California</li>";
-	html += "<li>Morelos</li>";
-	html += "<li>Guerrero</li>";
-	html += "<li>Tlaxcala</li>";
+	html += "<li>Puebla</li>";
 	html += "<li>Durango</li>";
-	html += "<li>Oaxaca</li>";
-	$("#interval-rank").html("<span>7.70 a 7.99</span>");
+	html += "<li>Tlaxcala</li>";
+	html += "<li>Morelos</li>";
+	html += "<li>Nuevo Leon</li>";
+	html += "<li>Coahuila</li>";
+	html += "<li>Nayarit</li>";
+
+	$("#interval-rank").html("<span>6.4 a 6.99</span>");
 	$("#interval-rank").css("background-color", "#ebd06e");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }
 
-function rank4() {
+function rank4p() {
 	document.body.style.cursor = "pointer";
-	html = "<li>Chihuahua</li>";
-	$("#interval-rank").html("<span>8.00 a 8.99</span>");
+	
+	html = "<li>Oaxaca</li>";
+	html += "<li>Chihuahua</li>";
+	html += "<li>Guerrero</li>";
+	
+	$("#interval-rank").html("<span>7.00 a 8.00</span>");
 	$("#interval-rank").css("background-color", "#388652");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }
 
-function rank5() {
+function rank5p() {
 	document.body.style.cursor = "pointer";
 	html = "<li>Distrito Federal</li>";
-	$("#interval-rank").html("<span>9.00 a 10.00</span>");
+	$("#interval-rank").html("<span>8.10 a 10.00</span>");
 	$("#interval-rank").css("background-color", "#79c452");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }

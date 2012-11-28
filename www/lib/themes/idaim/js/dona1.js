@@ -52,7 +52,11 @@ e_indi[28]=40;    e_indi[29]=27.32; e_indi[30]=14.66;
 
 function chartp(data) {	
 	var stage  = new Kinetic.Stage("chart2", 700, 700);
-	var layer  = new Kinetic.Layer();
+	var layer1  = new Kinetic.Layer();
+	var layer2  = new Kinetic.Layer();
+	var layer3  = new Kinetic.Layer();
+	var layer4  = new Kinetic.Layer();
+	var layer5  = new Kinetic.Layer();
 	var arcs   = draw();
 	
 	function draw() {
@@ -66,21 +70,21 @@ function chartp(data) {
 			startAngle = (s_indi[i]*Math.PI)/180;
 			endAngle   = (e_indi[i]*Math.PI)/180;
 			arc        = drawArc(x,y,254,startAngle,endAngle,data.indicadores[i].color);
-			layer.add(arc);
+			layer1.add(arc);
 		}
 		
 		for(i in data.variablesi) {
 			startAngle = (s_vari[i]*Math.PI)/180;
 			endAngle   = (e_vari[i]*Math.PI)/180;
 			arc        = drawArc(x,y,204,startAngle,endAngle,data.variablesi[i].color);
-			layer.add(arc);
+			layer2.add(arc);
 		}
 		
 		for(i in data.variablesp) {
 			startAngle = (s_varp[i]*Math.PI)/180;
 			endAngle   = (e_varp[i]*Math.PI)/180;
 			arc        = drawArc(x,y,150,startAngle,endAngle,data.variablesp[i].color);
-			layer.add(arc);
+			layer3.add(arc);
 		}
 		
 		var simpleText = new Kinetic.Text({
@@ -97,9 +101,15 @@ function chartp(data) {
 		endAngle   = (360*Math.PI)/180;
 		var indice = drawArc(x,y,70,startAngle, endAngle, data.indice.color);
 		
-		layer.add(indice);
-		layer.add(simpleText);
-		stage.add(layer);
+		layer4.add(indice);
+		layer5.add(simpleText);
+		//stage.add(layer);
+		
+		setTimeout( function(){ stage.add(layer1); } , 400)
+		setTimeout( function(){  stage.add(layer2); } , 800)
+		setTimeout( function(){  stage.add(layer3); } , 1200)
+		setTimeout( function(){  stage.add(layer4); } , 1600)
+		setTimeout( function(){  stage.add(layer5); } , 2000)
 	}
 
 	function drawArc(x, y, r, startAngle, endAngle, color) {

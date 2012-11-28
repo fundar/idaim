@@ -76,11 +76,19 @@ class Default_Model extends ZP_Model {
 	
 	public function color($value) {
 		if($value>=9 and $value<=10)  return "#388652";
-		if($value>=7 and $value<=8.9) return "#79c452";
-		if($value>=6 and $value<=6.9) return "#ebd06e";
-		if($value>=3 and $value<=5.9) return "#df6c4f";
-		if($value>=0 and $value<=2.9) return "#de2b33";
+		if($value>=8 and $value<=8.9) return "#79c452";
+		if($value>=7 and $value<=7.9) return "#ebd06e";
+		if($value>=6 and $value<=6.9) return "#df6c4f";
+		if($value>=0 and $value<=5.9) return "#de2b33";
 		
 		return "#ccc";
+		
+		/*
+		0 a 5.99
+		6.00 a 6.99
+		7.00 a 7.99
+		8.00 a 8.99
+		9 a 10
+		*/
 	}
 }

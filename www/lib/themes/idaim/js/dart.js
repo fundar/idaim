@@ -159,6 +159,14 @@ function edefault() {
 	$("#rank-estados").css("background-color", "transparent");
 }
 
+/*
+0 a 5.99
+6.00 a 6.99
+7.00 a 7.99
+8.00 a 8.99
+9 a 10
+*/
+
 function rank1() {
 	document.body.style.cursor = "pointer";
 	html = "<li>Colima</li>";

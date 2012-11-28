@@ -11,6 +11,7 @@
 		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/dona1.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<?php print $this->getCSS(); ?>

@@ -31,7 +31,7 @@ circle.child {
 }
 
 #chart { float:left; margin:0 0 0 120px; width:650px; height:500px; }
-#chart2 { float:left; margin:0 0 0 120px; width:650px; height:500px; }
+#chart2 { float:left; margin:0 0 0 0; width:700px; height:700px; }
 
 #nchart circle { fill: #429cce; }
 #nchart circle.parent { fill: #9bcee1; color:#fff !important; }

@@ -68,8 +68,8 @@ $(document).ready( function() {
 		    },
 			url: "get/" + $("#estados").val()
 		}).done(function(response) {
-			$("#chart").slideUp("slow");
-			$("#chart2").slideUp("slow");
+			//$("#chart").slideUp("slow");
+			//$("#chart2").slideUp("slow");
 			
 			data = JSON.parse(response);
 			
@@ -87,8 +87,8 @@ $(document).ready( function() {
 			$("#iprogresivo").html(data.indice.progresivo);
 			$("#ibase").html(data.indice.base);
 			
-			chart(data.progresivo);
-			chart2(data.base);
+			chartp(data.data.progresivo);
+			chartb(data.data.base);
 			
 			$(".loading").hide();
 		});
@@ -114,11 +114,6 @@ $(document).ready( function() {
 });
 
     
-function chart(obj) {
-	
-}
-
-    
-function chart2(obj) {
+function chartb(obj) {
 	
 }

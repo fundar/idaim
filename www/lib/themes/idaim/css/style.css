@@ -41,17 +41,17 @@ h3 { float:left; color:#feffff; }
 #form-estados select option { background-color:#fff; list-style: none outside none; text-transform:uppercase; }
 
 #desc-estado { float:left; width:340px; height:auto; margin-top:20px; }
-#name-estado { font-size:24px; font-weight:bold; color:#fff; margin:0 0 0 0; }
-#nname-estado { font-size:24px; font-weight:bold; color:#fff; }
+#name-estado { font-size:24px; font-weight:bold; color:#3d4145; margin:0 0 0 0; }
+#nname-estado { font-size:24px; font-weight:bold; color:#3d4145; }
 #indice-estado { float:right; margin:50px 35px 0 0;  }
 
 #indice-base { float:right; width:165px; height:160px; }
-#indice-base .name { float:right; color:#fff; font-size:19px; }
+#indice-base .name { float:right; color:#3d4145; font-size:19px; }
 #indice-base .circle { border-radius:50%; -webkit-border-radius: 50%; -moz-border-radius:50%; background-color:#6fbdee; width:106px; height:106px; float:right; margin-top:14px; }
 #indice-base .circle span { float:left; font-size:44px; margin:25px; color:#e3e6e4; }
 
 #indice-pro { float:right; width:240px; height:160px; }
-#indice-pro .name { float:right; color:#fff; font-size:19px; }
+#indice-pro .name { float:right; color:#3d4145; font-size:19px; }
 #indice-pro .circle { border-radius:50%; -webkit-border-radius: 50%; -moz-border-radius:50%; background-color:#66cae2; width:106px; height:106px; float:right; margin:14px; }
 #indice-pro .circle span { float:left; font-size:44px; margin:25px; color:#e3e6e4; }
 

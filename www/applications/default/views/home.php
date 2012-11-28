@@ -173,6 +173,10 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		<div class="clear"></div>
 
 		<div id="burbujas">
+			<div id="buttons">
+				<div id="button-base" class="button-active"><span>&Iacute;ndice base</span></div>
+				<div id="button-pro"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
+			</div>
 			<div id="pro-chart">
 				<div id="chart"></div>
 			</div>

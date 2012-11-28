@@ -3,12 +3,24 @@ $(document).ready( function() {
 	$("#pro-chart").hide();	
 	$("#npro-chart").hide();
 	
-	$("#tab-1").click( function() {
+	$("#button-base").click( function() {
+		$("#button-base").removeClass($("#button-base").attr("class"));
+		$("#button-pro").removeClass($("#button-pro").attr("class"));
+		
+		$("#button-base").addClass("button-active");
+		$("#button-pro").addClass("button-inactive");
+		
 		$("#base-chart").show();
 		$("#pro-chart").hide();	
 	});
 	
-	$("#tab-2").click( function() {
+	$("#button-pro").click( function() {
+		$("#button-pro").removeClass($("#button-pro").attr("class"));
+		$("#button-base").removeClass($("#button-base").attr("class"));
+		
+		$("#button-pro").addClass("button-active");
+		$("#button-base").addClass("button-inactive");
+		
 		$("#pro-chart").show();	
 		$("#base-chart").hide();
 	});

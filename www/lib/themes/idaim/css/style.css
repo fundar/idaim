@@ -37,11 +37,11 @@ h3 { float:left; color:#feffff; }
 
 #form-estados { float:right; width:498px; text-transform:uppercase; }
 #form-estados select { float:right; margin:6px 20px 0 0; width:229px; height:28px; background-color:#fff; border:0; padding:4px; color:#606060; text-transform:uppercase; }
-#resultados-estado { float:left; margin:10px 0 0 120px; width:840px; height:370px; -webkit-box-shadow: 0 5px 6px -6px #fff; -moz-box-shadow: 0 5px 6px -6px #fff; box-shadow: 0 5px 6px -6px #fff; }
+#resultados-estado { float:left; margin:10px 0 0 0; width:960px; height:370px; -webkit-box-shadow: 0 5px 6px -6px #fff; -moz-box-shadow: 0 5px 6px -6px #fff; box-shadow: 0 5px 6px -6px #fff; }
 #form-estados select option { background-color:#fff; list-style: none outside none; text-transform:uppercase; }
 
 #desc-estado { float:left; width:340px; height:auto; margin-top:20px; }
-#name-estado { font-size:24px; font-weight:bold; color:#fff; }
+#name-estado { font-size:24px; font-weight:bold; color:#fff; margin:0 0 0 0; }
 #nname-estado { font-size:24px; font-weight:bold; color:#fff; }
 #indice-estado { float:right; margin:50px 35px 0 0;  }
 
@@ -78,7 +78,7 @@ h3 { float:left; color:#feffff; }
 .margin-download { margin-right:90px; }
 .margin-left { margin-left:15%; }
 
-.button-download { float:left; margin:6px 0 0 130px; font-size:14px; text-transform:uppercase; width:139px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
+.button-download { float:left; margin:6px 0 0 0; font-size:14px; text-transform:uppercase; width:139px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
 .button-download span { top:7px; left:10px; position:relative; }
 
 .button-seek { float:right; margin:6px 40px 0 0; font-size:14px; text-transform:uppercase; width:139px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
@@ -89,8 +89,14 @@ h3 { float:left; color:#feffff; }
 .close { cursor:pointer; float:left; margin:22px 0 0 20px; background:url(images/close.png); width:18px; height:18px; text-indent:-999px; overflow:hidden; }
 .clear { clear:both; }
 
+#button-base { color:#fefefe; float:left; width:141px; height:25px; cursor:pointer; }
+#button-pro  { color:#fefefe; float:left; width:141px; height:25px; cursor:pointer; margin-left:9px; }
+#button-base span { float:left; margin:3px 0 0 28px; }
+#button-pro  span { float:left; margin:3px 0 0 9px; }
 
+.button-active { border-left:1px solid #787b7d; border-bottom:1px solid #787b7d; background-color:#3d4145; }
+.button-inactive { border-left:1px solid #939697; border-bottom:1px solid #939697; background-color:#676a6d; }
 /*Estados*/
-.img-estados { float:left; width:344px; margin:-10px 0 0 -103px; height:288px; }
+.img-estados { float:left; width:344px; margin:-10px 0 0 -130px; height:288px; }
 .slp-img { background:url(images/slp.png); }
 .loading { width:24px; height:24px; background:url(images/load.gif); float:left; margin:9px 0 0 12px; }

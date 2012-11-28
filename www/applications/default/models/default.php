@@ -21,7 +21,7 @@ class Default_Model extends ZP_Model {
 		$result  = $this->Db->query($query);
 		
 		$data["desc"]  = $result[0]["Description"];
-		$data["color"] = $this->color($this->convert($result[0][$estado]));
+		$data["color"] = $this->color($this->convert($result[0][$estado]), $type);
 		$data["level"] = 1;
 		$data["value"] = $this->convert($result[0][$estado]);
 		
@@ -34,7 +34,7 @@ class Default_Model extends ZP_Model {
 		
 		foreach($result as $value) {
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
-			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]));
+			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 2;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
 		}
@@ -48,7 +48,7 @@ class Default_Model extends ZP_Model {
 		
 		foreach($result as $value) {
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
-			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]));
+			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 3;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
 		}
@@ -62,7 +62,7 @@ class Default_Model extends ZP_Model {
 
 		foreach($result as $value) {
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
-			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]));
+			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 4;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
 		}
@@ -74,7 +74,27 @@ class Default_Model extends ZP_Model {
 		return substr($data * 10, 0, 3);
 	}
 	
-	public function color($value) {
+	public function color($value, $type = "p") {
+		if($type="p") {
+			/*0 - 5.5	5.6 - 6.3	6.4 - 6.9	7 - 8.0	8.1 a 10*/
+			if($value>=8.1 and $value<=10)  return "#79c452";
+			if($value>=7   and $value<=8)   return "#388652";
+			if($value>=6.4 and $value<=6.9) return "#ebd06e";
+			if($value>=5.6 and $value<=6.3) return "#df6c4f";
+			if($value>=0   and $value<=5.5) return "#de2b33";
+		} else {
+			/* 0 - 6.8	6.9 - 7.6	7.7 a 7.9	8 a 9	9 a 10 */
+			if($value>=9   and $value<=10)  return "#79c452";
+			if($value>=8   and $value<=8.9) return "#388652";
+			if($value>=7.7 and $value<=7.9) return "#ebd06e";
+			if($value>=6.9 and $value<=7.6) return "#df6c4f";
+			if($value>=0   and $value<=6.8) return "#de2b33";
+		}
+		
+		return "#ccc";
+	}
+	
+	public function color2($value, $type = "p") {
 		if($value>=9 and $value<=10)  return "#79c452";
 		if($value>=8 and $value<=8.9) return "#388652";
 		if($value>=7 and $value<=7.9) return "#ebd06e";

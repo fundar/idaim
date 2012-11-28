@@ -87,6 +87,9 @@ $(document).ready( function() {
 			$("#iprogresivo").html(data.indice.progresivo);
 			$("#ibase").html(data.indice.base);
 			
+			$("#indice-base .circle").css("background-color",  data.data.base.indice.color);
+			$("#indice-pro .circle").css("background-color",  data.data.progresivo.indice.color);
+			
 			chartp(data.data.progresivo);
 			chartb(data.data.base);
 			
@@ -112,8 +115,3 @@ $(document).ready( function() {
 		$("#indice-estatal .more").hide();
 	}
 });
-
-    
-function chartb(obj) {
-	
-}

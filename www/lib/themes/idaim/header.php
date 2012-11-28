@@ -11,7 +11,9 @@
 		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/dona1.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/ang.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/donap.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/donab.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<?php print $this->getCSS(); ?>

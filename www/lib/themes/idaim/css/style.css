@@ -14,25 +14,25 @@ body { font-family: arial, "PT Sans Caption", arial; margin:0; }
 
 #content { width:100%; height:auto;}
 
-#message { width:100%; height:295px; background-color:#f8fcff; border-bottom:2px solid #fff; }
+#message { width:100%; height:295px; background-color:#fdfdfd; border-bottom:2px solid #fff; }
 #message-content { width:960px; height:100%; margin:0 auto; }
 #message h2 { float:left; width:613px; margin-left:200px; margin-top:75px; font-style:italic; color:#434343; font-size:22px; }
 
-#results-graph { width:100%; height:367px; background-color:#f0f5f9; border-bottom:1px solid #e1e5e8;}
+#results-graph { width:100%; height:367px; background-color:#e4e6e5; border-bottom:1px solid #e1e5e8;}
 #results-graph-content  { width:960px; height:100%; margin:0 auto; }
 #results-graph h2 { float:left; margin-top:50px; width:173px; font-size:22px; color:#513838; }
 
-#indice-nacional { width:100%; height:83px; background-color:#1a232a; border-bottom:1px solid #7e909a; }
+#indice-nacional { width:100%; height:83px; background-color:#0e1212; border-bottom:1px solid #1b2121; }
 #indice-nacional-content { width:960px; height:100%; margin:0 auto; }
 h3 { float:left; color:#feffff; }
 
-#indice-estatal { width:100%; height:83px; background-color:#466174; border-top: 1px solid #5e798c; border-bottom:1px solid #5e798c; }
+#indice-estatal { width:100%; height:83px; background-color:#232b2b; border-top: 1px solid #1b2121; border-bottom:1px solid #4a5050; }
 #indice-estatal-content { width:960px; height:100%; margin:0 auto; }
 
-#results-estatal  { float:left; width:100%; height:1050px; background-color:#c1d8e8; border-bottom:1px solid #d9e7f2; }
+#results-estatal  { float:left; width:100%; height:1050px; background-color:#e4e6e5; border-bottom:1px solid #d9e7f2; }
 #results-estatal-content { width:960px; height:100%; margin:0 auto;  }
 
-#results-nacional { float:left; width:100%; height:1050px; background-color:#c1d8e8; border-bottom:1px solid #d9e7f2; }
+#results-nacional { float:left; width:100%; height:1050px; background-color:#e4e6e5; border-bottom:1px solid #d9e7f2; }
 #results-nacional-content { width:960px; height:100%; margin:0 auto;  }
 
 #form-estados { float:right; width:498px; text-transform:uppercase; }

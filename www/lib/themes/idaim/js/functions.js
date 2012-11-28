@@ -120,6 +120,7 @@ $(document).ready( function() {
 		$("#results-nacional").hide();
 		$("#indice-nacional .close").hide();
 		$("#indice-estatal .close").hide();
+		$(".button-seek").click();
 	} else {
 		$("#results-nacional").hide();
 		$(".button-seek").click();

@@ -10,7 +10,14 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 
 <div id="results-graph">
 	<div id="results-graph-content">
-		<h2>Ranking general de las entidades</h2>
+		<div id="buttons-ranking">
+			<h2>Ranking general de las entidades</h2>
+			<div class="clear"></div>
+			<div id="rk-but-base" class="button-active"><span>&Iacute;ndice base</span></div>
+			<div class="clear"></div>
+			<div id="rk-but-pro"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
+		</div>
+		
 		<div id="container-r"></div>
 		<div id="container-result">
 			<div id="cont-bar">

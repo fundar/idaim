@@ -76,7 +76,7 @@ function dartb() {
 		drawFunc: function(){
 			var context = this.getContext();
 			context.beginPath();
-			context.arc(0,0,165,0, 0.610865238, false); 
+			context.arc(0,0,33,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
 			context.fillStyle="#388652";
@@ -161,14 +161,6 @@ function edefault() {
 	$("#interval-rank").css("background-color", "transparent"); 
 	$("#rank-estados").css("background-color", "transparent");
 }
-
-/*
-0 a 5.99
-6.00 a 6.99
-7.00 a 7.99
-8.00 a 8.99
-9 a 10
-*/
 
 function rank1() {
 	document.body.style.cursor = "pointer";

@@ -24,7 +24,7 @@
 #rank-estados ul { list-style:none; }
 #rank-estados ul li { list-style:none; }
 
-#bar-colors { float:right; margin:18px 7px 0 0; width:168px; height:11px; 	position:relative; z-index:1001; }
+#bar-colors { float:right; margin:18px 7px 0 0; width:145px; height:11px; 	position:relative; z-index:1001; }
 #bar-colors .color {
 	width:27px;
 	height:10px;
@@ -32,12 +32,11 @@
 }
 
 #bar-colors span:hover { cursor:pointer; }
-#bar-colors .color1 { border-left:1px solid #f23837; border-top:1px solid #f17575; background-color:#f21f1d; }
-#bar-colors .color2 { border-left:1px solid #f14489; border-top:1px solid #f173ab; background-color:#f11d77; }
-#bar-colors .color3 { border-left:1px solid #d24ee4; border-top:1px solid #d473f4; background-color:#c21df1; }
-#bar-colors .color4 { border-left:1px solid #9f53f3; border-top:1px solid #9873f4; background-color:#5e1df1; }
-#bar-colors .color5 { border-left:1px solid #6e4ef3; border-top:1px solid #7a73f4; background-color:#2c1df1; }
-#bar-colors .color6 { border-left:1px solid #2169f1; border-top:1px solid #71aff4; background-color:#1d81f1; }
+#bar-colors .color1 { border-left:1px solid #de2b33; border-top:1px solid #de2b33; background-color:#de2b33; }
+#bar-colors .color2 { border-left:1px solid #df6c4f; border-top:1px solid #df6c4f; background-color:#df6c4f; }
+#bar-colors .color3 { border-left:1px solid #ebd06e; border-top:1px solid #ebd06e; background-color:#ebd06e; }
+#bar-colors .color4 { border-left:1px solid #388652; border-top:1px solid #388652; background-color:#388652; }
+#bar-colors .color5 { border-left:1px solid #79c452; border-top:1px solid #79c452; background-color:#79c452; }
 
 #interval-rank { 
 	float:right;

@@ -21,7 +21,6 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 						<span class="color color3"></span>
 						<span class="color color4"></span>
 						<span class="color color5"></span>
-						<span class="color color6"></span>
 					</div>
 				<span class="text-bar">Baja transparencia</span>
 			</div>

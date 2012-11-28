@@ -16,6 +16,8 @@
 		<script src="<?php print $this->themePath; ?>/js/donab.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/dartb.js"></script>
+		
 		<?php print $this->getCSS(); ?>
 		<script>
 			var webURL    = "<?php echo get("webURL");?>";

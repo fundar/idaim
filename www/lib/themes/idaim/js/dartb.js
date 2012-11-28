@@ -140,17 +140,14 @@ function dartb() {
 	setTimeout( function(){ layer.add(circle3); stage.add(layer); } , 600)
 	setTimeout( function(){ layer.add(circle4); stage.add(layer); } , 800)
 	setTimeout( function(){ layer.add(circle5); stage.add(layer); } , 1000)
-	//setTimeout( function(){ layer.add(circle6); stage.add(layer); } , 2400)
-}
-
-$(document).ready( function() {
+	
 	$(".color1").hover(function() { rank1() }, function() { edefault() });
 	$(".color2").hover(function() { rank2() }, function() { edefault() });
 	$(".color3").hover(function() { rank3() }, function() { edefault() });
 	$(".color4").hover(function() { rank4() }, function() { edefault() });
 	$(".color5").hover(function() { rank5() }, function() { edefault() });
 	$(".color6").hover(function() { rank6() }, function() { edefault() });
-});
+}
 
 function edefault() {
 	document.body.style.cursor = "default"; 

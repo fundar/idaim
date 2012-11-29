@@ -70,7 +70,6 @@ $(document).ready( function() {
 		$("#indice-estatal .more").show();
 		$("#indice-estatal .close").hide();	
 	});
-	
 
 			  
 	$(".button-seek").click( function() {
@@ -85,8 +84,15 @@ $(document).ready( function() {
 			
 			data = JSON.parse(response);
 			
-			var stateObj = { foo: $("#estados option:selected").text() };
-			history.pushState(stateObj, $("#estados option:selected").text(), webURL + "/estado/" + $("#estados").val());
+			if(($("#showes").val() == "0" || $("#showes").val() == "1") && $("#estados").val() != "Aguascalientes") {
+				var stateObj = { foo: $("#estados option:selected").text() };
+				history.pushState(stateObj, $("#estados option:selected").text(), webURL + "/estado/" + $("#estados").val());
+			} else if($("#showes").val() == "1" && $("#estados").val() == "Aguascalientes") {
+				var stateObj = { foo: $("#estados option:selected").text() };
+				history.pushState(stateObj, $("#estados option:selected").text(), webURL + "/estado/" + $("#estados").val());
+			}
+			
+			$("#showes").val("1");
 			
 			if(data.key=="Estado") {
 				$("#mapa").html("");
@@ -127,4 +133,38 @@ $(document).ready( function() {
 		$("#indice-nacional .close").hide();
 		$("#indice-estatal .more").hide();
 	}
+	
+	$.ajax({
+		url: "get/Nacional"
+	}).done(function(response) {
+		data = JSON.parse(response);
+		
+		$("#indice-base .circlen").css("background-color",  data.data.base.indice.color);
+		$("#indice-pro .circlen").css("background-color",  data.data.progresivo.indice.color);
+		
+		chartb_n(data.data.base);
+		chartp_n(data.data.progresivo);
+	});
+	
+	$("#button-base-n").click( function() {
+		$("#button-base-n").removeClass($("#button-base-n").attr("class"));
+		$("#button-pro-n").removeClass($("#button-pro-n").attr("class"));
+		
+		$("#button-base-n").addClass("button-active");
+		$("#button-pro-n").addClass("button-inactive");
+		
+		$("#nbase-chart").show();
+		$("#npro-chart").hide();	
+	});
+	
+	$("#button-pro-n").click( function() {
+		$("#button-pro-n").removeClass($("#button-pro-n").attr("class"));
+		$("#button-base-n").removeClass($("#button-base-n").attr("class"));
+		
+		$("#button-pro-n").addClass("button-active");
+		$("#button-base-n").addClass("button-inactive");
+		
+		$("#npro-chart").show();	
+		$("#nbase-chart").hide();
+	});
 });

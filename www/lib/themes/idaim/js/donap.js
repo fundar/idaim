@@ -55,11 +55,11 @@ function chartp(data) {
 		layer5.add(simpleText);
 		//stage.add(layer);
 		
-		setTimeout( function(){ stage.add(layer1); } , 400)
-		setTimeout( function(){  stage.add(layer2); } , 800)
-		setTimeout( function(){  stage.add(layer3); } , 1200)
-		setTimeout( function(){  stage.add(layer4); } , 1600)
-		setTimeout( function(){  stage.add(layer5); } , 2000)
+		setTimeout( function(){ stage.add(layer1); } , 300)
+		setTimeout( function(){  stage.add(layer2); } , 500)
+		setTimeout( function(){  stage.add(layer3); } , 700)
+		setTimeout( function(){  stage.add(layer4); } , 800)
+		setTimeout( function(){  stage.add(layer5); } , 900)
 	}
 
 	function drawArc(x, y, r, startAngle, endAngle, color, value, desc) {

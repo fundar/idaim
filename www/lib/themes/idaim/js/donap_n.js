@@ -1,7 +1,7 @@
-function chartb(data) {	
-	$("#chart2").html("");
+function chartp_n(data) {	
+	$("#nchart").html("");
 	
-	var stage  = new Kinetic.Stage("chart2", 530, 580);
+	var stage  = new Kinetic.Stage("nchart", 530, 580);
 	var layer1  = new Kinetic.Layer();
 	var layer2  = new Kinetic.Layer();
 	var layer3  = new Kinetic.Layer();
@@ -93,15 +93,15 @@ function chartb(data) {
 		arc.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - arc._x; draggingRectOffsetY = mousePos.y - arc._y; });
 		arc.on("mouseout", function(){ 
 			document.body.style.cursor = "default";
-			$("#value-base span").html("");
-			$("#value-name").html("");
-			$("#value-base").css("background-color", "transparent");
+			$("#value-pron span").html("");
+			$("#value-namepn").html("");
+			$("#value-pron").css("background-color", "transparent");
 		});
 		
 		arc.on("mouseover", function(){ 
-			$("#value-name").html(desc);
-			$("#value-base span").html(value);
-			$("#value-base").css("background-color", color);
+			$("#value-namepn").html(desc);
+			$("#value-pron span").html(value);
+			$("#value-pron").css("background-color", color);
 			document.body.style.cursor = "pointer"; 
 		});
 		

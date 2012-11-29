@@ -73,13 +73,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 					<div id="indice-pro">
 						<div class="name">&Iacute;ndice progresivo</div>
 						<div class="clear"></div>
-						<div class="circle"><span id="niprogresivo">6.0</span></div>
+						<div class="circlen"><span id="niprogresivo">6.1</span></div>
 					</div>
 					
 					<div id="indice-base">
 						<div class="name">&Iacute;ndice base</div>
 						<div class="clear"></div>
-						<div class="circle"><span id="nibase">6.9</span></div>
+						<div class="circlen"><span id="nibase">7.1</span></div>
 					</div>
 				</div>
 			</div>
@@ -88,11 +88,37 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		<div class="clear"></div>
 
 		<div id="burbujas">
+			<div id="buttons">
+				<div id="button-base-n" class="button-active"><span>&Iacute;ndice base</span></div>
+				<div id="button-pro-n"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
+			</div>
+			
 			<div id="npro-chart">
 				<div id="nchart"></div>
+				
+				<div id="info-pro">
+					<div id="value-namepn"></div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-pron">
+						<span></span>
+					</div>
+				</div>
 			</div>
+			
 			<div id="nbase-chart">
 				<div id="nchart2"></div>
+				
+				<div id="info-base">
+					<div id="value-namen"></div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-basen">
+						<span></span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

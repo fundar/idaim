@@ -14,6 +14,8 @@
 		<script src="<?php print $this->themePath; ?>/js/ang.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/donap.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/donab.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/donab_n.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/donap_n.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dartb.js"></script>

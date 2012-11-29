@@ -35,10 +35,18 @@ circle.child {
 #value-base { float:left; width:122px; height:122px; margin:10px 0 0 0; color:#e4e6e5; font-size:65px; }
 #value-base  span { float:left; margin:23px 0 0 16px; }
 
+#value-namen { float:left; width:320px; height:auto; font-size:20px; color:#000; }
+#value-basen { float:left; width:122px; height:122px; margin:10px 0 0 0; color:#e4e6e5; font-size:65px; }
+#value-basen  span { float:left; margin:23px 0 0 16px; }
+
 #info-pro { float:left; width:320px; margin:125px 0 0 -90px; }
 #value-namep { float:left; width:320px; height:auto; font-size:20px; color:#000; }
 #value-pro { float:left; width:122px; height:122px; margin:10px 0 0 0; color:#e4e6e5; font-size:65px; }
 #value-pro  span { float:left; margin:23px 0 0 16px; }
+
+#value-namepn { float:left; width:320px; height:auto; font-size:20px; color:#000; }
+#value-pron { float:left; width:122px; height:122px; margin:10px 0 0 0; color:#e4e6e5; font-size:65px; }
+#value-pron  span { float:left; margin:23px 0 0 16px; }
 
 #chart { float:left; margin:0 0 0 0; width:700px; height:580px; }
 #chart2 { float:left; margin:0 0 0 0; width:700px; height:580px; }
@@ -46,10 +54,10 @@ circle.child {
 #nchart circle { fill: #429cce; }
 #nchart circle.parent { fill: #9bcee1; color:#fff !important; }
 #nchart text.parent { fill: #fff; }
-#nchart { float:left; margin:0 0 0 120px; width:650px; height:500px; }
+#nchart { float:left; margin:0 0 0 0; width:700px; height:580px;  }
 
 
 #nchart2 circle { fill: #429cce; }
 #nchart2 circle.parent { fill: #6fbdee; color:#fff !important; }
 #nchart2 text.parent { fill: #fff; }
-#nchart2 { float:left; margin:0 0 0 120px; width:650px; height:500px; }
+#nchart2 { float:left; margin:0 0 0 0; width:700px; height:580px;  }

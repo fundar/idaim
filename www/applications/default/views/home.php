@@ -243,8 +243,8 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			<div class="clear"></div>
 			
 			<div id="buttons-more">
-				<a href="" title="">Boton 1</a>
-				<a href="" title="">Boton 2</a>
+				<a href="" title="Metodología">Metodolog&iacute;a</a>
+				<a href="" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
 			</div>
 		</div>
 	</div>

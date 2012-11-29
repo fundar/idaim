@@ -71,7 +71,13 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function convert($data) {
-		return substr($data * 10, 0, 3);
+		$number = substr($data * 10, 0, 3);
+		
+		if(strlen($number) == 1) {
+			$number = $number . ".0";
+		}
+		
+		return $number;
 	}
 	
 	public function color($value, $type = "p") {

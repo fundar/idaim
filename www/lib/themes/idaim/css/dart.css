@@ -35,8 +35,8 @@
 #bar-colors .color1 { border-left:1px solid #de2b33; border-top:1px solid #de2b33; background-color:#de2b33; }
 #bar-colors .color2 { border-left:1px solid #df6c4f; border-top:1px solid #df6c4f; background-color:#df6c4f; }
 #bar-colors .color3 { border-left:1px solid #ebd06e; border-top:1px solid #ebd06e; background-color:#ebd06e; }
-#bar-colors .color4 { border-left:1px solid #388652; border-top:1px solid #388652; background-color:#388652; }
-#bar-colors .color5 { border-left:1px solid #79c452; border-top:1px solid #79c452; background-color:#79c452; }
+#bar-colors .color4 { border-left:1px solid #79c452; border-top:1px solid #79c452; background-color:#79c452; }
+#bar-colors .color5 { border-left:1px solid #388652; border-top:1px solid #388652; background-color:#388652; }
 
 #interval-rank { 
 	float:right;

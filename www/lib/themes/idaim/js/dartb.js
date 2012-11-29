@@ -77,7 +77,7 @@ function dartb() {
 			context.arc(0,0,33,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#388652";
+			context.fillStyle="#79c452";
 			context.fill();
 		}
 	});
@@ -98,7 +98,7 @@ function dartb() {
 			context.arc(0,0,33,0, 0.610865238, false); 
 			context.lineTo(0,0);
 			context.closePath();
-			context.fillStyle="#79c452";
+			context.fillStyle="#388652";
 			context.fill();
 		}
 	});
@@ -215,7 +215,7 @@ function rank4() {
 	document.body.style.cursor = "pointer";
 	html = "<li>Chihuahua</li>";
 	$("#interval-rank").html("<span>8.00 a 8.99</span>");
-	$("#interval-rank").css("background-color", "#388652");
+	$("#interval-rank").css("background-color", "#79c452");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }
 
@@ -223,6 +223,6 @@ function rank5() {
 	document.body.style.cursor = "pointer";
 	html = "<li>Distrito Federal</li>";
 	$("#interval-rank").html("<span>9.00 a 10.00</span>");
-	$("#interval-rank").css("background-color", "#79c452");
+	$("#interval-rank").css("background-color", "#388652");
 	$("#rank-estados").html("<ul>" + html + "</ul>");
 }

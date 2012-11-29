@@ -56,7 +56,9 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 <div id="results-nacional">
 	<div id="results-nacional-content">
 		<div id="top-resutls">
-			<a id="button-download-nacional" class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
+			<a id="button-download-nacional" class="button-download" href="/" title="Descargar Ficha del estado">
+				<span>Descargar Ficha</span>
+			</a>
 		</div>
 				
 			<div class="clear"></div>
@@ -97,13 +99,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 				<div id="nchart"></div>
 				
 				<div id="info-pro">
-					<div id="value-namepn"></div>
-					
-					<div class="clear"></div>
-					
 					<div id="value-pron">
 						<span></span>
 					</div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-namepn"></div>
 				</div>
 			</div>
 			
@@ -111,13 +113,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 				<div id="nchart2"></div>
 				
 				<div id="info-base">
-					<div id="value-namen"></div>
-					
-					<div class="clear"></div>
-					
 					<div id="value-basen">
 						<span></span>
 					</div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-namen"></div>
 				</div>
 			</div>
 		</div>
@@ -129,7 +131,9 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 <div id="results-estatal">
 	<div id="results-estatal-content">
 		<div id="top-resutls">
-			<a id="button-download"  class="button-download" href="/" title="Descargar PDF del indice del estado"><span>Descargar PDF</span></a>
+			<a id="button-download"  class="button-download" href="/" title="Descargar Ficha del estado">
+				<span>Descargar Ficha</span>
+			</a>
 			
 			<div id="form-estados">
 				<div class="loading"></div>
@@ -212,13 +216,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 				<div id="chart"></div>
 				
 				<div id="info-pro">
-					<div id="value-namep"></div>
-					
-					<div class="clear"></div>
-					
 					<div id="value-pro">
 						<span></span>
 					</div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-namep"></div>
 				</div>
 			</div>
 			
@@ -226,13 +230,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 				<div id="chart2"></div>
 				
 				<div id="info-base">
-					<div id="value-name"></div>
-					
-					<div class="clear"></div>
-					
 					<div id="value-base">
 						<span></span>
 					</div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-name"></div>
 				</div>
 			</div>
 		</div>

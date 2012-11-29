@@ -184,6 +184,16 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			</div>
 			<div id="pro-chart">
 				<div id="chart"></div>
+				
+				<div id="info-pro">
+					<div id="value-namep"></div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-pro">
+						<span></span>
+					</div>
+				</div>
 			</div>
 			
 			<div id="base-chart">

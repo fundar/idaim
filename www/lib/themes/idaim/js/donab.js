@@ -99,18 +99,6 @@ function chartb(data) {
 		});
 		
 		arc.on("mouseover", function(){ 
-			/*
-			console.log(arc.get_Fill());
-			$("#color").val(arc.get_Fill());
-			
-			var array = arc.drawFunc("#ccc");
-			var arc2   = drawArc(array[0],array[1],array[2],array[3],array[4],array[5]);
-			
-			layer.add(arc2);
-			//arc2.setZIndex(30);
-			stage.add(layer);
-			*/
-			
 			$("#value-name").html(desc);
 			$("#value-base span").html(value);
 			$("#value-base").css("background-color", color);

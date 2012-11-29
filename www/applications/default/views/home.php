@@ -64,8 +64,8 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			<div id="resultados-estado">
 				<div id="desc-estado">
 					<div id="nname-estado">Nacional</div>
-					<div class="estado img-estados">
-						<?php include 'svg.php'; ?>
+					<div id="mapan" class="estado img-estados">
+						
 					</div>
 				</div>
 				

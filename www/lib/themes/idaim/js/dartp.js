@@ -153,15 +153,15 @@ function rank1p() {
 	document.body.style.cursor = "pointer";
 	
 	html = "<li>Baja California Sur</li>";
-	html += "<li>Michoacan</li>";
+	html += "<li>Michoacán</li>";
 	html += "<li>Tabasco</li>";
 	html += "<li>Hidalgo</li>";
 	html += "<li>Guanajuato</li>";
-	html += "<li>Queretaro</li>";
+	html += "<li>Querétaro</li>";
 	html += "<li>Sonora</li>";
 	html += "<li>Sinaloa</li>";
 	html += "<li>Tamaulipas</li>";
-	html += "<li>Yucatan</li>";
+	html += "<li>Yucatán</li>";
 	html += "<li>Quintana Roo</li>";
 	
 	$("#interval-rank").css("background-color", "#de2b33");
@@ -195,7 +195,7 @@ function rank3p() {
 	html += "<li>Durango</li>";
 	html += "<li>Tlaxcala</li>";
 	html += "<li>Morelos</li>";
-	html += "<li>Nuevo Leon</li>";
+	html += "<li>Nuevo León</li>";
 	html += "<li>Coahuila</li>";
 	html += "<li>Nayarit</li>";
 

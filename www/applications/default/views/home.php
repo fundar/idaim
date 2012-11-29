@@ -56,8 +56,12 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 <div id="results-nacional">
 	<div id="results-nacional-content">
 		<div id="top-resutls">
-			<a id="button-download-nacional" class="button-download" href="/" title="Descargar Ficha del estado">
+			<a id="button-download-nacional" class="button-download" href="/" title="Descargar Ficha Nacional">
 				<span>Descargar Ficha</span>
+			</a>
+			
+			<a id="button-download-nacional-des" class="button-download-des" href="/" title="Descargar evaluación desagregada">
+				<span>Descargar evaluaci&oacute;n desagregada</span>
 			</a>
 		</div>
 				
@@ -133,6 +137,10 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		<div id="top-resutls">
 			<a id="button-download"  class="button-download" href="/" title="Descargar Ficha del estado">
 				<span>Descargar Ficha</span>
+			</a>
+			
+			<a id="button-download-des" class="button-download-des" href="/" title="Descargar evaluación desagregada">
+				<span>Descargar evaluaci&oacute;n desagregada</span>
 			</a>
 			
 			<div id="form-estados">

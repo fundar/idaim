@@ -154,8 +154,11 @@ h3 { float:left; color:#feffff; }
 .margin-download { margin-right:90px; }
 .margin-left { margin-left:15%; }
 
-.button-download { float:left; margin:6px 0 0 0; font-size:14px; text-transform:uppercase; width:153px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
+.button-download { float:left; margin:6px 0 0 0; font-size:13px; text-transform:uppercase; width:146px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
 .button-download span { top:7px; left:10px; position:relative; }
+
+.button-download-des { float:left; margin:6px 0 0 10px; font-size:13px; text-transform:uppercase; width:293px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
+.button-download-des span { top:7px; left:10px; position:relative; }
 
 .button-seek { float:right; margin:6px 40px 0 0; font-size:14px; text-transform:uppercase; width:139px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
 .button-seek span { top:7px; left:10px; position:relative; }

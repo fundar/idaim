@@ -48,6 +48,8 @@ circle.child {
 #value-pron { float:left; width:122px; height:122px; color:#e4e6e5; font-size:65px; }
 #value-pron  span { float:left; margin:23px 0 0 16px; }
 
+#buttons-more { float:right; margin:-30px 0 0 0; }
+
 #chart { float:left; margin:0 0 0 0; width:700px; height:580px; }
 #chart2 { float:left; margin:0 0 0 0; width:700px; height:580px; }
 

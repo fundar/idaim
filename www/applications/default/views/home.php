@@ -239,6 +239,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 					<div id="value-name"></div>
 				</div>
 			</div>
+			
+			<div class="clear"></div>
+			
+			<div id="buttons-more">
+				<a href="" title="">Boton 1</a>
+				<a href="" title="">Boton 2</a>
+			</div>
 		</div>
 	</div>
 </div>

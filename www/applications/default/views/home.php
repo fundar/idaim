@@ -19,6 +19,7 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		</div>
 		
 		<div id="container-r"></div>
+		
 		<div id="container-result">
 			<div id="cont-bar">
 				<span class="text-bar">Alta transparencia</span>
@@ -34,9 +35,7 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			
 			<div id="interval-rank"></div>
 			<div id="rank-estados"></div>
-			
 		</div>
-		
     </div>
 </div>
 
@@ -189,6 +188,16 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			
 			<div id="base-chart">
 				<div id="chart2"></div>
+				
+				<div id="info-base">
+					<div id="value-name"></div>
+					
+					<div class="clear"></div>
+					
+					<div id="value-base">
+						<span></span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

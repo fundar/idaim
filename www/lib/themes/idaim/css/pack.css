@@ -30,8 +30,13 @@ circle.child {
   pointer-events: none;
 }
 
-#chart { float:left; margin:0 0 0 0; width:700px; height:700px; }
-#chart2 { float:left; margin:0 0 0 0; width:700px; height:700px; }
+#info-base { float:left; width:320px; margin:125px 0 0 -90px; }
+#value-name { float:left; width:320px; height:auto; font-size:20px; color:#000; }
+#value-base { float:left; width:122px; height:122px; margin:10px 0 0 0; color:#e4e6e5; font-size:65px; }
+#value-base  span { float:left; margin:23px 0 0 16px; }
+
+#chart { float:left; margin:0 0 0 0; width:700px; height:580px; }
+#chart2 { float:left; margin:0 0 0 0; width:700px; height:580px; }
 
 #nchart circle { fill: #429cce; }
 #nchart circle.parent { fill: #9bcee1; color:#fff !important; }

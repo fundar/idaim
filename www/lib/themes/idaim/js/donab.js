@@ -19,21 +19,21 @@ function chartb(data) {
 		for(i in data.indicadores) {
 			startAngle = (s_indi[i]*Math.PI)/180;
 			endAngle   = (e_indi[i]*Math.PI)/180;
-			arc        = drawArc(x,y,254,startAngle,endAngle,data.indicadores[i].color);
+			arc        = drawArc(x,y,254,startAngle,endAngle,data.indicadores[i].color,data.indicadores[i].value,data.indicadores[i].desc);
 			layer1.add(arc);
 		}
 		
 		for(i in data.variablesi) {
 			startAngle = (s_vari[i]*Math.PI)/180;
 			endAngle   = (e_vari[i]*Math.PI)/180;
-			arc        = drawArc(x,y,204,startAngle,endAngle,data.variablesi[i].color);
+			arc        = drawArc(x,y,204,startAngle,endAngle,data.variablesi[i].color,data.variablesi[i].value,data.variablesi[i].desc);
 			layer2.add(arc);
 		}
 		
 		for(i in data.variablesp) {
 			startAngle = (s_varp[i]*Math.PI)/180;
 			endAngle   = (e_varp[i]*Math.PI)/180;
-			arc        = drawArc(x,y,150,startAngle,endAngle,data.variablesp[i].color);
+			arc        = drawArc(x,y,150,startAngle,endAngle,data.variablesp[i].color,data.variablesp[i].value,data.variablesp[i].desc);
 			layer3.add(arc);
 		}
 		
@@ -49,7 +49,7 @@ function chartb(data) {
 		/* Indice */
 		startAngle = (0*Math.PI)/180;
 		endAngle   = (360*Math.PI)/180;
-		var indice = drawArc(x,y,70,startAngle, endAngle, data.indice.color);
+		var indice = drawArc(x,y,70,startAngle, endAngle, data.indice.color,data.indice.value,data.indice.desc);
 		
 		layer4.add(indice);
 		layer5.add(simpleText);
@@ -62,7 +62,7 @@ function chartb(data) {
 		setTimeout( function(){  stage.add(layer5); } , 2000)
 	}
 
-	function drawArc(x, y, r, startAngle, endAngle, color) {
+	function drawArc(x, y, r, startAngle, endAngle, color, value, desc) {
 		var arc = new Kinetic.Shape({
 			drawFunc: function(stroke){
 				var context = this.getContext();
@@ -92,7 +92,10 @@ function chartb(data) {
 		
 		arc.on("mousedown", function(){ draggingShape = this; var mousePos = stage.getMousePosition(); draggingRectOffsetX = mousePos.x - arc._x; draggingRectOffsetY = mousePos.y - arc._y; });
 		arc.on("mouseout", function(){ 
-			document.body.style.cursor = "default";  
+			document.body.style.cursor = "default";
+			$("#value-base span").html("");
+			$("#value-name").html("");
+			$("#value-base").css("background-color", "transparent");
 		});
 		
 		arc.on("mouseover", function(){ 
@@ -108,6 +111,9 @@ function chartb(data) {
 			stage.add(layer);
 			*/
 			
+			$("#value-name").html(desc);
+			$("#value-base span").html(value);
+			$("#value-base").css("background-color", color);
 			document.body.style.cursor = "pointer"; 
 		});
 		

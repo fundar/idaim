@@ -3,8 +3,8 @@
 		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los Estados
 en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cticas en la materia."</h2>
 		<div class="clear"></div>
-		<a href="/ranking" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
-		<a href="/indice" title="Descarga la matriz del IDAIM" class="downloads indice-download">Descarga la matriz del IDAIM</a>
+		<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
+		<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
 	</div>
 </div>
 
@@ -125,6 +125,13 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 					
 					<div id="value-namen"></div>
 				</div>
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div id="buttons-more">
+				<a href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
+				<a href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
 			</div>
 		</div>
 	</div>
@@ -251,8 +258,8 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			<div class="clear"></div>
 			
 			<div id="buttons-more">
-				<a href="" title="Metodología">Metodolog&iacute;a</a>
-				<a href="" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
+				<a href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
+				<a href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
 			</div>
 		</div>
 	</div>

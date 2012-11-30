@@ -97,6 +97,7 @@ $(document).ready( function() {
 			if(data.key=="Estado") {
 				$("#mapa").html("");
 			} else {
+				$("#button-download").attr("href", data.ficha);
 				$("#button-download").show();
 				$("#mapa").html('<img src="'+themePath+'/css/images/estados/'+data.key+'.png" title="'+$("#estados option:selected").text()+'" />');
 			}
@@ -142,6 +143,7 @@ $(document).ready( function() {
 		$("#indice-base .circlen").css("background-color",  data.data.base.indice.color);
 		$("#indice-pro .circlen").css("background-color",  data.data.progresivo.indice.color);
 		
+		$("#button-download-nacional").attr("href", data.ficha);
 		$("#mapan").html('<img src="'+themePath+'/css/images/estados/federal2.png" title="Nacional" />');
 		
 		chartb_n(data.data.base);

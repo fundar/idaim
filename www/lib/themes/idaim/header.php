@@ -7,6 +7,7 @@
 		<link href="<?php print $this->themePath; ?>/css/pack.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/tabs.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/dart.css" rel="stylesheet">
+		<link href="<?php print $this->themePath; ?>/css/colorbox.css" rel="stylesheet">
 		<script src="<?php print $this->themePath; ?>/js/d3.v2.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
@@ -20,7 +21,12 @@
 		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dartb.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/dartp.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/colorbox.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/superfish.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		  google.load("visualization", "1", {packages:["corechart"]});
+		</script>
 		
 		<?php print $this->getCSS(); ?>
 		<script>

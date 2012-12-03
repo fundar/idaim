@@ -1,5 +1,6 @@
 $(document).ready( function() {
-	$(".ajax").colorbox({iframe:true, width:"400", height:"400"});
+	
+	$(".ajax").colorbox({iframe:true, width:"980", height:"400"});
 	$(".loading").hide();
 	$("#pro-chart").hide();	
 	$("#npro-chart").hide();

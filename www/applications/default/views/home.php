@@ -3,8 +3,13 @@
 		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los Estados
 en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cticas en la materia."</h2>
 		<div class="clear"></div>
-		<a class="ajax cboxElement" title="Ranking final" href="<?php print $this->themePath; ?>/ranking.html">Outside HTML (Ajax)</a>
-
+		<a class="ajax cboxElement" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
+			Ranking final base
+		</a>
+		
+		<a class="ajax cboxElement" title="Ranking final base" href="<?php print $this->themePath; ?>/ranking.html">
+			Ranking final progresivo
+		</a>
 		<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
 		<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
 	</div>

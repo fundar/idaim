@@ -172,7 +172,7 @@ d3.tsv("data.tsv", function(error, data) {
     // Copy-on-write since tweens are evaluated after a delay.
     var x0 = x.domain(data.sort(this.checked
         ? function(a, b) { return b.value - a.value; }
-        : function(a, b) { return d3.ascending(a.state, b.state); })
+        : function(a, b) { return d3.ascending(a.value, b.value); })
         .map(function(d) { return d.state; }))
         .copy();
 

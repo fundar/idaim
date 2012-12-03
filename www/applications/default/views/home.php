@@ -6,7 +6,7 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 		<a class="ajax cboxElement" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
 			Ranking final base
 		</a>
-		
+		<br/>
 		<a class="ajax cboxElement" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
 			Ranking final progresivo
 		</a>

@@ -106,7 +106,7 @@ h3 { float:left; color:#feffff; }
 
 #bar-downloads { float:left; width:100%; height:80px; background-color:#c9caca; border-top:1px solid #f3f3f3; }
 .downloadsb { width:960px; margin:0 auto; }
-.downloads { float:right; margin:0 0 0 0; background:url(images/downloads.png); width:490px; height:49px; text-indent:-999px; overflow:hidden; }
+.downloads { text-decoration:none; float:right; margin:0 0 0 0; background:url(images/downloads.png); width:490px; height:98px; text-indent:-999px; overflow:hidden; }
 .rigth { float:right;  margin:15px 0 0 0;}
 
 #form-estados { float:right; width:498px; text-transform:uppercase; }
@@ -158,6 +158,11 @@ h3 { float:left; color:#feffff; }
 .ranking-download { background-position:-211px -2px; width:150px; height:45px; overflow:hidden;}
 .rankingp-download { background-position:-92px -2px; width:119px; height:45px; overflow:hidden; }
 .rankingb-download { background-position:-2px -2px; width:91px; height:45px; overflow:hidden; }
+
+.indice-download:hover { background-position:-362px -51px; width:125px; height:45px;}
+.ranking-download:hover { background-position:-211px -51px; width:150px; height:45px; overflow:hidden;}
+.rankingp-download:hover { background-position:-92px -51px; width:119px; height:45px; overflow:hidden; }
+.rankingb-download:hover { background-position:-2px -51px; width:91px; height:45px; overflow:hidden; }
 
 .margin-download { margin-right:90px; }
 .margin-left { margin-left:15%; }

@@ -1,17 +1,8 @@
 <div id="message">
 	<div id="message-content">
-		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los Estados
-en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cticas en la materia."</h2>
-		<div class="clear"></div>
-		<a class="ajax cboxElement" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
-			Ranking final base
-		</a>
-		<br/>
-		<a class="ajax cboxElement" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
-			Ranking final progresivo
-		</a>
-		<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
-		<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
+		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los estados en relaci&oacute;n 
+		a los principios constitucionales y a las mejores pr&aacute;cticas internacionales"</h2>
+		<iframe id="vimeo" src="http://player.vimeo.com/video/14352658?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	</div>
 </div>
 
@@ -43,7 +34,25 @@ en relaci&oacute;n al artículo 6° Constitucional y a las mejores pr&aacute;cti
 			<div id="interval-rank"></div>
 			<div id="rank-estados"></div>
 		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="downloadsb">
+			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
+			<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
+			<a class="ajax cboxElement downloads rankingp-download" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
+				Ranking final progresivo
+			</a>
+			<a class="ajax cboxElement downloads rankingb-download" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
+				Ranking final base
+			</a>
+		</div>
+		
     </div>
+    
+    
+    
+		
 </div>
 
 <div id="indice-nacional">

@@ -146,8 +146,8 @@
 			<div class="clear"></div>
 			
 			<div id="buttons-more">
-				<a href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
-				<a href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
+				<a class="metodologia" href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
+				<a class="guia-inter" href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
 			</div>
 		</div>
 	</div>
@@ -274,8 +274,8 @@
 			<div class="clear"></div>
 			
 			<div id="buttons-more">
-				<a href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
-				<a href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
+				<a class="metodologia" href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
+				<a class="guia-inter" href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
 			</div>
 		</div>
 	</div>

@@ -49,6 +49,9 @@ circle.child {
 #value-pron  span { float:left; margin:23px 0 0 16px; }
 
 #buttons-more { float:right; margin:-30px 0 0 0; }
+#buttons-more a { text-decoration:none; color:#676a6c; border-top:1px solid #676a6c; }
+#buttons-more a:hover { text-decoration:none; color:#3c4145;  border-top:1px solid #3c4145; }
+.guia-inter { margin-left:36px; }
 
 #chart { float:left; margin:0 0 0 0; width:700px; height:580px; }
 #chart2 { float:left; margin:0 0 0 0; width:700px; height:580px; }
@@ -57,7 +60,6 @@ circle.child {
 #nchart circle.parent { fill: #9bcee1; color:#fff !important; }
 #nchart text.parent { fill: #fff; }
 #nchart { float:left; margin:0 0 0 0; width:700px; height:580px;  }
-
 
 #nchart2 circle { fill: #429cce; }
 #nchart2 circle.parent { fill: #6fbdee; color:#fff !important; }

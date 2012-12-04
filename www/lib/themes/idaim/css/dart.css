@@ -52,7 +52,7 @@
 #interval-rank span { float:left; margin:6px 0  0 55px; color:#fff; }
 .text-bar { color:#4d4d4d; font-size:12px; float:right; margin: 16px 10px 0 0; }
 
-#buttons-ranking { float:left; width:173; height:100%; }
+#buttons-ranking { float:left; width:173; height:auto; }
 #rk-but-base { color:#fefefe; float:left; width:118px; height:25px; cursor:pointer; }
 #rk-but-pro  { color:#fefefe; float:left; width:166px; height:25px; cursor:pointer; margin-top:6px; }
 #rk-but-base span { float:left; margin:3px 0 0 5px; }

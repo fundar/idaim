@@ -20,7 +20,7 @@ class Default_Model extends ZP_Model {
 		$query = "select Indicador, Description, " . $estado . " from indice  where Type='" . $type . "';";
 		$result  = $this->Db->query($query);
 		
-		$data["desc"]  = utf8_decode($result[0]["Description"]);
+		$data["desc"]  = $result[0]["Description"];
 		$data["color"] = $this->color($this->convert($result[0][$estado]), $type);
 		$data["level"] = 1;
 		$data["value"] = $this->convert($result[0][$estado]);
@@ -33,7 +33,7 @@ class Default_Model extends ZP_Model {
 		$result = $this->Db->query($query);
 		
 		foreach($result as $value) {
-			$data[$value["Indicador"]]["desc"]  = utf8_decode($value["Description"]);
+			$data[$value["Indicador"]]["desc"]  = $value["Description"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 2;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
@@ -47,7 +47,7 @@ class Default_Model extends ZP_Model {
 		$result = $this->Db->query($query);
 		
 		foreach($result as $value) {
-			$data[$value["Indicador"]]["desc"]  = utf8_decode($value["Description"]);
+			$data[$value["Indicador"]]["desc"]  = $value["Description"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 3;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
@@ -61,7 +61,7 @@ class Default_Model extends ZP_Model {
 		$result = $this->Db->query($query);
 
 		foreach($result as $value) {
-			$data[$value["Indicador"]]["desc"]  = utf8_decode($value["Description"]);
+			$data[$value["Indicador"]]["desc"]  = $value["Description"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 4;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);

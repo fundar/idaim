@@ -6,6 +6,21 @@
 	</div>
 </div>
 
+<div id="bar-downloads">
+	<div class="downloadsb">
+		<div class="rigth">
+			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
+			<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
+			<a class="ajax cboxElement downloads rankingp-download" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
+				Ranking final progresivo
+			</a>
+			<a class="ajax cboxElement downloads rankingb-download" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
+				Ranking final base
+			</a>
+		</div>
+	</div>
+</div>
+
 <div id="results-graph">
 	<div id="results-graph-content">
 		<div id="buttons-ranking">
@@ -34,25 +49,7 @@
 			<div id="interval-rank"></div>
 			<div id="rank-estados"></div>
 		</div>
-		
-		<div class="clear"></div>
-		
-		<div class="downloadsb">
-			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
-			<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
-			<a class="ajax cboxElement downloads rankingp-download" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
-				Ranking final progresivo
-			</a>
-			<a class="ajax cboxElement downloads rankingb-download" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
-				Ranking final base
-			</a>
-		</div>
-		
-    </div>
-    
-    
-    
-		
+    </div>	
 </div>
 
 <div id="indice-nacional">

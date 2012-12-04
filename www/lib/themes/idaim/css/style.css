@@ -82,11 +82,11 @@ box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.59); }
 
 #content { width:100%; height:auto;}
 
-#message { width:100%; height:340px; background-color:#fdfdfd;  }
+#message { width:100%; height:428px; background-color:#fdfdfd;  }
 #message-content { width:960px; height:100%; margin:0 auto; }
-#message h2 { float:left; width:209px; margin-left:98px; margin-top:35px; font-style:italic; color:#434343; font-size:22px; }
+#message h2 { float:left; width:209px; margin-left:98px; margin-top:75px; font-style:italic; color:#434343; font-size:22px; }
 
-#vimeo { float:left; margin:35px 0 0 60px; }
+#vimeo { float:left; margin:75px 0 0 60px; }
 #results-graph { width:100%; height:500px; background-color:#e4e6e5; border-bottom:1px solid #e1e5e8;}
 #results-graph-content  { width:960px; height:500px; margin:0 auto; }
 #results-graph h2 { float:left; margin-top:50px; width:173px; font-size:22px; color:#513838; }
@@ -103,6 +103,11 @@ h3 { float:left; color:#feffff; }
 
 #results-nacional { float:left; width:100%; height:1050px; background-color:#e4e6e5; border-bottom:1px solid #d9e7f2; }
 #results-nacional-content { width:960px; height:100%; margin:0 auto;  }
+
+#bar-downloads { float:left; width:100%; height:80px; background-color:#c9caca; border-top:1px solid #f3f3f3; }
+.downloadsb { width:960px; margin:0 auto; }
+.downloads { float:right; margin:0 0 0 0; background:url(images/downloads.png); width:490px; height:49px; text-indent:-999px; overflow:hidden; }
+.rigth { float:right;  margin:15px 0 0 0;}
 
 #form-estados { float:right; width:498px; text-transform:uppercase; }
 #form-estados select { float:right; margin:6px 20px 0 0; width:229px; height:28px; background-color:#fff; border:0; padding:4px; color:#606060; text-transform:uppercase; }
@@ -149,15 +154,11 @@ h3 { float:left; color:#feffff; }
 .social-rss { background-position:-14px 0px; width:14px; height:14px; }
 .social-facebook { background-position:-34px 0px; width:14px; height:14px; }
 
-.downloads { float:right; margin:0 0 0 0; background:url(images/downloads.png); width:490px; height:49px; text-indent:-999px; overflow:hidden; }
+.indice-download { background-position:-362px -2px; width:125px; height:45px; overflow:hidden; }
+.ranking-download { background-position:-211px -2px; width:150px; height:45px; overflow:hidden;}
+.rankingp-download { background-position:-92px -2px; width:119px; height:45px; overflow:hidden; }
+.rankingb-download { background-position:-2px -2px; width:91px; height:45px; overflow:hidden; }
 
-
-.indice-download { background-position:-362px 0px; width:129px; height:49px; overflow:hidden; }
-.ranking-download { background-position:-211px 0px; width:150px; height:49px; overflow:hidden;}
-.rankingp-download { background-position:-92px 0px; width:119px; height:49px; overflow:hidden; }
-.rankingb-download { background-position:0px 0px; width:91px; height:49px; overflow:hidden; }
-
-.downloadsb { float:left; margin:-50px 0 0 0; }
 .margin-download { margin-right:90px; }
 .margin-left { margin-left:15%; }
 

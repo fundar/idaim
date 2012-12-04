@@ -55,14 +55,14 @@
 <div id="indice-nacional">
 	<div id="indice-nacional-content">
 		<h3>&Iacute;ndice Rep&uacute;blica Mexicana</h3><span class="close">Cerrar</span><span class="more">Abrir</span>
-		<img src="<?php print $this->themePath; ?>/css/images/nacional.png" class="indice-icon" alt="Nacional" />
+		<img src="<?php print $this->themePath; ?>/css/images/flecha.png" class="indice-icon" alt="Nacional" />
 	</div>
 </div>
 
 <div id="indice-estatal">
 	<div id="indice-estatal-content">
 		<h3>&Iacute;ndice por Estado</h3><span class="more">Abrir</span><span class="close">Cerrar</span>
-		<img src="<?php print $this->themePath; ?>/css/images/estado.png" class="indice-icon" alt="Estado" />
+		<img src="<?php print $this->themePath; ?>/css/images/flecha.png" class="indice-icon" alt="Estado" />
 	</div>
 </div>
 

@@ -171,7 +171,7 @@ h3 { float:left; color:#feffff; }
 .button-seek { float:right; margin:6px 40px 0 0; font-size:14px; text-transform:uppercase; width:139px; height:28px; background-color:#545454; text-decoration:none; color:#fff; }
 .button-seek span { top:7px; left:10px; position:relative; }
 
-.indice-icon { float:right; margin:8px 0 0 0; }
+.indice-icon { float:right; margin:25px 0 0 0; }
 .more { cursor:pointer; float:left; margin:22px 0 0 20px; background:url(images/more.png); width:18px; height:18px; text-indent:-999px; overflow:hidden;}
 .close { cursor:pointer; float:left; margin:22px 0 0 20px; background:url(images/close.png); width:18px; height:18px; text-indent:-999px; overflow:hidden; }
 .clear { clear:both; }

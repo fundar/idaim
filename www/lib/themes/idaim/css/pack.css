@@ -65,3 +65,5 @@ circle.child {
 #nchart2 circle.parent { fill: #6fbdee; color:#fff !important; }
 #nchart2 text.parent { fill: #fff; }
 #nchart2 { float:left; margin:0 0 0 0; width:700px; height:580px;  }
+
+.description { color:#8c8c8c; font-size:18px; }

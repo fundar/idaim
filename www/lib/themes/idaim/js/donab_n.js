@@ -19,21 +19,21 @@ function chartb_n(data) {
 		for(i in data.indicadores) {
 			startAngle = (s_indi[i]*Math.PI)/180;
 			endAngle   = (e_indi[i]*Math.PI)/180;
-			arc        = drawArc(x,y,254,startAngle,endAngle,data.indicadores[i].color,data.indicadores[i].value,data.indicadores[i].desc);
+			arc        = drawArc(x,y,254,startAngle,endAngle,data.indicadores[i].color,data.indicadores[i].value,data.indicadores[i].desc,data.indicadores[i].extra);
 			layer1.add(arc);
 		}
 		
 		for(i in data.variablesi) {
 			startAngle = (s_vari[i]*Math.PI)/180;
 			endAngle   = (e_vari[i]*Math.PI)/180;
-			arc        = drawArc(x,y,204,startAngle,endAngle,data.variablesi[i].color,data.variablesi[i].value,data.variablesi[i].desc);
+			arc        = drawArc(x,y,204,startAngle,endAngle,data.variablesi[i].color,data.variablesi[i].value,data.variablesi[i].desc,data.variablesi[i].extra);
 			layer2.add(arc);
 		}
 		
 		for(i in data.variablesp) {
 			startAngle = (s_varp[i]*Math.PI)/180;
 			endAngle   = (e_varp[i]*Math.PI)/180;
-			arc        = drawArc(x,y,150,startAngle,endAngle,data.variablesp[i].color,data.variablesp[i].value,data.variablesp[i].desc);
+			arc        = drawArc(x,y,150,startAngle,endAngle,data.variablesp[i].color,data.variablesp[i].value,data.variablesp[i].desc,data.variablesp[i].extra);
 			layer3.add(arc);
 		}
 		
@@ -49,7 +49,7 @@ function chartb_n(data) {
 		/* Indice */
 		startAngle = (0*Math.PI)/180;
 		endAngle   = (360*Math.PI)/180;
-		var indice = drawArc(x,y,70,startAngle, endAngle, data.indice.color,data.indice.value,data.indice.desc);
+		var indice = drawArc(x,y,70,startAngle, endAngle, data.indice.color,data.indice.value,data.indice.desc,data.indice.extra);
 		
 		layer4.add(indice);
 		layer5.add(simpleText);
@@ -62,7 +62,7 @@ function chartb_n(data) {
 		setTimeout( function(){  stage.add(layer5); } , 900)
 	}
 
-	function drawArc(x, y, r, startAngle, endAngle, color, value, desc) {
+	function drawArc(x, y, r, startAngle, endAngle, color, value, desc, extra) {
 		var arc = new Kinetic.Shape({
 			drawFunc: function(stroke){
 				var context = this.getContext();
@@ -98,8 +98,14 @@ function chartb_n(data) {
 			$("#value-basen").css("background-color", "transparent");
 		});
 		
-		arc.on("mouseover", function(){ 
-			$("#value-namen").html(desc);
+		arc.on("mouseover", function(){
+			var html = desc;
+			
+			if(extra != 0) {
+				html += "<p class='description'>" + extra + "</p>"
+			}
+			
+			$("#value-namen").html(html);
 			$("#value-basen span").html(value);
 			$("#value-basen").css("background-color", color);
 			document.body.style.cursor = "pointer"; 

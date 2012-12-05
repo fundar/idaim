@@ -17,10 +17,11 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getIndices($estado, $type = "p") {
-		$query = "select Indicador, Description, " . $estado . " from indice  where Type='" . $type . "';";
+		$query = "select Indicador, Value, Description, " . $estado . " from indice  where Type='" . $type . "';";
 		$result  = $this->Db->query($query);
 		
 		$data["desc"]  = $result[0]["Description"];
+		$data["extra"] = $result[0]["Value"];
 		$data["color"] = $this->color($this->convert($result[0][$estado]), $type);
 		$data["level"] = 1;
 		$data["value"] = $this->convert($result[0][$estado]);
@@ -29,11 +30,12 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getVariablesP($estado, $type = "p") {
-		$query 	= "select Indicador, Description, " . $estado . " from variablesp where Type='" . $type . "';";
+		$query 	= "select Indicador, Value, Description, " . $estado . " from variablesp where Type='" . $type . "';";
 		$result = $this->Db->query($query);
 		
 		foreach($result as $value) {
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
+			$data[$value["Indicador"]]["extra"] = $value["Value"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 2;
 			$data[$value["Indicador"]]["value"] = $this->convert($value[$estado]);
@@ -43,10 +45,11 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getVariablesI($estado, $type = "p") {
-		$query  = "select Indicador, Description, " . $estado . " from variablesi where Type='" . $type . "';";
+		$query  = "select Indicador, Value,Description, " . $estado . " from variablesi where Type='" . $type . "';";
 		$result = $this->Db->query($query);
 		
 		foreach($result as $value) {
+			$data[$value["Indicador"]]["extra"] = $value["Value"];
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 3;
@@ -57,10 +60,11 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getIndicadores($estado, $type = "p") {
-		$query  = "select Indicador, Description, " . $estado . " from indicadores where Type='" . $type . "';";
+		$query  = "select Indicador, Value,Description, " . $estado . " from indicadores where Type='" . $type . "';";
 		$result = $this->Db->query($query);
 
 		foreach($result as $value) {
+			$data[$value["Indicador"]]["extra"] = $value["Value"];
 			$data[$value["Indicador"]]["desc"]  = $value["Description"];
 			$data[$value["Indicador"]]["color"] = $this->color($this->convert($value[$estado]), $type);
 			$data[$value["Indicador"]]["level"] = 4;

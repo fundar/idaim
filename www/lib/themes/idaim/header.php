@@ -8,28 +8,37 @@
 		<link href="<?php print $this->themePath; ?>/css/tabs.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/dart.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/colorbox.css" rel="stylesheet">
-		<script src="<?php print $this->themePath; ?>/js/d3.v2.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/ang.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/donap.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/donab.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/donab_n.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/donap_n.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/d3.layout.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/dart.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/dartb.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/dartp.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/colorbox.js"></script>
-		<script src="<?php print $this->themePath; ?>/js/superfish.js"></script>
+		<link href="<?php print $this->themePath; ?>/css/jquery-ui.css" rel="stylesheet">
+		<link href="<?php print $this->themePath; ?>/css/stylesheet.css" rel="stylesheet">
+		
+		<script src="<?php print $this->themePath; ?>/js/d3.v2.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/kinetic-v3.8.3.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/jquery.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/modernizr.custom.54280.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/jquery-ui.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/functions.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/ang.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/donap.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/donab.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/donab_n.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/donap_n.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/d3.layout.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/dart.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/dartb.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/dartp.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/colorbox.js" type="text/javascript"></script>
+		<script src="<?php print $this->themePath; ?>/js/superfish.js" type="text/javascript"></script>
+		<!-- <script src="<?php print $this->themePath; ?>/js/custom.js"></script> -->
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<script type="text/javascript">
 		  google.load("visualization", "1", {packages:["corechart"]});
 		</script>
 		
 		<?php print $this->getCSS(); ?>
-		<script>
+		<script type="text/javascript">
 			var webURL    = "<?php echo get("webURL");?>";
 			var themePath = "<?php echo $this->themePath; ?>";
 		</script>
@@ -38,33 +47,44 @@
 	
 <body onload="init();">
 	<div id="container">
-		<div id="header">
-			<div id="header-content">
+		<header id="main-header">
+			<div class="container clearfix">
 				<div id="logo">
-					<a href="http://fundar.org.mx/idaim/"><img src="<?php print $this->themePath; ?>/css/images/logo.png" title="Nuestros Recursos"/></a>
+					<a href="http://idaim.org.mx"><img src="<?php print $this->themePath; ?>/css/images/logo.png" title="IDAIM" border="0"/></a>
 				</div>
 				
-				<div id="top-menu">
-					<ul class="nav sf-js-enabled" id="menu-main" style="visibility: visible;">
-						<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-10" id="menu-item-10"><a href="http://fundar.org.mx/idaim/blog/quienes-somos"><span class="main_text">Quiénes somos</span><span class="menu_slide" style="display: block;">Quiénes somos</span></a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11" id="menu-item-11"><a href="http://fundar.org.mx/idaim/blog/acerca-de" class="sf-with-ul"><span class="main_text">Acerca de<span class="sf-sub-indicator"> »</span></span><span class="menu_slide" style="display: block;">Acerca de<span class="sf-sub-indicator"> »</span></span></a>
-						<ul class="sub-menu" style="display: none; visibility: hidden;">
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13" id="menu-item-13"><a href="http://fundar.org.mx/idaim/blog/metodologia">Metodología</a></li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14" id="menu-item-14"><a href="http://fundar.org.mx/idaim/blog/criterios">Base de Datos</a></li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15" id="menu-item-15"><a href="http://fundar.org.mx/idaim/blog/resultados">Resultados 2012</a></li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16" id="menu-item-16"><a href="http://checatuley.org/">IDAIM 2010</a></li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17" id="menu-item-17"><a href="http://fundar.org.mx/idaim/blog/glosario">Materiales de Prensa</a></li>
-						</ul>
-						</li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94" id="menu-item-94"><a href="http://fundar.org.mx/idaim/blog/contacto"><span class="main_text">Contacto</span><span class="menu_slide" style="display: block;">Contacto</span></a></li>
-					</ul>
-				</div>
+<nav id="top-menu">
+				<ul class="nav sf-js-enabled" id="menu-main" style="visibility: visible;"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10" id="menu-item-10"><a href="http://idaim.org.mx/blog/quienes-somos"><span class="main_text" style="margin-top: 0px;">Quiénes somos</span><span class="menu_slide" style="display: block;">Quiénes somos</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-11" id="menu-item-11"><a href="http://idaim.org.mx/blog/acerca-de" class="sf-with-ul"><span class="main_text" style="margin-top: 0px;">Acerca de<span class="sf-sub-indicator"> »</span></span><span class="menu_slide" style="display: block;">Acerca de<span class="sf-sub-indicator"> »</span></span></a>
+<ul class="sub-menu" style="visibility: hidden; display: none;">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13" id="menu-item-13"><a href="http://idaim.org.mx/blog/metodologia">Ranking</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14" id="menu-item-14"><a href="http://idaim.org.mx/blog/criterios">Cuadernillo de Resultados</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15" id="menu-item-15"><a href="http://idaim.org.mx/blog/resultados">Documento de Buenas Prácticas</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154" id="menu-item-154"><a href="http://idaim.org.mx/blog/fichas-por-estado" class="sf-with-ul">Fichas por estado<span class="sf-sub-indicator"> »</span></a>
+	<ul class="sub-menu" style="display: none; visibility: hidden;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155" id="menu-item-155"><a href="http://idaim.org.mx/blog/fichas-por-estado/aguascalientes">Aguascalientes</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174" id="menu-item-174"><a href="http://idaim.org.mx/blog/fichas-por-estado/baja-california-norte">Baja California Norte</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173" id="menu-item-173"><a href="http://idaim.org.mx/blog/fichas-por-estado/baja-california-sur">Baja California Sur</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172" id="menu-item-172"><a href="http://idaim.org.mx/blog/fichas-por-estado/campeche">Campeche</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171" id="menu-item-171"><a href="http://idaim.org.mx/blog/fichas-por-estado/chiapas">Chiapas</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170" id="menu-item-170"><a href="http://idaim.org.mx/blog/fichas-por-estado/chihuahua">Chihuahua</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138" id="menu-item-138"><a href="http://#">Base de datos</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16" id="menu-item-16"><a href="http://#">Guía de interpretación</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17" id="menu-item-17"><a href="http://idaim.org.mx/blog/glosario">Materiales de Prensa</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139" id="menu-item-139"><a href="http://#">Metodología</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-115" id="menu-item-115"><a href="http://idaim.org.mx/blog/category/blog"><span class="main_text">Blog</span><span class="menu_slide" style="display: block;">Blog</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94" id="menu-item-94"><a href="http://idaim.org.mx/blog/contacto"><span class="main_text">Contacto</span><span class="menu_slide" style="display: block;">Contacto</span></a></li>
+</ul>			</nav>
 
 				<div id="social-icons">	
 						<li>
-							<a target="_blank" href="#"><img src="http://fundar.org.mx/idaim/blog/wp-content/themes/Lucid/images/twitter.png" alt="Twitter"></a>
-							<a target="_blank" href="http://fundar.org.mx/idaim/blog/feed"><img src="http://fundar.org.mx/idaim/blog/wp-content/themes/Lucid/images/rss.png" alt="Rss"></a>
-							<a target="_blank" href="#"><img src="http://fundar.org.mx/idaim/blog/wp-content/themes/Lucid/images/facebook.png" alt="Facebook"></a>
+							<a target="_blank" href="#"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/twitter.png" alt="Twitter" border="0"></a>
+							<a target="_blank" href="http://idaim.org.mx/blog/feed"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/rss.png" alt="Rss" border="0"></a>
+							<a target="_blank" href="#"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/facebook.png" alt="Facebook " border="0"></a>
 						</li>
 				</div>	
 

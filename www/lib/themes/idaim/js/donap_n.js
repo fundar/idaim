@@ -102,7 +102,11 @@ function chartp_n(data) {
 			var html = desc;
 			
 			if(extra != 0) {
-				html += "<p class='description'>" + extra + "</p>"
+				if(desc == 'Prueba tripartita') {
+					html += "<p class='description tripartita'>" + extra + "</p>"
+				} else {
+					html += "<p class='description'>" + extra + "</p>"
+				}
 			}
 			
 			$("#value-namepn").html(html);

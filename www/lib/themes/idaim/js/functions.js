@@ -1,9 +1,22 @@
 $(document).ready( function() {
+	$("#uns-html5").hide();
+	
+	if(Modernizr.canvas) {
+		
+	} else {
+		$("#container").hide();
+		$("#content").hide();
+		$("#footer").hide();
+		$("#uns-html5").show();
+	}
 	
 	$(".ajax").colorbox({iframe:true, width:"980", height:"400"});
 	$(".loading").hide();
 	$("#pro-chart").hide();	
 	$("#npro-chart").hide();
+    $(".tooltip").tooltip();
+    
+
 	
 	$("#button-base").click( function() {
 		$("#button-base").removeClass($("#button-base").attr("class"));
@@ -11,6 +24,13 @@ $(document).ready( function() {
 		
 		$("#button-base").addClass("button-active");
 		$("#button-pro").addClass("button-inactive");
+		
+		$("#button-base .title").css("color", "#5e5e5e");
+		$("#button-pro .title").css("color", "#868686");
+		
+		$("#button-base").css("border-bottom", "2px solid #6c6b6b");
+		$("#button-pro").css("border-bottom", "none");
+		$(".triangulo_sup").css("margin", "13px 0 0 70px");
 		
 		$("#base-chart").show();
 		$("#pro-chart").hide();	
@@ -22,6 +42,13 @@ $(document).ready( function() {
 		
 		$("#button-pro").addClass("button-active");
 		$("#button-base").addClass("button-inactive");
+		
+		$("#button-pro .title").css("color", "#5e5e5e");
+		$("#button-base .title").css("color", "#868686");
+		
+		$("#button-pro").css("border-bottom", "2px solid #6c6b6b");
+		$("#button-base").css("border-bottom", "none");
+		$(".triangulo_sup").css("margin", "13px 0 0 313px");
 		
 		$("#pro-chart").show();	
 		$("#base-chart").hide();

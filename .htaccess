@@ -1,3 +1,9 @@
+AuthName "Restricted Area" 
+AuthType Basic 
+AuthUserFile /home/fundarm/public_html/Idaim.org.mx/.htpasswd 
+AuthGroupFile /dev/null 
+require valid-user
+
 RewriteEngine on
 
 RewriteBase /

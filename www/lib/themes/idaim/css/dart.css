@@ -1,6 +1,7 @@
 #container-r {
-	float:left;
-	margin:20 0 0 380px;
+    float: left;
+    margin-left: 95px;
+    margin-top: 84px;
 }
 
 #container-result {
@@ -10,13 +11,17 @@
 }
 
 #cont-bar {
-	float:left;
+	float:left;margin-left:13px; margin-top: 35px;
+}
+
+#cont-bar2 {
+	float:left; margin:0 20px 0 0;
 }
 
 #rank-estados {
 	float: right;
 	height: 340px;
-	margin: 28px -222px 0;
+	margin:63px -227px 0;
 	width: 210px;
 	color:#626363;
 }
@@ -32,17 +37,17 @@
 }
 
 #bar-colors span:hover { cursor:pointer; }
-#bar-colors .color1 { border-left:1px solid #de2b33; border-top:1px solid #de2b33; background-color:#de2b33; }
-#bar-colors .color2 { border-left:1px solid #df6c4f; border-top:1px solid #df6c4f; background-color:#df6c4f; }
-#bar-colors .color3 { border-left:1px solid #ebd06e; border-top:1px solid #ebd06e; background-color:#ebd06e; }
-#bar-colors .color4 { border-left:1px solid #79c452; border-top:1px solid #79c452; background-color:#79c452; }
-#bar-colors .color5 { border-left:1px solid #388652; border-top:1px solid #388652; background-color:#388652; }
+#bar-colors .color1, .scolor1 { border-left:1px solid #de2b33; border-top:1px solid #de2b33; background-color:#de2b33; }
+#bar-colors .color2, .scolor2 { border-left:1px solid #df6c4f; border-top:1px solid #df6c4f; background-color:#df6c4f; }
+#bar-colors .color3, .scolor3 { border-left:1px solid #ebd06e; border-top:1px solid #ebd06e; background-color:#ebd06e; }
+#bar-colors .color4, .scolor4 { border-left:1px solid #79c452; border-top:1px solid #79c452; background-color:#79c452; }
+#bar-colors .color5, .scolor5 { border-left:1px solid #388652; border-top:1px solid #388652; background-color:#388652; }
 
 #interval-rank { 
 	float:right;
-	width:189px;
+	width:206px;
 	height:29px;
-	margin:10px 34px 0 0;
+	margin:44px 4px 0 0;
 	-moz-border-radius: 17px;
     -ms-border-radius: 17px;
 	-webkit-border-radius: 17px;
@@ -53,7 +58,7 @@
 .text-bar { color:#4d4d4d; font-size:12px; float:right; margin: 16px 10px 0 0; }
 
 #buttons-ranking { float:left; width:173; height:auto; }
-#rk-but-base { color:#fefefe; float:left; width:118px; height:25px; cursor:pointer; }
-#rk-but-pro  { color:#fefefe; float:left; width:166px; height:25px; cursor:pointer; margin-top:6px; }
+#rk-but-base { color:#fefefe; float:left; width:118px; height:auto; cursor:pointer; }
+#rk-but-pro  { color:#fefefe; float:left; width:166px; height:auto; cursor:pointer; margin-top:54px; }
 #rk-but-base span { float:left; margin:3px 0 0 5px; }
 #rk-but-pro  span { float:left; margin:3px 0 0 5px; }

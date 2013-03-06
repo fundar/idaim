@@ -30,7 +30,7 @@ circle.child {
   pointer-events: none;
 }
 
-#info-base { float:left; width:320px; margin:125px 0 0 -90px; }
+#info-base { float:left; width:320px; margin:47px 0 0 -90px; }
 #value-name { float:left; width:320px; height:auto; margin:10px 0 0 0; font-size:20px; color:#000; }
 #value-base { float:left; width:122px; height:122px; color:#e4e6e5; font-size:65px; }
 #value-base  span { float:left; margin:23px 0 0 16px; }
@@ -39,7 +39,7 @@ circle.child {
 #value-basen { float:left; width:122px; height:122px; color:#e4e6e5; font-size:65px; }
 #value-basen  span { float:left; margin:23px 0 0 16px; }
 
-#info-pro { float:left; width:320px; margin:125px 0 0 -90px; }
+#info-pro { float:left; width:320px; margin:47px 0 0 -90px; }
 #value-namep { float:left; width:320px; height:auto; margin:10px 0 0 0; font-size:20px; color:#000; }
 #value-pro { float:left; width:122px; height:122px; color:#e4e6e5; font-size:65px; }
 #value-pro  span { float:left; margin:23px 0 0 16px; }
@@ -48,10 +48,16 @@ circle.child {
 #value-pron { float:left; width:122px; height:122px; color:#e4e6e5; font-size:65px; }
 #value-pron  span { float:left; margin:23px 0 0 16px; }
 
-#buttons-more { float:right; margin:-30px 0 0 0; }
-#buttons-more a { text-decoration:none; color:#676a6c; border-top:1px solid #676a6c; }
-#buttons-more a:hover { text-decoration:none; color:#3c4145;  border-top:1px solid #3c4145; }
-.guia-inter { margin-left:36px; }
+#buttons-more { float:right; margin:-130px 50px 0 0; width:299px; }
+#metodologia-box { float:left; text-decoration:none; width:299px; height:57px; color:#4c4c4c; background-color:#cecfcf; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; font-size:19px; }
+#metodologia-box:hover { background-color:#a4a5a4; color:#696a69; }
+.metodologia-img { text-indent:-999px; margin:10px 0 0 10px; float:left; background:url(images/metodologia.png); width:35px; height:38px; overflow:hidden; }
+.metodologia-desc { margin:10px 0 0 10px; float:left; }
+
+#guia-inter-box { margin-top:18px; float:left; text-decoration:none; width:299px; height:57px; color:#4c4c4c; background-color:#cecfcf; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; font-size:19px; }
+#guia-inter-box:hover { background-color:#a4a5a4; color:#696a69; }
+.guia-inter-img { text-indent:-999px; margin:10px 0 0 10px; float:left; background:url(images/guia.png); width:35px; height:34px; overflow:hidden; }
+.guia-inter-desc { margin:10px 0 0 10px; float:left; }
 
 #chart { float:left; margin:0 0 0 0; width:700px; height:580px; }
 #chart2 { float:left; margin:0 0 0 0; width:700px; height:580px; }

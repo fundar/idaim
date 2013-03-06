@@ -1,34 +1,92 @@
 <div id="message">
-	<div id="message-content">
-		<h2>"El IDAIM mide la calidad de las leyes de transparencia de los estados en relaci&oacute;n 
-		a los principios constitucionales y a las mejores pr&aacute;cticas internacionales"</h2>
-		<iframe id="vimeo" src="http://player.vimeo.com/video/14352658?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	
+<div id="message-content">
+		<div id="slogan-video">
+		<div class="slogan">
+	        <h2>
+			<span class="idaim">El IDAIM</span>
+			<span class="calidad">mide la calidad</span>
+			<span class="leyes">de las leyes de transparencia</span>
+			<span class="estados"> y acceso a la informaci&oacute;n en M&eacute;xico </span>
+			<span class="principios">con relaci&oacute;n a los principios</span>
+			<span class="constitucion">constitucionales</span>
+			<span class="mejores">y a las mejores pr&aacute;cticas</span>
+			<span class="internacional">internacionales</span>
+		</h2>
+		 
+		</div>
+		<div class="video">
+			<iframe width="469" height="270" src="http://www.youtube.com/embed/pAdSSIVF6Xo" frameborder="0" allowfullscreen></iframe>
+		</div>
+		</div>
 	</div>
 </div>
 
 <div id="bar-downloads">
 	<div class="downloadsb">
-		<div class="rigth">
-			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">Descarga la base de datos del IDAIM</a>
-			<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">Descarga el ranking final</a>
+		<div class="left">
+			<a class="ajax cboxElement downloads rankingb-download" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
+				Ranking final base
+			</a>
+			
 			<a class="ajax cboxElement downloads rankingp-download" title="Ranking final progresivo" href="<?php print $this->themePath; ?>/rankingpro.html">
 				Ranking final progresivo
 			</a>
-			<a class="ajax cboxElement downloads rankingb-download" title="Ranking final base" href="<?php print $this->themePath; ?>/rankingbase.html">
-				Ranking final base
+			
+			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">
+				Descarga la base de datos del IDAIM
+			</a>
+			
+			<a href="<?php echo get("webURL") . "/docs/docto_ranking.pdf";?>" title="Descarga el ranking final"   class="downloads ranking-download">
+				Descarga el ranking final
+			</a>
+		</div>
+		
+		<div class="left2">
+			<a>
+				Ranking base
+			</a>
+			<a style="margin-left:122px;">
+				Ranking progresivo
+			</a>
+			<a style="margin-left:93px;">
+				Descarga el Ranking
+			</a>
+			<a style="margin-left:93px; width:164px;">
+				Descarga la Base de Datos del IDAIM
 			</a>
 		</div>
 	</div>
 </div>
 
+<div class="clear"></div>
 <div id="results-graph">
 	<div id="results-graph-content">
 		<div id="buttons-ranking">
 			<h2>Ranking general de las entidades</h2>
 			<div class="clear"></div>
-			<div id="rk-but-base" class="button-active"><span>&Iacute;ndice base</span></div>
+			<div id="rk-but-base" class="button-active">
+				
+				<div class="botones-dart">
+					<a class="boton-base-active botones_indice" title="Índice base">&Iacute;ndice base</a>
+					<span>&Iacute;ndice base</span>
+				</div>
+				
+				<span class="desc-dart">Mide el cumplimiento de los principios constitucionales</span>
+			</div>
+			
 			<div class="clear"></div>
-			<div id="rk-but-pro"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
+			
+			<div id="rk-but-pro" class="button-inactive">
+				
+				<div class="botones-dart">
+					<a class="boton-progresivo-inactive botones_indice" title="Índice progresivo">&Iacute;ndice progresivo</a>
+					<span>&Iacute;ndice progresivo</span>
+				</div>
+				
+				<span class="desc-dart-pro">Mide el grado de progresividad de la ley seg&uacute;n los est&aacute;ndares internacionales</span>
+			</div>
+
 		</div>
 		
 		<div id="container-r"></div>
@@ -47,21 +105,28 @@
 			</div>
 			
 			<div id="interval-rank"></div>
-			<div id="rank-estados"></div>
+			<div id="rank-estados">
+				<div id="information-dart">
+					<span>Mueva el cursor sobre los colores para obtener m&aacute;s informaci&oacute;n</span>
+					<img src="<?php print $this->themePath; ?>/css/images/cursor.png" title="Cursor" alt="Cursor"/>
+				</div>
+			</div>
 		</div>
     </div>	
 </div>
 
+<!--
 <div id="indice-nacional">
 	<div id="indice-nacional-content">
 		<h3>&Iacute;ndice Rep&uacute;blica Mexicana</h3>
 		<img src="<?php print $this->themePath; ?>/css/images/flecha.png" class="indice-icon" alt="Nacional" />
 	</div>
 </div>
+-->
 
 <div id="indice-estatal">
 	<div id="indice-estatal-content">
-		<h3>&Iacute;ndice por Estado</h3>
+		<h3>Evaluaci&oacute;n de las leyes de transparencia por entidad y de la ley federal</h3>
 		<img src="<?php print $this->themePath; ?>/css/images/flecha.png" class="indice-icon" alt="Estado" />
 	</div>
 </div>
@@ -108,8 +173,12 @@
 
 		<div id="burbujas">
 			<div id="buttons">
-				<div id="button-base-n" class="button-active"><span>&Iacute;ndice base</span></div>
-				<div id="button-pro-n"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
+				<div id="button-base-n" class="button-active">
+					<a class="tooltip" title="Mide el cumplimiento de los principios constitucionales">&Iacute;ndice base</a>
+				</div>
+				<div id="button-pro-n"  class="button-inactive">
+					<a class="tooltip" title="Mide el grado de progresividad de la ley según los estándares internacionales">&Iacute;ndice progresivo</a>
+				</div>
 			</div>
 			
 			<div id="npro-chart">
@@ -153,21 +222,28 @@
 <div class="clear"></div>
 
 <div id="results-estatal">
-	<div id="results-estatal-content">
-		<div id="top-resutls">
-			<a id="button-download"  class="button-download" href="/" title="Descargar Ficha del estado">
+	<div id="top-results">
+		<div id="top-results-content">
+			<a id="button-download" class="download-fichas download-ficha" href="/" title="Descargar Ficha del estado">
 				<span>Descargar Ficha</span>
 			</a>
 			
-			<a id="button-download-des" class="button-download-des" href="/" title="Descargar evaluación desagregada">
+			<a class="a-ficha" href="/" title="Descargar Ficha del estado">
+				<span>Descargar Ficha</span>
+			</a>
+			
+			
+			<a id="button-download-des"  class="download-fichas download-ficha" href="/" title="Descargar evaluación desagregada">
 				<span>Descargar evaluaci&oacute;n desagregada</span>
 			</a>
 			
+			<a class="a-ficha-des" href="/" title="Descargar Ficha del estado">
+				<span>Descargar evaluaci&oacute;n desagregada</span>
+			</a>
+			
+			
 			<div id="form-estados">
 				<div class="loading"></div>
-				<a class="button-seek" href="/" title="Buscar por estado">
-					<span>Buscar</span>
-				</a>
 				<?php $estado = segment(1);?>
 				<?php echo ($estado==false) ? '<input id="showes" name="showes" value="0" type="hidden" />' : '<input type="hidden" id="showes" name="showes" value="1" />' ?>
 				<select id="estados" name="estados">
@@ -205,30 +281,47 @@
 					<option value="Zacatecas" <?php echo ($estado=="Zacatecas") ? 'selected="selected"' : "";?>>Zacatecas</option>
 					<option value="Federal" <?php echo ($estado=="Federal") ? 'selected="selected"' : "";?>>Federal</option>
 				</select>
+				<a class="button-seek" href="/" title="Buscar por estado">
+					<span>Ir</span>
+				</a>
 			</div>
-				
-			<div class="clear"></div>
-				
-			<div id="resultados-estado">
-				<div id="desc-estado">
-					<div id="name-estado"></div>
-					<div id="mapa" class="estado img-estados">
-						<div id="img-estado" class=""></div>
-					</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div id="results-estatal-content">
+		<div id="resultados-estado">
+			<div id="desc-estado">
+				<div id="name-estado"></div>
+				<div id="mapa" class="estado img-estados">
+					<div id="img-estado" class=""></div>
+				</div>
+			</div>
+			
+			<div id="indice-estado">
+				<div id="indice-pro">
+					<div class="name">&Iacute;ndice progresivo</div>
+					<div class="clear"></div>
+					<div class="circle"><span id="iprogresivo"></span></div>
 				</div>
 				
-				<div id="indice-estado">
-					<div id="indice-pro">
-						<div class="name">&Iacute;ndice progresivo</div>
-						<div class="clear"></div>
-						<div class="circle"><span id="iprogresivo"></span></div>
-					</div>
-					
-					<div id="indice-base">
-						<div class="name">&Iacute;ndice base</div>
-						<div class="clear"></div>
-						<div class="circle"><span id="ibase"></span></div>
-					</div>
+				<div id="indice-base">
+					<div class="name">&Iacute;ndice base</div>
+					<div class="clear"></div>
+					<div class="circle"><span id="ibase"></span></div>
+				</div>
+			</div>
+			
+			<div id="buttons-indices">
+				<div id="button-base" class="button-active">
+					<span class="title">&Iacute;ndice base</span>
+					<span class="desc">Mide el cumplimiento de los principios constitucionales</span>
+					<div class="triangulo_sup"></div>
+				</div>
+				<div id="button-pro"  class="button-inactive">
+					<span class="title">&Iacute;ndice progresivo</span>
+					<span class="desc">Mide el grado de progresividad de la ley seg&uacute;n los estándares internacionales</span>
 				</div>
 			</div>
 		</div>
@@ -236,10 +329,6 @@
 		<div class="clear"></div>
 
 		<div id="burbujas">
-			<div id="buttons">
-				<div id="button-base" class="button-active"><span>&Iacute;ndice base</span></div>
-				<div id="button-pro"  class="button-inactive"><span>&Iacute;ndice progresivo</span></div>
-			</div>
 			<div id="pro-chart">
 				<div id="chart"></div>
 				
@@ -251,6 +340,11 @@
 					<div class="clear"></div>
 					
 					<div id="value-namep"></div>
+				</div>
+				
+				<div class="cursor-chart">
+					<span>Mueva el cursor sobre los colores para obtener m&aacute;s informaci&oacute;n</span>
+					<img src="<?php print $this->themePath; ?>/css/images/cursor.png" title="Cursor" alt="Cursor"/>
 				</div>
 			</div>
 			
@@ -266,13 +360,37 @@
 					
 					<div id="value-name"></div>
 				</div>
+				
+				<div class="cursor-chart">
+					<span>Mueva el cursor sobre los colores para obtener m&aacute;s informaci&oacute;n</span>
+					<img src="<?php print $this->themePath; ?>/css/images/cursor.png" title="Cursor" alt="Cursor"/>
+				</div>
+			</div>
+			
+			<div id="cont-bar2">
+				<span class="text-bar">Alta transparencia</span>
+					<div id="bar-colors">
+						<span class="color scolor1"></span>
+						<span class="color scolor2"></span>
+						<span class="color scolor3"></span>
+						<span class="color scolor4"></span>
+						<span class="color scolor5"></span>
+					</div>
+				<span class="text-bar">Baja transparencia</span>
 			</div>
 			
 			<div class="clear"></div>
 			
 			<div id="buttons-more">
-				<a class="metodologia" href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">Metodolog&iacute;a</a>
-				<a class="guia-inter" href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">Gu&iacute;a de interpretaci&oacute;n</a>
+				<a id="metodologia-box" href="<?php echo get("webURL") . "/docs/docto_metodologia.pdf";?>" title="Metodología">
+					<span class="metodologia-img">Metodolog&iacute;a</span>
+					<span class="metodologia-desc">Metodolog&iacute;a</span>
+				</a>
+				
+				<a id="guia-inter-box" href="<?php echo get("webURL") . "/docs/docto_guiadeinterpretacion.pdf";?>" title="Guía de interpretación">
+					<span class="guia-inter-img">Gu&iacute;a de interpretaci&oacute;n</span>
+					<span class="guia-inter-desc">Gu&iacute;a de interpretaci&oacute;n</span>
+				</a>
 			</div>
 		</div>
 	</div>

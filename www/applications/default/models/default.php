@@ -85,7 +85,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function color($value, $type = "p") {
-		if($type="p") {
+		if($type=="p") {
 			/*0 - 5.5	5.6 - 6.3	6.4 - 6.9	7 - 8.0	8.1 a 10*/
 			if($value>=8.1 and $value<=10)  return "#388652";
 			if($value>=7   and $value<=8)   return "#79c452";
@@ -95,10 +95,10 @@ class Default_Model extends ZP_Model {
 		} else {
 			/* 0 - 6.8	6.9 - 7.6	7.7 a 7.9	8 a 9	9 a 10 */
 			if($value>=9   and $value<=10)  return "#388652";
-			if($value>=8   and $value<=8.9) return "#79c452";
-			if($value>=7.7 and $value<=7.9) return "#ebd06e";
-			if($value>=6.9 and $value<=7.6) return "#df6c4f";
-			if($value>=0   and $value<=6.8) return "#de2b33";
+			if($value>=8   and $value<=8.99) return "#79c452";
+			if($value>=7.7 and $value<=7.99) return "#ebd06e";
+			if($value>=6.9 and $value<=7.69) return "#df6c4f";
+			if($value>=0   and $value<=6.89) return "#de2b33";
 		}
 		
 		return "#ccc";

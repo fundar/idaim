@@ -33,7 +33,7 @@
 				Ranking final progresivo
 			</a>
 			
-			<a href="<?php echo get("webURL") . "/docs/docto_basededatos.pdf";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">
+			<a href="<?php echo get("webURL") . "/docs/basededatos.xlsx";?>" title="Descarga la base de datos del IDAIM" class="downloads indice-download">
 				Descarga la base de datos del IDAIM
 			</a>
 			

@@ -13,19 +13,39 @@
 body { font-family: 'Open Sans',Arial,sans-serif; margin:0; }
 
 #container { width:100%; height:auto; margin:0 auto; } 
+.container-idaim2012 {
+    border-top: 8px solid #8BC75A;
+    height: 50px;
+}
+.container-idaim2012 .container_idaim_ir {width: 960px;margin:0 auto;}
 
+#ir-idaim2012 {
+    display: block;
+    height: 43px;
+    padding: 0 8px 0 0;
+    position: relative;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: -1px;
+}
+.idaim2012 {
+    float:right;
+   
+    
+}
 #header:before {background: url("images/shadow.png") no-repeat scroll center top transparent;bottom: -7px;content: "";height: 7px;left: 0;position: absolute;width: 100%;}
 #header {background-color: #FFFFFF;height: 129px;margin-bottom: 0;position: relative;width: 100%;}
 #header-content { width:960px; height:100%; margin:0 auto;}
 
-#logo { float:left; width:340px; height:auto; margin-top:19px;border:none;}
-#main-header { background-color: #fff; border-bottom: 1px solid #eeeeee;height: 126px; position: relative; margin-bottom:0; }
+#logo { float:left; width:340px; height:auto; margin-top:0;border:none;}
+#main-header { background-color: #fff; border-bottom: 1px solid #eeeeee;height: 106px; position: relative; margin-bottom:0; }
 #main-header:before { content: ''; position: absolute; height: 7px; bottom: -7px; left: 0; background: url(images/shadow.png) no-repeat top center; width: 100%; }
 	.container { text-align: left; margin: 0 auto; width: 960px; position: relative; }
 
 .clearfix:after {clear: both;content: " ";display: block;font-size: 0;height: 0;visibility: hidden;}
 .clearfix:after {clear: both;content: " ";display: block;font-size: 0;height: 0;visibility: hidden;}
-#top-menu {float: left;margin:28px 0 5px 85px;padding: 0;}			
+#top-menu {float: left;margin:16px 0 5px 85px;padding: 0;}			
 				#top-menu a { font-size: 14px; color: #4b4b4b; text-decoration: none; padding: 22px 15px 23px; display: block; }		    				
 				#top-menu > ul > li > a:hover { color: #2daaec ; background-color: #fff;  }
 					#top-menu li.sfHover > a { color: #fff; text-shadow: none; }
@@ -117,7 +137,7 @@ span.menu_slide { display: none; }
 .js #top-menu > ul.nav, .js #second-menu > ul.nav {visibility: hidden;}
 
 /** iconos sociales **/
-#social-icons {display: block;float: left;list-style: none outside none;margin: 66px 0px 31px -2px;padding: 0;}
+#social-icons {display: block;float: left;list-style: none outside none;margin: 54px 0 0 -2px;padding: 0;}
 #social-icons a { padding-left: 10px; }
 
 
@@ -134,7 +154,12 @@ span.menu_slide { display: none; }
 
 #indice-nacional { width:100%; height:83px; background-color:#0e1212; cursor:pointer; }
 #indice-nacional-content { width:960px; height:100%; margin:0 auto; }
-h3 { float:left; color:#feffff; }
+h3 {
+    color: #FEFFFF;
+    float: left;
+    font: 28px/36px 'League Gothic';
+    text-transform: uppercase;
+}
 
 #indice-estatal { width:100%; height:83px; background-color:#232b2b; cursor:pointer; border-bottom:1px solid #4a5050;}
 #indice-estatal-content { width:960px; height:100%; margin:0 auto; }
@@ -149,7 +174,7 @@ h3 { float:left; color:#feffff; }
 #top-results { width:100%; float:left; background-color:#d5d7d6; height:60px; border:2px solid #e4e6e5; }
 #top-results-content { width:960px; margin:0 auto;}
 
-#bar-downloads { float:left; width:100%; height:80px; margin-bottom:70px; }
+#bar-downloads { background:#fdfdfd;float:left; width:100%; height:80px; padding-bottom:70px; }
 .downloadsb { width:960px; margin:0 auto; }
 .downloads { text-decoration:none; float:left; background:url(images/downloads_new.png); width:228px; height:152px; text-indent:-999px; overflow:hidden; }
 .rigth { float:right;  margin:15px 0 0 0;}
@@ -160,23 +185,7 @@ h3 { float:left; color:#feffff; }
 #form-estados { float:left; width:450px; text-transform:uppercase; }
 /* #form-estados select { float:right; margin:6px 20px 0 0; width:229px; height:28px; background-color:#fff; border:0; padding:4px; color:#606060; text-transform:uppercase; } */
 
-#form-estados select {
-	float:left;
-	width:255px;
-	height:34px;
-    padding:3px;
-    margin:10px 0 0 145px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    background: #d5d7d6;
-    color:#888;
-    border:none;
-    outline:none;
-    border-top:1px solid #929393;
-    border-bottom:1px solid #929393;
-    border-left:1px solid #929393;
-    display: inline-block;
+#form-estados select {float:left;width:255px;height:34px;padding:3px; margin:10px 0 0 145px;-webkit-border-radius:4px; -moz-border-radius:4px;border-radius:4px;background: #d5d7d6; color:#888;border:none;outline:none;border-top:1px solid #929393; border-bottom:1px solid #929393;border-left:1px solid #929393;display: inline-block;
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
@@ -213,38 +222,28 @@ h3 { float:left; color:#feffff; }
 
 
 #divisor { width:100%; height:7px; background-color:#c1d8e8; border-bottom:1px solid #b6cddd; }
-
 #burbujas { width:100%; }
 
 #footer { width:100%; height:auto;}
-#footer-content { width:100%; height:185px; background-color:#161b1b !important; }
-
+#footer-content { width:100%; height:185px; background-color:#161b1b !important;border-top: 10px solid #8BC75A; }
 #footer-info { width:960px; height:auto; margin:0 auto; }
-#footer p {
-    color: #838383;
-    padding-top:10px;
-    font-size: 12px;
-    margin:0 auto;
-    text-align: justify;
-    width: 621px;
-    line-height:14px;
-}
+#footer p {color: #4c4c4c; padding-top:10px;font-size: 12px;margin:0 auto; text-align: justify;width: 621px;line-height:14px;}
 
 #footer ul { float:right; margin:45px 0 0 0; list-style-type:none; padding:0; font-size:15px; }
 #footer ul li { padding-top:5px; }
 #footer ul li a { text-decoration:none; color:#f6f2f2; }
 #footer ul li a:hover { color:#8d8b8b; }
 
-.logos-footer { float:left; margin:60px 0 0; background:url(images/logos-footer.png); width:156px; height:60px; text-indent:-999px; overflow:hidden; }  
+.logos-footer { float:left; margin:60px 0 0; background:url("images/logos-footer-spr.png"); width:156px; height:60px; text-indent:-999px; overflow:hidden; }  
 .fundar-logo {
     background-position: 0 0;
     height: 60px;
-    width: 81px;
+    width:164px;
 }
 .article19-logo {
     background-position: 201px 0;
-    height: 64px;
-    width: 204px;
+    height: 74px;
+    width: 201px;
 }
 
 .social { float:right; margin:3px 10px 0 0; background:url(images/social.png); width:48px; height:14px; text-indent:-999px; overflow:hidden; }
@@ -305,7 +304,8 @@ h3 { float:left; color:#feffff; }
 .video {float: right;height: 270px;padding-top: 2px;width: 469px;}
 #carrusel {margin: 0 auto 70px;width: 960px;}
 #carrusel iframe { overflow:hidden; border:none; }
-
+#news { color: #4C4C4C; margin:0 auto;width: 960px;}
+#news h3{ color:#4c4c4c;  font: 28px/17px 'League Gothic'; text-transform: uppercase;}
 .top50 {}
 .botones-dart { float:left; width:290px; height:80px; }
 .botones-dart span { color:#6a6b6b; text-transform:uppercase; font-size:20px; margin:27px 0 0 10px !important; }
@@ -337,15 +337,7 @@ h3 { float:left; color:#feffff; }
 #button-pro .title { margin-left:17px; color:#868686; text-transform:uppercase;}
 #button-pro .desc { color:#939393; font-size:12px; text-align:center; }
 
-.triangulo_sup {
-    float: left;
-    height: 0;
-    width: 0;
-    margin: 13px 0 0 70px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid #5e5e5e;
-}
+.triangulo_sup {float: left;height: 0;width: 0;margin: 13px 0 0 70px;border-left: 5px solid transparent;border-right: 5px solid transparent;border-bottom: 10px solid #5e5e5e;}
 
 #button-base span { float:left; }
 #button-pro  span { float:left; }

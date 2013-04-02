@@ -28,7 +28,7 @@
 		<script src="<?php print $this->themePath; ?>/js/dartp.js" type="text/javascript"></script>
 		<script src="<?php print $this->themePath; ?>/js/colorbox.js" type="text/javascript"></script>
 		<script src="<?php print $this->themePath; ?>/js/superfish.js" type="text/javascript"></script>
-		<!-- <script src="<?php print $this->themePath; ?>/js/custom.js"></script> -->
+		 <!--<script src="<?php print $this->themePath; ?>/js/custom.js"></script> -->
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		
 		
@@ -46,6 +46,16 @@
 
 	
 <body onload="init();">
+	<div class="container-idaim2012">
+			<div class="container_idaim_ir">
+			<div class="idaim2012" >
+				<div id="ir-idaim2012">
+				<a href="http://checatuley.org/"><img src="<?php print $this->themePath; ?>/css/images/idaim-2012-btn.png"  border="0"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="container">
 		<header id="main-header">
 			<div class="container clearfix">
@@ -54,22 +64,21 @@
 				</div>
 				
 <nav id="top-menu">
+	
+	<script>
+
+	jQuery(document).ready(function () {
+		jQuery('ul.sf-js-enabled').superfish();
+	});
+
+</script>
+	
 				<ul class="nav sf-js-enabled" id="menu-main" style="visibility: visible;"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10" id="menu-item-10"><a href="http://idaim.org.mx/blog/quienes-somos"><span class="main_text" style="margin-top: 0px;">Quiénes somos</span><span class="menu_slide" style="display: block;">Quiénes somos</span></a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-11" id="menu-item-11"><a href="http://idaim.org.mx/blog/acerca-de" class="sf-with-ul"><span class="main_text" style="margin-top: 0px;">Acerca de<span class="sf-sub-indicator"> »</span></span><span class="menu_slide" style="display: block;">Acerca de<span class="sf-sub-indicator"> »</span></span></a>
 <ul class="sub-menu" style="visibility: hidden; display: none;">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13" id="menu-item-13"><a href="http://idaim.org.mx/blog/metodologia">Ranking</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14" id="menu-item-14"><a href="http://idaim.org.mx/blog/criterios">Cuadernillo de Resultados</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15" id="menu-item-15"><a href="http://idaim.org.mx/blog/resultados">Documento de Buenas Prácticas</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154" id="menu-item-154"><a href="http://idaim.org.mx/blog/fichas-por-estado" class="sf-with-ul">Fichas por estado<span class="sf-sub-indicator"> »</span></a>
-	<ul class="sub-menu" style="display: none; visibility: hidden;">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155" id="menu-item-155"><a href="http://idaim.org.mx/blog/fichas-por-estado/aguascalientes">Aguascalientes</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174" id="menu-item-174"><a href="http://idaim.org.mx/blog/fichas-por-estado/baja-california-norte">Baja California Norte</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173" id="menu-item-173"><a href="http://idaim.org.mx/blog/fichas-por-estado/baja-california-sur">Baja California Sur</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172" id="menu-item-172"><a href="http://idaim.org.mx/blog/fichas-por-estado/campeche">Campeche</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171" id="menu-item-171"><a href="http://idaim.org.mx/blog/fichas-por-estado/chiapas">Chiapas</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170" id="menu-item-170"><a href="http://idaim.org.mx/blog/fichas-por-estado/chihuahua">Chihuahua</a></li>
-	</ul>
-</li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138" id="menu-item-138"><a href="http://#">Base de datos</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16" id="menu-item-16"><a href="http://#">Guía de interpretación</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17" id="menu-item-17"><a href="http://idaim.org.mx/blog/glosario">Materiales de Prensa</a></li>
@@ -85,6 +94,7 @@
 							<a target="_blank" href="#"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/twitter.png" alt="Twitter" border="0"></a>
 							<a target="_blank" href="http://idaim.org.mx/blog/feed"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/rss.png" alt="Rss" border="0"></a>
 							<a target="_blank" href="#"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/facebook.png" alt="Facebook " border="0"></a>
+							
 						</li>
 				</div>	
 

@@ -33,12 +33,32 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('league_gothic-webfont.eot');
+    src: url('league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('league_gothic-webfont.woff') format('woff'),
+         url('league_gothic-webfont.ttf') format('truetype'),
+         url('league_gothic-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ h3 {
+    
+    float: left;
+    font: 28px/36px 'League Gothic';
+    text-transform: uppercase;
+}
 </style>
+
 <link rel='stylesheet' id='smooth_slider_headcss-css'  href='http://idaim.org.mx/blog/wp-content/plugins/smooth-slider/css/skins/default/style.css?ver=2.4' type='text/css' media='all' />
 <script type='text/javascript' src='http://idaim.org.mx/blog/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
 <script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/plugins/smooth-slider/js/jcycle.js?ver=2.4'></script>
 </head>
 <body>
+	
+
 <?php if ( function_exists( 'get_smooth_slider' ) ) {
      get_smooth_slider(); } ?>
 

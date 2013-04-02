@@ -4,7 +4,7 @@ Author:Tejaswini
 Website:http://www.clickonf5.org
 */
 /*Smooth Slider specific styles*/
-.smooth_slider_fouc .smooth_slider {display: none;margin-top:60px;}
+.smooth_slider_fouc .smooth_slider {display: none;margin-top:10px;}
 .smooth_slider div,.smooth_slider p,.smooth_slider li,.smooth_slider span,.smooth_slider img,.smooth_slider h2,.smooth_slider ul{list-style:none;background:transparent;vertical-align:baseline;}
 .smooth_slider{padding:0 30px;}
 .smooth_slider .sldr_title {

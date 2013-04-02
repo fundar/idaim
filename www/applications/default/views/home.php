@@ -16,7 +16,7 @@
 		 
 		</div>
 		<div class="video">
-			<iframe width="469" height="270" src="http://www.youtube.com/embed/pAdSSIVF6Xo" frameborder="0" allowfullscreen></iframe>
+			<!--<iframe width="469" height="270" src="http://www.youtube.com/embed/pAdSSIVF6Xo" frameborder="0" allowfullscreen></iframe>-->
 		</div>
 		</div>
 	</div>

@@ -1,6 +1,10 @@
 		<div id="footer">
+			<div id="news"><h3>Noticias</h3></div>
 			<div id="carrusel">
-		         <div id="carrusel-content"><iframe width="100%" scrolling="no" src="http://idaim.org.mx/blog/carrousel"></iframe></div>
+			
+		         <div id="carrusel-content">
+				
+				<iframe width="100%" scrolling="no" src="http://idaim.org.mx/blog/carrousel"></iframe></div>
 	        </div>
 	        
 			<div id="footer-content">

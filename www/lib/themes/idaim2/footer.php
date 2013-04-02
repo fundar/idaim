@@ -11,7 +11,13 @@
 			</div>
 		</div>
 	</div>
-	
+	<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/js/superfish.js?ver=1.0'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/js/jquery.flexslider-min.js?ver=1.0'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/js/jquery.fitvids.js?ver=1.0'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/epanel/page_templates/js/fancybox/jquery.easing-1.3.pack.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.pack.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://idaim.org.mx/blog/wp-content/themes/Lucid/epanel/page_templates/js/et-ptemplates-frontend.js?ver=1.1'></script>
 </body>
 </html>
 

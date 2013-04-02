@@ -23,6 +23,7 @@
 	<link id="google_font_open_sans-css" media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300&ver=3.4.2" rel="stylesheet">
         <link id="google_font_open_sans_condensed-css" media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300%2C700&ver=3.4.2" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<!--[if lt IE 9]>
@@ -37,6 +38,15 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php do_action('et_header_top'); ?>
+		<div class="container-idaim2012">
+			<div class="container_idaim_ir">
+			<div class="idaim2012" >
+				<div id="ir-idaim2012">
+				<a href="http://checatuley.org/"><img src="http://idaim.org.mx/blog/wp-content/themes/Lucid/images/idaim-2012-btn.png"  border="0"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<header id="main-header">
 		<div class="container clearfix">
 			<div id="logo-area"<?php if ( 'on' == $use_header_banner ) echo ' class="header_banner clearfix"'; ?>>

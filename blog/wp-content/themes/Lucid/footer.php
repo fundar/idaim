@@ -10,30 +10,35 @@
 	<?php if ( $any_widget_area_active ) { ?>
 		
 	<?php } ?>
-		<div class="container">
+		<div id="footer">
 			
-	<footer id="main-footer">
-			<?php	if ( function_exists( 'get_smooth_slider' ) ) {
-				     	get_smooth_slider(); } ?>
-			<div id="footer-widgets" class="clearfix">
-				<?php
-					if ( $any_widget_area_active ) {
-						foreach ( $footer_sidebars as $key => $footer_sidebar ){
-							if ( is_active_sidebar( $footer_sidebar ) ) {
-								echo '<div class="footer-widget' . (  2 == $key ? ' last' : '' ) . '">';
-								dynamic_sidebar( $footer_sidebar );
-								echo '</div> <!-- end .footer-widget -->';
-							}
-						}
-					}
-				?>
-			</div> <!-- end #footer-widgets -->	
-		</div> <!-- end .container -->
+			<div id="footer-content">
+				
+				<div id="footer-info">
+					<a class="logos-footer fundar-logo" href="http://fundar.org.mx" title="Fundar, Centro de Análisis e Investigación">Fundar, Centro de An&aacute;lisis e Investigaci&oacute;n</a>
+					<a class="logos-footer article19-logo" href="http://www.article19.org" title="Article 19">Article 19</a>
+					<ul>
+						<li>
+							<a href="" title="Inicio">Inicio</a>
+						</li>
+						<li>
+							<a href="" title="Quiénes Somos">Qui&eacute;nes Somos</a>
+						</li>
+						<li>
+							<a href="" title="Acerca de">Acerca de</a>
+						</li>
+						<li>
+							<a href="" title="Blog">Blog</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<p>Copyright ARTICLE 19 y FUNDAR, Centro de An&aacute;lisis e Investigaci&oacute;n. Todos los Derechos Reservados</p>
+		 </div>
 		
-		<?php if ( 'on' == et_get_option( 'lucid_728_enable', 'false' ) ){ ?>
+	
 
-		<?php } ?>		
-	</footer> <!-- end #main-footer -->	
 	<?php wp_footer(); ?>
 </body>
 </html>

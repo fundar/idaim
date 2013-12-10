@@ -24,3 +24,38 @@ indicadores/variables
 + Garantías jurídicas del recurso de revisión
 + Lista de información que debe ser publicada sin que medie una solicitud de información
 + Reglas para la publicación y difusión de obligaciones de transparencia
+
+
+Estados
++ Aguascalientes
++ Baja California
++ Baja California Sur
++ Campeche
++ Chiapas
++ Chihuahua
++ Coahuila
++ Colima
++ Distrito Federal
++ Durango
++ México
++ Guanajuato
++ Guerrero
++ Hidalgo
++ Jalisco
++ Michoacán
++ Morelos
++ Nayarit
++ Nuevo León
++ Oaxaca
++ Puebla
++ Querétaro
++ Quintana Roo
++ San Luis Potosí
++ Sinaloa
++ Sonora
++ Tabasco
++ Tamaulipas
++ Tlaxcala
++ Veracruz
++ Yucatán
++ Zacatecas

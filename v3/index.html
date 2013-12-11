@@ -21,7 +21,8 @@
 		var dispatch = d3.dispatch("load", "statechange");
 
 		var groups = ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12","v13","v14","v15","v16","v17","v18","v19","v20","v21"];
-
+		var index  = ["index"];
+		
 		d3.csv("data.csv", type, function(error, states) {
 			if (error) throw error;
 			
@@ -63,14 +64,16 @@
 				height = 460 - margin.top - margin.bottom;
 
 			var y = d3.scale.linear()
-				.domain([0, d3.max(stateById.values(), function(d) { return d.total; })])
+				.domain([0, 10])
 				.rangeRound([height, 0])
 				.nice();
 
 			var yAxis = d3.svg.axis()
 				.scale(y)
 				.orient("left")
-				.tickFormat(d3.format(".2s"));
+				.tickFormat(d3.format(".2"));
+				
+				//.tickFormat(d3.format(".2s")); with demical point
 
 			var svg = d3.select("body").append("svg")
 				.attr("width", width + margin.left + margin.right)
@@ -81,7 +84,7 @@
 			svg.append("g")
 				.attr("class", "y axis")
 				.call(yAxis);
-
+			
 			var rect = svg.append("rect")
 				.attr("x", 4)
 				.attr("width", width - 4)
@@ -90,9 +93,22 @@
 				.style("fill", "#aaa");
 
 			dispatch.on("statechange.bar", function(d) {
+				if(d.index > 8.9) {
+					var fill = "#388652";
+				} else if(d.index > 6.9) {
+					var fill = "#79c452";
+				} else if(d.index > 4.9) {
+					var fill = "#ebd06e";
+				} else if(d.index > 2.9) {
+					var fill = "#de2b33";
+				} else if(d.index > 0) {
+					var fill = "#de2b33";
+				}
+
 				rect.transition()
 					.attr("y", y(d.total))
-					.attr("height", y(0) - y(d.total));
+					.attr("height", y(0) - y(d.total))
+					.style("fill", fill);
 			});
 		});
 
@@ -143,7 +159,7 @@
 
 		// Coerce population counts to numbers and compute total per state.
 		function type(d) {
-			d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
+			d.total = d3.sum(index, function(k) { return d[k] = +d[k]; });
 			return d;
 		}
 		

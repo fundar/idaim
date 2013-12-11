@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<title>IDAIM V3</title>
 <style>
 
 .axis text {
@@ -21,11 +22,9 @@
 		//reference http://bl.ocks.org/mbostock/5872848
 		
 		var dispatch = d3.dispatch("load", "statechange");
-
-		var groups = ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12","v13","v14","v15","v16","v17","v18","v19","v20","v21"];
-		var index  = ["index"];
+		var groups   = ["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12","v13","v14","v15","v16","v17","v18","v19","v20","v21"];
 		
-		d3.csv("data.csv", type, function(error, states) {
+		d3.csv("data.csv", function(error, states) {
 			if (error) throw error;
 			
 			var stateById = d3.map();
@@ -108,8 +107,8 @@
 				}
 
 				rect.transition()
-					.attr("y", y(d.total))
-					.attr("height", y(0) - y(d.total))
+					.attr("y", y(d.index))
+					.attr("height", y(0) - y(d.index))
 					.style("fill", fill);
 			});
 		});
@@ -147,8 +146,12 @@
 				.each(function() { this._current = {startAngle: 0, endAngle: 0}; });
 
 			dispatch.on("statechange.pie", function(d) {
+				console.log(d);
 				path.data(pie.value(function(g) { return d[g]; })(groups)).transition()
 				.attrTween("d", function(d) {
+					//start angle = 0 to show complete transition
+					this._current.startAngle = 0;
+					
 					var interpolate = d3.interpolate(this._current, d);
 					this._current = interpolate(0);
 					
@@ -158,12 +161,6 @@
 				});
 			});
 		});
-
-		// Coerce population counts to numbers and compute total per state.
-		function type(d) {
-			d.total = d3.sum(index, function(k) { return d[k] = +d[k]; });
-			return d;
-		}
 		
 		// show values in mouseover
 		function mapMouseOver(e) {
@@ -174,6 +171,12 @@
 		function mapMouseOut() {
 			d3.select(".value-text").text("");
 		}
-
+		
+		// sum all the values ​​of each item - compute total per state - (not used)
+		function type(d) {
+			d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
+			
+			return d;
+		}
 	</script>
 	<span class="value-text"></span>
